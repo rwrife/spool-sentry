@@ -81,7 +81,7 @@ Final BOM data belongs in KiCad schematic symbol properties (`Manufacturer`, `MP
 
 ## Current status and milestones
 
-**Status: documentation/backlog only.** There is no schematic, PCB, firmware, app build, calibrated instrument, fabricated board, assembly, ERC/DRC result, or bench/field test yet.
+**Status: requirements/architecture baseline plus toolchain proof.** The v0.1 requirements, editable architecture diagrams, protocol schema/fixture, risk register, and verification matrix are frozen. A pinned Rust host-test and ESP32-C3 target-link proof exists, but there is still no schematic, PCB, functional firmware/app, calibrated instrument, fabricated board, assembly, ERC/DRC result, flash/boot evidence, or bench/field test.
 
 1. Freeze measurable requirements and risk boundaries.
 2. Select exact components from manufacturer datasheets and create the KiCad schematic/BOM.
@@ -89,18 +89,17 @@ Final BOM data belongs in KiCad schematic symbol properties (`Manufacturer`, `MP
 4. Build firmware and the local web companion against simulated interfaces.
 5. Assemble, calibrate, integrate, and publish honest fabrication/release evidence.
 
-See [PLAN.md](PLAN.md), [hardware/requirements.md](hardware/requirements.md), and the GitHub issue backlog.
+See [PLAN.md](PLAN.md), the canonical [v0.1 requirements](docs/requirements.md), [architecture](docs/architecture.md), [risk register](docs/risk-register.md), [verification matrix](docs/verification-matrix.md), and the GitHub issue backlog.
 
 ## Development quickstart
 
-The implementation workspace has not been created yet. Planned prerequisites are:
+The currently implemented checks require Python 3 plus rustup. The proof pins and installs its exact Rust version, components, and ESP32-C3 target:
 
-- KiCad 9+ for editable hardware sources and ERC/DRC
-- Rust stable with an ESP32-C3-supported embedded toolchain for firmware
-- Node.js 22 LTS with pnpm for the TypeScript/Vite local web app
-- Python 3 for host-side protocol fixtures and hardware-free integration tests
+```sh
+./scripts/verify.sh
+```
 
-For now, validate the scaffold by reviewing the documents and planning BOM. Do not expect build commands until the project-skeleton issue lands. Future quickstart commands must be pinned in-repository and exercised in CI before being presented as working.
+This checks requirement traceability, local Markdown links, the protocol schema/fixture, Rust formatting/clippy/host tests, and an ESP32-C3 release link. See [the toolchain decision](docs/toolchain.md) for exact evidence limits. KiCad 9+, the companion Node/pnpm workspace, selected-part drivers, flashing, and bench procedures arrive in later issues and must not be presented as working yet.
 
 ## License
 

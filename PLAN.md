@@ -1,95 +1,40 @@
 # Spool Sentry implementation plan
 
-## Scope
+## Frozen scope
 
-Build a one-spool, observation-only dry-box monitor with reproducible low-voltage hardware, embedded firmware, and a device-hosted local web companion. The MVP measures box temperature/humidity and platform mass, stores bounded history, supports explicit calibration and spool metadata, and exports user-owned data. It never actuates a dryer or printer.
+Build a one-spool, observation-only passive dry-box monitor with editable low-voltage hardware, embedded firmware, and a device-hosted accessible companion. It measures environment and platform mass, stores bounded local history, supports explicit calibration/spool metadata, and provides user-owned export/backup/deletion. It never actuates a dryer or printer.
 
-## Architecture
+The authoritative v0.1 planning set is:
 
-```text
-USB 5 V
-  -> input protection + 3.3 V rail
-      -> ESP32-C3-class module
-          -> digital temperature/humidity sensor
-          -> load-cell ADC -> replaceable load cell/platform
-          -> setup/tare button + non-color-only status LED
-          -> USB CDC provisioning/recovery
-          -> local Wi-Fi HTTP/WebSocket API
-              -> device-hosted TypeScript/Vite responsive web app
-          -> bounded flash config/history
+- [frozen requirements](docs/requirements.md)
+- [editable architecture diagrams](docs/architecture.md)
+- [protocol v0.1](docs/protocol.md)
+- [risk register](docs/risk-register.md)
+- [verification matrix](docs/verification-matrix.md)
+- [firmware toolchain decision](docs/toolchain.md)
+
+## Milestones and dependencies
+
+1. **M1 — requirements/architecture:** freeze measurable ranges, semantics, retention, offline behavior, protocol, risk controls, and toolchain proof. No dependency.
+2. **M2 — datasheet-backed parts/schematic:** exact manufacturer parts, KiCad properties, pin/package/footprint checks, ERC, and exported `bom/bom.csv`. Depends on M1.
+3. **M3 — PCB/mechanics:** antenna/analog/thermal-aware layout, force path, DRC/cross-domain analysis, and review-only fabrication preview. Depends on M2.
+4. **M4 — firmware:** host-tested domain logic, selected-part adapters, local HTTP/SSE and USB CDC, storage, target build/flash/recovery. Depends on M1; hardware integration depends on M2.
+5. **M5 — companion:** fixture-first accessible local UI, calibration/history/events, export/restore/deletion. Depends on M1 and coordinates with M4 fixtures.
+6. **M6 — integration:** assembled bring-up, calibration/repeatability/fault evidence, documentation, and limitations. Depends on M2–M5.
+7. **M7 — release:** inspected fabrication/source/BOM/binaries/licenses/archive from a tagged revision. Depends on M6.
+
+## Verification policy
+
+Static analysis, simulation, host tests, target builds, bench measurements, and field observations are separate evidence classes. A clean target build does not mean firmware booted; an unbuilt board is not tested; one bench prototype does not establish field durability. Every requirement remains planned until the [verification matrix](docs/verification-matrix.md) links adequate evidence.
+
+From the repository root, run the currently available checks with:
+
+```sh
+./scripts/verify.sh
 ```
 
-Boundaries:
+Future milestones must extend that command/CI rather than replacing evidence with prose.
 
-- **Hardware:** protected USB input, controller module, sensor connectors, button/status, programming/debug access, test points, and mechanical mounting.
-- **Firmware:** sampling, validity/freshness, filtering, calibration, retention, protocol, provisioning, recovery, and static web asset serving.
-- **Web app:** setup, live readings, calibration workflow, spool metadata, history/events, export/backup/restore, retention/deletion, accessibility.
-- **Protocol:** versioned schemas shared by firmware, web app, fixtures, and host-side tests.
+## Packaging direction
 
-## Technology choices
-
-- **ESP32-C3-class module:** inexpensive Wi-Fi/BLE-capable RISC-V platform with USB-capable development paths and broad open tooling. BLE is not required for MVP.
-- **Digital humidity/temperature sensor family:** avoids analog calibration complexity; exact part waits for datasheet, package, lifecycle, and availability validation.
-- **Bridge load cell plus dedicated ADC family:** common replaceable mechanics and sufficient resolution for trend/remaining-mass estimates; exact ADC and cell are not selected yet.
-- **Rust embedded firmware:** memory-safe core logic and testable domain code; toolchain support must be proven in the skeleton issue before commitment is irreversible.
-- **TypeScript + Vite PWA-style UI:** small device-hosted static bundle, responsive on Android/iOS/desktop browsers, no app-store dependency.
-- **KiCad 9+:** editable schematic/PCB sources, symbol-property BOM, ERC/DRC, and reproducible fabrication export.
-
-## Milestones and dependency order
-
-### M1 — Requirements and architecture
-
-Freeze measurement ranges, accuracy/uncertainty language, retention, mechanical load envelope, power limits, protocol boundary, and safety/risk exclusions. Dependency: none.
-
-### M2 — Datasheet-backed parts and schematic
-
-Select exact controller module, sensor, ADC, protection, connectors, and passives from manufacturer evidence. Populate KiCad Manufacturer/MPN properties, complete the schematic, run ERC, and export `bom/bom.csv`. Dependency: M1.
-
-### M3 — PCB and mechanical interface
-
-Define outline and mounting, preserve antenna/sensor/load-cell noise constraints, place/rout/test, run DRC/analyzers, and review fabrication files. Dependency: M2.
-
-### M4 — Firmware and protocol core
-
-Create reproducible build/flash/recovery; implement simulated sensor interfaces, filtering, calibration state, retention, and versioned API. Dependency: M1; hardware integration depends on M2.
-
-### M5 — Local web companion
-
-Implement onboarding, live/status, calibration, history/events, export/restore, deletion, and accessibility against protocol fixtures before hardware. Dependency: M1/M4 protocol fixtures.
-
-### M6 — Integration and release candidate
-
-Assemble, record expected measurements, calibrate, test fault states and offline recovery, document assembly/troubleshooting, and publish inspected fabrication/release outputs. Dependencies: M2–M5.
-
-## Testing strategy
-
-- **Static hardware checks:** KiCad ERC/DRC, schematic/PCB analyzers, pad/net cross-checks, antenna keepout and sensor-placement review.
-- **Datasheet verification:** voltage/current/pinout/package/lifecycle checks cited to manufacturer documents; no exact part is accepted from search snippets alone.
-- **Firmware:** host unit tests for filtering, calibration arithmetic, stale/invalid states, retention, schema migration, and protocol serialization; target build and flash checks; hardware abstraction fakes.
-- **Web app:** unit tests for reducers/formatting/import validation, accessibility checks, component tests, protocol fixtures, and production bundle size.
-- **Integration:** replayable serial/API fixtures first; then bench measurements for rail voltage/current, sensor plausibility, calibration repeatability, drift, load-step response, disconnect/reconnect, Wi-Fi loss, storage-full behavior, and factory reset.
-- **Evidence labels:** static analysis, simulation, bench testing, and field observation remain separate. An unbuilt prototype is never called tested.
-
-## Packaging and distribution
-
-- Versioned firmware binaries plus source/build metadata and checksums
-- Device-hosted compressed web bundle built from source
-- KiCad source, schematic PDF, Gerber/drill, BOM/CPL where applicable, board renders, and fabrication notes
-- Versioned source/archive release with hardware, firmware, software, and third-party licenses
-- No app store or cloud service required; optional installable web-app behavior remains browser-dependent
-
-## Risks and mitigations
-
-| Risk | Mitigation |
-|---|---|
-| Load-cell creep, off-center loading, vibration, or temperature drift | Stable-reading gate, calibration age/state, mechanical guidance, repeatability measurements, visible uncertainty |
-| Humidity sensor self-heating or poor placement | Low duty cycle, vented placement away from regulator/MCU, datasheet timing, comparison during bring-up |
-| Flash wear or history corruption | Bounded append strategy, checksums/versioning, retention, interrupted-write tests |
-| Wi-Fi onboarding exposes credentials | Short-lived proof-of-presence mode, local-only endpoints, no logs/exports containing secrets, documented reset |
-| ESP32-C3 Rust support blocks progress | Prove build/flash/CI in M1; retain a narrow C/C++ fallback decision gate without changing protocol/domain tests |
-| Mass estimate mistaken for guaranteed usable filament | Label estimates and calibration assumptions; expose gross/net/uncertainty and never predict print success |
-| Electronics placed near hot dryer hardware | Project explicitly supports passive boxes only; no heater integration or thermal-control claims |
-
-## Explicit non-goals
-
-Mains/battery power, heating/fan actuation, printer control, safety alarms, certified metrology, guaranteed material condition, multi-spool/RFID/camera inventory, cloud sync, remote access, AI classification, and commercial fleet management are outside the MVP.
+A release eventually includes editable KiCad/mechanical source, schematic PDF, inspected Gerbers/drills/BOM/CPL, pinned firmware source/binaries/checksums, compressed companion assets, assembly/bring-up/recovery docs, and hardware/firmware/software/third-party notices. No app store, cloud account, telemetry, or internet service is required.

@@ -6,7 +6,7 @@ A suitable USB 5 V supply feeds protected low-voltage power and a 3.3 V rail. An
 
 ## Controller choice
 
-The provisional platform is an ESP32-C3 module because it combines local Wi-Fi, adequate GPIO, broad community tooling, and low module cost. The exact module, antenna variant, USB/programming topology, and Rust toolchain remain selection tasks. Manufacturer datasheets and module integration guidance are required before schematic capture.
+The provisional platform is an ESP32-C3 module because it combines local Wi-Fi, adequate GPIO, broad community tooling, and low module cost. The pinned Rust/`esp-hal` target-link path is proven in [`firmware/toolchain-proof`](../firmware/toolchain-proof), but the exact module, antenna variant, USB/programming topology, and hardware drivers remain selection tasks. Manufacturer datasheets and module integration guidance are required before schematic capture.
 
 ## Interfaces
 
