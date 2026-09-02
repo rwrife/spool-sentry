@@ -1,0 +1,48 @@
+# Toolchains and build outputs
+/target/
+/build/
+/dist/
+node_modules/
+.pnpm-store/
+coverage/
+*.lcov
+
+# Firmware and hardware generated outputs
+firmware/sdkconfig
+firmware/sdkconfig.old
+hardware/fabrication/
+hardware/generated/
+*.kicad_prl
+*.kicad_pro-bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.lck
+
+# KiCad/BOM working files
+analysis/*/
+!analysis/manifest.json
+datasheets/
+bom/orders/
+*.bak
+
+# Runtime/local state
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.env
+.env.*
+!.env.example
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+junit*.xml
+test-results/
+playwright-report/
