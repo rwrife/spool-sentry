@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spool-sentry.local/schemas/observation-v0.1.schema.json",
+  "title": "Spool Sentry observation v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "device_id",
+    "sequence",
+    "sampled_at",
+    "temperature_c",
+    "relative_humidity_pct",
+    "gross_mass_g",
+    "net_mass_estimate_g",
+    "stable",
+    "calibration_state",
+    "quality",
+    "faults"
+  ],
+  "properties": {
+    "protocol_version": {"const": "0.1"},
+    "device_id": {"type": "string", "minLength": 8, "maxLength": 64, "pattern": "^[A-Za-z0-9_-]+$"},
+    "sequence": {"type": "integer", "minimum": 0},
+    "sampled_at": {"type": ["string", "null"], "format": "date-time"},
+    "temperature_c": {"type": ["number", "null"]},
+    "relative_humidity_pct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+    "gross_mass_g": {"type": ["number", "null"]},
+    "net_mass_estimate_g": {"type": ["number", "null"]},
+    "stable": {"type": "boolean"},
+    "calibration_state": {"enum": ["valid", "uncalibrated", "invalid", "expired"]},
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["environment", "mass"],
+      "properties": {
+        "environment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["state", "sample_age_ms"],
+          "properties": {
+            "state": {"enum": ["fresh", "stale", "disconnected", "out_of_range", "invalid"]},
+            "sample_age_ms": {"type": ["integer", "null"], "minimum": 0}
+          }
+        },
+        "mass": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["state", "sample_age_ms", "uncertainty_g"],
+          "properties": {
+            "state": {"enum": ["fresh", "settling", "stale", "disconnected", "saturated", "out_of_range", "invalid"]},
+            "sample_age_ms": {"type": ["integer", "null"], "minimum": 0},
+            "uncertainty_g": {"type": ["number", "null"], "minimum": 0}
+          }
+        }
+      }
+    },
+    "faults": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {"type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-z0-9_]+$"}
+    }
+  }
+}

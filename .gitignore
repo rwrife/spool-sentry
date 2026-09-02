@@ -1,11 +1,13 @@
 # Toolchains and build outputs
-/target/
+target/
 /build/
 /dist/
 node_modules/
 .pnpm-store/
 coverage/
 *.lcov
+__pycache__/
+*.py[cod]
 
 # Firmware and hardware generated outputs
 firmware/sdkconfig

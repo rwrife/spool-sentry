@@ -1,32 +1,28 @@
-# Firmware plan
+# Firmware plan and toolchain baseline
+
+The frozen firmware requirements are [FW-001 and FW-002](../docs/requirements.md), and the transport/data contract is [`docs/protocol.md`](../docs/protocol.md).
+
+## Primary toolchain
+
+Issue #1 proved a pinned stable Rust/ESP32-C3 path in [`toolchain-proof`](toolchain-proof):
+
+```sh
+./scripts/verify.sh
+```
+
+That command runs documentation/schema checks, formatting, host clippy/tests, target clippy, and an ESP32-C3 release link. See [`docs/toolchain.md`](../docs/toolchain.md) for exact versions, evidence limits, and the bounded ESP-IDF fallback gate.
 
 ## Responsibilities
 
-- Initialize and supervise the environmental sensor, load-cell ADC, button, status output, storage, USB, and Wi-Fi.
-- Sample at bounded rates; expose raw diagnostic values separately from filtered/stable observations.
+- Initialize and supervise environmental sensor, load-cell ADC, button/status, storage, USB, and Wi-Fi adapters.
+- Sample at bounded rates; separate raw diagnostics from filtered/stable observations.
 - Track freshness, settling, saturation, disconnect, calibration, and storage faults explicitly.
 - Compute gross and user-derived net mass with honest precision and uncertainty metadata.
-- Maintain bounded, versioned configuration/history with migration and interrupted-write recovery.
-- Serve the companion web bundle and versioned local API; support USB CDC setup, snapshot, diagnostics, reset, and recovery.
+- Maintain bounded versioned configuration/history with migration and interrupted-write recovery.
+- Serve the companion bundle and versioned local HTTP/SSE API; support the required USB CDC offline subset.
 
-## Interfaces and protocol
+Domain logic stays in host-testable `no_std` code behind sensor, monotonic/wall clock, storage, USB, and network interfaces. Exact hardware drivers wait for issue #2 part/pin decisions.
 
-The canonical draft lives in `docs/protocol.md`. Firmware and app will share generated or validated schema fixtures rather than duplicate ad-hoc payload definitions. Mutation requires a short-lived session established by physical proof of presence. Internet connectivity is not required.
+## Evidence boundary
 
-Hardware drivers will sit behind narrow interfaces so filters, calibration, retention, protocol serialization, and fault behavior can run on a host without physical hardware.
-
-## Provisioning and updates
-
-- First setup: hold the physical button, then use a short-lived local onboarding page or USB CDC.
-- Credentials must never appear in normal logs or exports.
-- USB flashing/recovery is mandatory and documented before any over-the-air update is considered.
-- Updates must identify compatible hardware/protocol versions and preserve or explicitly migrate data.
-- Failed update/recovery behavior must be tested; no claim of safe OTA exists in the scaffold.
-
-## Test strategy
-
-- Host unit/property tests: calibration arithmetic, stable-reading gate, stale/invalid transitions, bounded queues, migrations, import rejection, and protocol encoding.
-- Simulated drivers: sensor disconnect, impossible values, ADC saturation/noise, button timing, Wi-Fi loss, storage-full/interrupted writes.
-- Reproducible target build and size report in CI.
-- On-device checks: flash/recovery, boot/current measurements, radio coexistence/noise, sampling timing, repeated reference loads, and environmental comparison.
-- Label evidence as host simulation, target build, or bench measurement; an unbuilt board is not hardware-tested.
+The current proof builds and host-tests but has not been flashed or run on a board. Issue #4 must add pinned flash/recovery commands, serial evidence, full host tests, target size reporting, and selected-part drivers. Issue #6 owns bench fault/calibration/current evidence.
