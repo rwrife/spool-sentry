@@ -1,0 +1,12 @@
+Item,Qty,Category,Specification / MPN,Source,Notes
+Carrier PCB fabrication,1,Manufacturing,TBD (2-layer FR-4, final fab stack-up not yet frozen),Fabricator quote required,Not represented as a schematic symbol.
+Carrier PCB assembly,1,Manufacturing,TBD (SMT assembly service),Assembler quote required,Not represented as a schematic symbol.
+Passive dry-box enclosure,1,Mechanical,TBD (sealed dry-box enclosure sized for spool + carrier),Integrator-defined,Required for passive moisture-control deployment; enclosure dimensions finalized in Issue #3.
+USB-C cable,1,Accessory,USB 2.0 or better A-to-C / C-to-C cable,Distributor/open market,Needed for commissioning and power.
+5 V USB SELV supply,1,Accessory,5 V regulated USB wall supply (<500 mA continuous target),Distributor/open market,External supply; not represented as a schematic symbol.
+Calibration reference mass set,1,Calibration,Known reference masses (for example 500 g + 1000 g),Metrology supplier,Required for NAU7802 scale calibration and drift checks.
+JST GH mating housing,1,Connector accessory,GHR-04V-S,JST/distributor,Required mate for J2 cable harness; external harness BOM item.
+JST GH crimp contacts,4,Connector accessory,SSHL-002T-P0.2,JST/distributor,Required mate for J2 cable harness; external harness BOM item.
+Load-cell cable/harness,1,Harness,4-conductor load-cell harness (E+/E-/S+/S-),Integrator-defined,Mechanical length/strain relief is enclosure-specific.
+Load-cell mechanical mounting kit,1,Mechanical,TBD (bracket/fixture + fasteners),Integrator-defined,Depends on selected load-cell geometry and enclosure.
+Carrier mounting hardware set,1,Mechanical,TBD (standoffs/screws/washers sized after enclosure release),Integrator-defined,Final dimensions depend on enclosure and hole plan (Issue #3).

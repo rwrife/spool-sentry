@@ -1,0 +1,57 @@
+{
+  "success": true,
+  "schematic_path": "hardware/spool-sentry.kicad_sch",
+  "component_count": 42,
+  "identified_patterns": {
+    "power_supply_circuits": [
+      {
+        "type": "linear_regulator",
+        "subtype": "78xx",
+        "main_component": "U2",
+        "value": "NAU7802SGI",
+        "input_voltage": "unknown",
+        "output_voltage": "2V",
+        "associated_components": []
+      }
+    ],
+    "amplifier_circuits": [],
+    "filter_circuits": [],
+    "oscillator_circuits": [],
+    "digital_interface_circuits": [
+      {
+        "type": "i2c_interface",
+        "signals_found": ["I2C_SCL", "I2C_SDA"],
+        "components": ["R5", "R6", "TP6", "TP7", "U1", "U2", "U3"]
+      },
+      {
+        "type": "uart_interface",
+        "signals_found": ["UART_RX", "UART_TX"],
+        "components": ["J3", "U1"]
+      },
+      {
+        "type": "usb_interface",
+        "signals_found": ["VBUS", "VBUS_FUSED"],
+        "components": ["C11", "D1", "D2", "F1", "J1", "TP1"]
+      }
+    ],
+    "microcontroller_circuits": [
+      {
+        "type": "microcontroller",
+        "family": "ESP",
+        "model": "ESP32",
+        "component": "U1",
+        "features": "Wi-Fi & Bluetooth"
+      }
+    ],
+    "sensor_interface_circuits": [
+      {
+        "type": "analog_interface",
+        "model": "NAU7802SGI",
+        "component": "U2"
+      }
+    ],
+    "other_patterns": []
+  },
+  "total_patterns_found": 6,
+  "notes": "Pattern classifier is heuristic and misclassifies NAU7802 as a linear regulator; treat this file as structural corroboration only."
+}

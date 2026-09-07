@@ -1,42 +1,43 @@
-# Hardware plan
+# Hardware design artifacts
 
-## System block description
+This directory now carries the schematic source-of-truth for the Spool Sentry carrier board.
 
-A suitable USB 5 V supply feeds protected low-voltage power and a 3.3 V rail. An ESP32-C3-class module reads one digital temperature/humidity sensor and one bridge load-cell ADC, controls a setup/tare button and status indicator, stores bounded data, exposes USB CDC, and serves the local web interface over Wi-Fi.
+## Included files
 
-## Controller choice
+- `spool-sentry.kicad_pro` / `spool-sentry.kicad_sch`: KiCad 9 project + schematic
+- `sym-lib-table`, `fp-lib-table`: local library bindings used by this schematic
+- `lib/spool-sentry.kicad_sym`: project-local custom symbols (XIAO ESP32-C3 module, NAU7802 ADC)
+- `lib/spool-sentry.pretty/XIAO_ESP32C3.kicad_mod`: project-local XIAO module footprint
+- `lib/spool-sentry.dcm`: symbol documentation metadata
 
-The provisional platform is an ESP32-C3 module because it combines local Wi-Fi, adequate GPIO, broad community tooling, and low module cost. The pinned Rust/`esp-hal` target-link path is proven in [`firmware/toolchain-proof`](../firmware/toolchain-proof), but the exact module, antenna variant, USB/programming topology, and hardware drivers remain selection tasks. Manufacturer datasheets and module integration guidance are required before schematic capture.
+## What this schematic covers
 
-## Interfaces
+- USB 5V SELV power entry and protection path (USB-C UFP + PPTC + TVS + reverse-current block)
+- Controller module (`U1`: Seeed XIAO ESP32-C3)
+- Bridge ADC path (`U2`: NAU7802) and load-cell connector (`J2`)
+- Environmental sensor path (`U3`: SHT40) on shared I2C
+- Dedicated user button (`SW1`) for tare/calibration/recovery interactions
+- Status RGB indicator (`D3` + current-limit resistors)
+- Test points for safe bring-up/diagnostics
 
-- One digital temperature/humidity sensor bus with power and serviceable connector or board placement
-- One load-cell ADC interface and keyed load-cell connector
-- USB 2.0 device/serial setup and recovery path as supported by the selected module/topology
-- One physical setup/tare input and non-color-only status indication
-- Programming/debug header or test pads and named power/signal test points
-- 2.4 GHz Wi-Fi with a documented antenna keepout
+## Regenerating verification artifacts
 
-## Power plan
+From the repository root:
 
-USB 5 V SELV only. The carrier will include a datasheet-backed connector/input-protection strategy, regulated 3.3 V as required, local decoupling/bulk capacitance, and current measurement points. No battery, charger, heater, fan, printer-power connection, or mains circuit is allowed. Power/current budgets and protection values remain TBD until exact parts are selected.
+```bash
+# Schematic ERC (text report)
+kicad-cli sch erc --format report \
+  --output docs/verification/kicad-erc.rpt \
+  hardware/spool-sentry.kicad_sch
 
-## Enclosure and assembly concept
+# Netlist + BOM exports from schematic symbol properties
+./scripts/export_schematic_bom.py hardware/spool-sentry.kicad_sch
 
-A printed or fabricated low-profile platform transfers spool load to a replaceable bar load cell without loading the PCB. The sensor sits in vented air away from MCU/regulator heat and filament contact. The carrier uses hand-assemblable parts where practical, accessible connectors, mounting holes, visible orientation markings, and replaceable modules/sensors. Editable mechanical source is expected before release; photos/renders remain placeholders until real artifacts exist.
+# Optional external schematic analyzer outputs (JSON + text)
+# (path depends on local Hermes skill checkout)
+# python3 <path-to-analyze_schematic.py> hardware/spool-sentry.kicad_sch --output docs/verification/schematic-analysis.json
+# python3 <path-to-analyze_schematic.py> hardware/spool-sentry.kicad_sch --output docs/verification/schematic-analysis.txt --text
+```
 
-## Safety limits
-
-Observation-only passive dry boxes; suitable enclosed USB supply; no heated chamber integration; no mains, batteries, relays, printers, safety interlocks, hazardous loads, or certified environmental/metrology claims. Faults must become explicit stale/invalid states rather than reassuring values.
-
-## Expected KiCad deliverables
-
-Planned editable sources (currently absent):
-
-- `hardware/spool-sentry.kicad_pro`
-- `hardware/spool-sentry.kicad_sch`
-- `hardware/spool-sentry.kicad_pcb`
-
-The mature design must include power/protection, controller/module, sensors/connectors, programming/debug, test points, mounting, silkscreen, antenna/sensor constraints, net classes, ERC/DRC evidence, schematic PDF, Gerber/drill, BOM/CPL where applicable, and source licensing. Image/PDF exports supplement but never replace KiCad sources.
-
-Final part identity belongs in KiCad symbol properties and exports to `bom/bom.csv`. The current preliminary BOM is planning-only.
+The issue-specific validation summary is in
+`docs/verification/issue-2-hardware-schematic.md`.
