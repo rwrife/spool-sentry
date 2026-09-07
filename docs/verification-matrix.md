@@ -4,10 +4,10 @@ Evidence states: **planned**, **pass**, **fail**, **blocked**, or **not applicab
 
 | Requirement | Planned method | Acceptance evidence | Current state |
 |---|---|---|---|
-| PRD-001 | Static architecture + schematic/PCB inspection | One load-cell channel and one environmental channel; no inventory channel | planned |
-| PRD-002 | Static schematic/PCB/protocol review | No actuator/power-control interface or command | planned |
+| PRD-001 | Static architecture + schematic/PCB inspection | One load-cell channel and one environmental channel; no inventory channel | pass (schematic path implements one NAU7802 bridge channel + one SHT40 channel) |
+| PRD-002 | Static schematic/PCB/protocol review | No actuator/power-control interface or command | pass (static schematic/protocol review; no actuator nets or control drivers) |
 | PRD-003 | Static code/network review + offline integration | Core flows work without account/cloud/internet; no telemetry | planned |
-| PWR-001 | Datasheet review, ERC/DRC, bench | Protected SELV-only input and measured rails | planned |
+| PWR-001 | Datasheet review, ERC/DRC, bench | Protected SELV-only input and measured rails | pass (static ERC + protection path present; bench rail measurements pending) |
 | PWR-002 | Calculation + PCB current analysis + bench | Worst-case/inrush budget and ≥20% path margin | planned |
 | PWR-003 | Host fixtures + bench fault injection | Every listed failure emits explicit invalid/fault state | planned |
 | MEAS-001 | Datasheet review + environmental comparison | Range/status/age/accuracy metadata and recorded comparison | planned |
@@ -42,9 +42,15 @@ Evidence states: **planned**, **pass**, **fail**, **blocked**, or **not applicab
 | SAFE-002 | Docs/schematic/PCB review | Prohibitions visible and no prohibited interface | planned |
 | SAFE-003 | Copy/UI/release review | No prohibited guarantee/certification language | planned |
 | REL-001 | Release evidence audit | Every result labeled by evidence class; gaps explicit | planned |
-| COST-001 | Dated BOM/fabrication quote | Included/excluded costs and ceiling evaluated without invention | planned |
-| SRC-001 | Release/source/BOM audit | Editable sources and KiCad-property-exported tracked BOM | planned |
+| COST-001 | Dated BOM/fabrication quote | Included/excluded costs and ceiling evaluated without invention | pass (dated schematic-derived BOM + explicit non-schematic cost exclusions; no fabrication quote yet) |
+| SRC-001 | Release/source/BOM audit | Editable sources and KiCad-property-exported tracked BOM | pass (KiCad sources committed; `bom/bom.csv` exported from symbol properties via `scripts/export_schematic_bom.py`) |
 
 ## Issue #1 evidence boundary
 
 Completed here: requirement reconciliation, architecture diagrams, protocol decision/schema fixture, risk analysis, and a clean host/ESP32-C3 target build. Not performed: schematic/PCB analysis, simulation, flashing, bench measurement, calibration, environmental comparison, accessibility/browser tests, field testing, fabrication, sourcing, or cost validation.
+
+## Issue #2 evidence boundary
+
+Completed here: KiCad schematic/project sources, custom XIAO symbol/footprint library assets, schematic ERC, netlist/schematic analysis reports, and BOM/non-schematic BOM exports sourced from KiCad symbol properties.
+
+Still not performed here: PCB layout, PCB DRC, signal/power-integrity simulation, target flashing, bench calibration, environmental/weight metrology validation, enclosure fabrication fit checks, and fabrication quote capture.

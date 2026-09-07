@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "spool-sentry")(type "KiCad")(uri "${KIPRJMOD}/lib/spool-sentry.kicad_sym")(options "")(descr "Spool Sentry project symbols"))
+)

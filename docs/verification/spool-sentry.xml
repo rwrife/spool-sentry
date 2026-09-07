@@ -1,0 +1,2000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/rwrife/repos/.worktrees/spool-sentry-issue-2/hardware/spool-sentry.kicad_sch</source>
+    <date>2026-09-07T16:27:51+0000</date>
+    <tool>Eeschema 9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Spool Sentry USB/SELV preliminary carrier</title>
+        <company>Open hardware design — rwrife/spool-sentry</company>
+        <rev>A0 preliminary</rev>
+        <date>2026-09-05</date>
+        <source>spool-sentry.kicad_sch</source>
+        <comment number="1" value="USB/SELV only; not legal-for-trade or safety certified"/>
+        <comment number="2" value="NAU7802: 3.0 V AVDD, channel 1, PGA 128, 10 SPS baseline"/>
+        <comment number="3" value="PCB layout, fabrication, assembly, and bench validation are pending"/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>4.7uF 10V X5R</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM31CR61A475KA01L</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">490-3902-1-ND</field>
+        <field name="Estimated Unit Cost USD">0.20</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Protected 5 V bulk capacitor; total carrier input capacitance remains below 10 uF nominal.</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet">https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM31CR61A475KA01L"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="490-3902-1-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.20"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Protected 5 V bulk capacitor; total carrier input capacitance remains below 10 uF nominal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e62b1c23-d76c-4641-aa58-e1cbe958a57f</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100nF 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71H104KA93-01.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">490-1519-1-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">High-frequency bypass on protected 5 V rail.</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71H104KA93-01.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="490-1519-1-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="High-frequency bypass on protected 5 V rail."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>25303eb6-bbcf-40d0-82f0-bf7d6ec1af35</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>10uF 10V X5R</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM31CR61A106KA01-01.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM31CR61A106KA01L</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C97949</field>
+        <field name="Estimated Unit Cost USD">0.3351</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">22</field>
+        <field name="Cost Basis">1 @ $0.3351</field>
+        <field name="BOM Comments">Local bulk capacitor on the XIAO 3V3 output; regulator is on the module.</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM31CR61A106KA01-01.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM31CR61A106KA01L"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C97949"/>
+      <property name="Estimated Unit Cost USD" value="0.3351"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="22"/>
+      <property name="Cost Basis" value="1 @ $0.3351"/>
+      <property name="BOM Comments" value="Local bulk capacitor on the XIAO 3V3 output; regulator is on the module."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1409068a-457b-42c6-8b69-678c58de1e8f</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>100nF 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71H104KA93-01.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">490-1519-1-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">High-frequency bypass on the 3V3 rail.</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71H104KA93-01.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="490-1519-1-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="High-frequency bypass on the 3V3 rail."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8444a27-e3b0-4374-935b-18223d56222a</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>1uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C105KA12D</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">TBD—verify before order</field>
+        <field name="Estimated Unit Cost USD">0.08</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">DVDD local bypass; Nuvoton Rev. 2.6 p.24.</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C105KA12D"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="TBD—verify before order"/>
+      <property name="Estimated Unit Cost USD" value="0.08"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="DVDD local bypass; Nuvoton Rev. 2.6 p.24."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cbe2b4c8-1b71-40e7-848e-e543b7ed6f87</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>1uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C105KA12D</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">TBD—verify before order</field>
+        <field name="Estimated Unit Cost USD">0.08</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">AVDD/LDO local bypass; low-ESR, Nuvoton Rev. 2.6 pp.6,24.</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C105KA12D"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="TBD—verify before order"/>
+      <property name="Estimated Unit Cost USD" value="0.08"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="AVDD/LDO local bypass; low-ESR, Nuvoton Rev. 2.6 pp.6,24."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a457d7d3-646a-4b23-9754-a8818a26eef7</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>100nF 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">TBD—verify before order</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">VBG bypass per Nuvoton Rev. 2.6 p.24.</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="TBD—verify before order"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="VBG bypass per Nuvoton Rev. 2.6 p.24."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>09733292-ded3-4485-a988-1c8b75589a28</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>100nF 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">TBD—verify before order</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Differential bridge-input filter after the two 47 Ω series resistors.</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="TBD—verify before order"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Differential bridge-input filter after the two 47 Ω series resistors."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>21bec228-8540-4483-a935-9cf87c9545f2</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>330pF 50V C0G</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM1885C1H331JA01D</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">TBD—verify before order</field>
+        <field name="Estimated Unit Cost USD">0.05</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Optional PGA-output Cfilter between VIN2P and VBG; enable PGA_CAP_EN; Nuvoton p.24.</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM1885C1H331JA01D"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="TBD—verify before order"/>
+      <property name="Estimated Unit Cost USD" value="0.05"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Optional PGA-output Cfilter between VIN2P and VBG; enable PGA_CAP_EN; Nuvoton p.24."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ac1c195-ae42-4423-802a-400bab619a9e</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>100nF 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71H104KA93-01.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">490-1519-1-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Button hardware debounce; firmware still applies bounded debounce and long-press timing.</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71H104KA93-01.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="490-1519-1-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Button hardware debounce; firmware still applies bounded debounce and long-press timing."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7ae8944d-5948-4d9f-850e-c7d220f36492</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>1uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</datasheet>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C105KA12D</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">490-3897-1-ND</field>
+        <field name="Estimated Unit Cost USD">0.08</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Local VBUS input bypass; total nominal input capacitance remains below 10 uF.</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C105KA12D"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="490-3897-1-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.08"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Local VBUS input bypass; total nominal input capacitance remains below 10 uF."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b56a66c4-81ca-449e-a96a-311c65255dfa</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>SMF5.0A</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>https://www.littelfuse.com/assetdocs/tvs-diodes-smf-datasheet?assetguid=7eb8a5b6-bdd0-4561-8f19-0c3cc6f9b2af</datasheet>
+      <fields>
+        <field name="Manufacturer">Littelfuse</field>
+        <field name="MPN">SMF5.0A</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">F8583CT-ND</field>
+        <field name="Estimated Unit Cost USD">0.30</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">VBUS transient clamp; place at J1 with short return to ground.</field>
+        <field name="Footprint">Diode_SMD:D_SOD-123F</field>
+        <field name="Datasheet">https://www.littelfuse.com/assetdocs/tvs-diodes-smf-datasheet?assetguid=7eb8a5b6-bdd0-4561-8f19-0c3cc6f9b2af</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_TVS" description="Bidirectional transient-voltage-suppression diode"/>
+      <property name="Manufacturer" value="Littelfuse"/>
+      <property name="MPN" value="SMF5.0A"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="F8583CT-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.30"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="VBUS transient clamp; place at J1 with short return to ground."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="diode TVS thyrector"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7510f403-e455-4635-8622-9689696a18a8</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>B140-13-F</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds13002.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="MPN">B140-13-F</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C15759</field>
+        <field name="Estimated Unit Cost USD">0.0856</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">59660</field>
+        <field name="Cost Basis">5 @ $0.0856 each</field>
+        <field name="BOM Comments">Series reverse-current block prevents carrier USB input from being back-fed by U1 USB.</field>
+        <field name="Footprint">Diode_SMD:D_SMA</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/ds13002.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Manufacturer" value="Diodes Incorporated"/>
+      <property name="MPN" value="B140-13-F"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C15759"/>
+      <property name="Estimated Unit Cost USD" value="0.0856"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="59660"/>
+      <property name="Cost Basis" value="5 @ $0.0856 each"/>
+      <property name="BOM Comments" value="Series reverse-current block prevents carrier USB input from being back-fed by U1 USB."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fd85149f-c3cd-4a70-b136-327562bf732a</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>RGB STATUS</value>
+      <footprint>LED_SMD:LED_Avago_PLCC6_3x2.8mm</footprint>
+      <datasheet>https://docs.broadcom.com/docs/AV02-3819EN</datasheet>
+      <fields>
+        <field name="Manufacturer">Broadcom Limited</field>
+        <field name="MPN">ASMT-YTC7-0AA02</field>
+        <field name="Supplier">JLCPCB</field>
+        <field name="Supplier PN">C5555828</field>
+        <field name="Estimated Unit Cost USD">1.7772</field>
+        <field name="Price Observed UTC">2026-08-22</field>
+        <field name="Stock Observed">79</field>
+        <field name="Cost Basis">1 @ $1.7772; JLCPCB extended part</field>
+        <field name="BOM Comments">Current YTC7 replacement for obsolete YTC2. Datasheet lead map: 1 KB, 2 KG, 3 KR, 4 AR, 5 AG, 6 AB. Independently driven active-low cathodes; text/icon fault detail remains in the PWA.</field>
+        <field name="Footprint">LED_SMD:LED_Avago_PLCC6_3x2.8mm</field>
+        <field name="Datasheet">https://docs.broadcom.com/docs/AV02-3819EN</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="LED" part="ASMT-YTC2-0AA02" description="Triple LED RVB (Avago Technology)"/>
+      <property name="Manufacturer" value="Broadcom Limited"/>
+      <property name="MPN" value="ASMT-YTC7-0AA02"/>
+      <property name="Supplier" value="JLCPCB"/>
+      <property name="Supplier PN" value="C5555828"/>
+      <property name="Estimated Unit Cost USD" value="1.7772"/>
+      <property name="Price Observed UTC" value="2026-08-22"/>
+      <property name="Stock Observed" value="79"/>
+      <property name="Cost Basis" value="1 @ $1.7772; JLCPCB extended part"/>
+      <property name="BOM Comments" value="Current YTC7 replacement for obsolete YTC2. Datasheet lead map: 1 KB, 2 KG, 3 KR, 4 AR, 5 AG, 6 AB. Independently driven active-low cathodes; text/icon fault detail remains in the PWA."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="LED RGB"/>
+      <property name="ki_fp_filters" value="LED?Avago?PLCC6?3x2.8mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f6a775ef-4413-46fa-a529-191bd2af970a</tstamps>
+    </comp>
+    <comp ref="F1">
+      <value>500mA hold</value>
+      <footprint>Fuse:Fuse_1812_4532Metric</footprint>
+      <datasheet>https://www.bourns.com/docs/product-datasheets/mf-msmf.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Bourns</field>
+        <field name="MPN">MF-MSMF050-2</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C17313</field>
+        <field name="Estimated Unit Cost USD">0.0668</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">47400</field>
+        <field name="Cost Basis">10 @ $0.0668 each</field>
+        <field name="BOM Comments">500 mA hold / 1 A trip PPTC; preserves &lt;500 mA normal-current design target.</field>
+        <field name="Footprint">Fuse:Fuse_1812_4532Metric</field>
+        <field name="Datasheet">https://www.bourns.com/docs/product-datasheets/mf-msmf.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="MPN" value="MF-MSMF050-2"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C17313"/>
+      <property name="Estimated Unit Cost USD" value="0.0668"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="47400"/>
+      <property name="Cost Basis" value="10 @ $0.0668 each"/>
+      <property name="BOM Comments" value="500 mA hold / 1 A trip PPTC; preserves &lt;500 mA normal-current design target."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
+      <property name="ki_fp_filters" value="*polyfuse* *PTC*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>572ca4b9-bd55-4c15-8c38-b1062176a801</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>USB-C POWER ONLY</value>
+      <footprint>Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</footprint>
+      <datasheet>https://gct.co/files/drawings/usb4105.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Global Connector Technology</field>
+        <field name="MPN">USB4105-GF-A</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C3020560</field>
+        <field name="Estimated Unit Cost USD">1.0659</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">926</field>
+        <field name="Cost Basis">1 @ $1.0659</field>
+        <field name="BOM Comments">Power-only UFP. CC1/CC2 each use 5.1k Rd. D+/D-/SBU are intentionally NC. Shell to GND.</field>
+        <field name="Footprint">Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</field>
+        <field name="Datasheet">https://gct.co/files/drawings/usb4105.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="USB_C_Receptacle_USB2.0_16P" description="USB 2.0-only 16P Type-C Receptacle connector"/>
+      <property name="Manufacturer" value="Global Connector Technology"/>
+      <property name="MPN" value="USB4105-GF-A"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C3020560"/>
+      <property name="Estimated Unit Cost USD" value="1.0659"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="926"/>
+      <property name="Cost Basis" value="1 @ $1.0659"/>
+      <property name="BOM Comments" value="Power-only UFP. CC1/CC2 each use 5.1k Rd. D+/D-/SBU are intentionally NC. Shell to GND."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="usb universal serial bus type-C USB2.0"/>
+      <property name="ki_fp_filters" value="USB*C*Receptacle*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>23be9062-7159-4968-a4be-eb61cf646c75</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>LOAD CELL E+/E-/S+/S-</value>
+      <footprint>Connector_JST:JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eGH.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">JST</field>
+        <field name="MPN">SM04B-GHS-TB(LF)(SN)</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C189895</field>
+        <field name="Estimated Unit Cost USD">1.1182</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">0</field>
+        <field name="Cost Basis">1 @ $1.1182; out of stock</field>
+        <field name="BOM Comments">Keyed carrier connector. Pin 1 E+, 2 E-, 3 S+ (green), 4 S- (white). LCSC C189895 was out of stock when checked; verify DigiKey/alternate stock before ordering. Mating housing and contacts are external BOM items.</field>
+        <field name="Footprint">Connector_JST:JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal</field>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eGH.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="MPN" value="SM04B-GHS-TB(LF)(SN)"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C189895"/>
+      <property name="Estimated Unit Cost USD" value="1.1182"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="0"/>
+      <property name="Cost Basis" value="1 @ $1.1182; out of stock"/>
+      <property name="BOM Comments" value="Keyed carrier connector. Pin 1 E+, 2 E-, 3 S+ (green), 4 S- (white). LCSC C189895 was out of stock when checked; verify DigiKey/alternate stock before ordering. Mating housing and contacts are external BOM items."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>864eef6b-9cf0-481c-b6e0-482b42ea3f07</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>UART DEBUG 3V3</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>https://suddendocs.samtec.com/prints/tsw-1xx-xx-xxx-x-xx-xx-mkt.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Samtec</field>
+        <field name="MPN">TSW-104-07-G-S</field>
+        <field name="Supplier">JLCPCB</field>
+        <field name="Supplier PN">C3335156</field>
+        <field name="Estimated Unit Cost USD">0.6472</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">337</field>
+        <field name="Cost Basis">1 @ $0.6472</field>
+        <field name="BOM Comments">Optional 3.3 V UART header: pin 1 3V3, 2 GND, 3 TX (D6/GPIO21), 4 RX (D7/GPIO20). Do not apply 5 V logic.</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet">https://suddendocs.samtec.com/prints/tsw-1xx-xx-xxx-x-xx-xx-mkt.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="MPN" value="TSW-104-07-G-S"/>
+      <property name="Supplier" value="JLCPCB"/>
+      <property name="Supplier PN" value="C3335156"/>
+      <property name="Estimated Unit Cost USD" value="0.6472"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="337"/>
+      <property name="Cost Basis" value="1 @ $0.6472"/>
+      <property name="BOM Comments" value="Optional 3.3 V UART header: pin 1 3V3, 2 GND, 3 TX (D6/GPIO21), 4 RX (D7/GPIO20). Do not apply 5 V logic."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ff68ed71-8fcf-4059-9981-87948f5ba8d8</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>5.1k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-075K1L</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">311-5.10KHRCT-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">USB-C CC1 Rd; 5.1 kΩ to GND per USB Type-C sink power role.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-075K1L"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="311-5.10KHRCT-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="USB-C CC1 Rd; 5.1 kΩ to GND per USB Type-C sink power role."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a100cf8-b7f6-49bd-be69-82e35605b6dc</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>5.1k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-075K1L</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">311-5.10KHRCT-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">USB-C CC2 Rd; 5.1 kΩ to GND per USB Type-C sink power role.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-075K1L"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="311-5.10KHRCT-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="USB-C CC2 Rd; 5.1 kΩ to GND per USB Type-C sink power role."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e8aeaca-5fea-410f-890e-1cfef8a0a17f</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>47R 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0747RL</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">311-47.0HRCT-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Bridge input series filter resistor per Nuvoton Rev. 2.6 p.24.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0747RL"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="311-47.0HRCT-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Bridge input series filter resistor per Nuvoton Rev. 2.6 p.24."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>92be1d15-90ac-4f02-9c6e-32275275fd5d</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>47R 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0747RL</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">311-47.0HRCT-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Bridge input series filter resistor per Nuvoton Rev. 2.6 p.24.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0747RL"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="311-47.0HRCT-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Bridge input series filter resistor per Nuvoton Rev. 2.6 p.24."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b6ea162e-5c66-4583-9f87-f6d30c6684e3</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>4.7k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">311-4.70KHRCT-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Carrier-owned 3.3 V I2C pull-up; do not parallel strong module pull-ups.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="311-4.70KHRCT-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Carrier-owned 3.3 V I2C pull-up; do not parallel strong module pull-ups."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5eea259f-c5a8-4845-a866-0e5d66a480c2</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>4.7k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">311-4.70KHRCT-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Carrier-owned 3.3 V I2C pull-up; do not parallel strong module pull-ups.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="311-4.70KHRCT-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Carrier-owned 3.3 V I2C pull-up; do not parallel strong module pull-ups."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8fc36b5-378f-4194-bbe4-248e35bf5cd7</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">311-10.0KHRCT-ND</field>
+        <field name="Estimated Unit Cost USD">0.02</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">External pull-up for dedicated active-low button.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="311-10.0KHRCT-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.02"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="External pull-up for dedicated active-low button."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b76b6afc-baa6-4f55-ad38-f264ff10eb0e</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>220R 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07220RL</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C107696</field>
+        <field name="Estimated Unit Cost USD">0.0061</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">417400</field>
+        <field name="Cost Basis">100 @ $0.0061 each</field>
+        <field name="BOM Comments">RGB channel current limiting; final brightness/current is a bench-verification item.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07220RL"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C107696"/>
+      <property name="Estimated Unit Cost USD" value="0.0061"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="417400"/>
+      <property name="Cost Basis" value="100 @ $0.0061 each"/>
+      <property name="BOM Comments" value="RGB channel current limiting; final brightness/current is a bench-verification item."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32a54e11-3b57-4e78-b826-c89d674a0973</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>220R 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07220RL</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C107696</field>
+        <field name="Estimated Unit Cost USD">0.0061</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">417400</field>
+        <field name="Cost Basis">100 @ $0.0061 each</field>
+        <field name="BOM Comments">RGB channel current limiting; final brightness/current is a bench-verification item.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07220RL"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C107696"/>
+      <property name="Estimated Unit Cost USD" value="0.0061"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="417400"/>
+      <property name="Cost Basis" value="100 @ $0.0061 each"/>
+      <property name="BOM Comments" value="RGB channel current limiting; final brightness/current is a bench-verification item."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a997749-9e0c-4a94-9c63-30983c66c2e3</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>220R 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07220RL</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C107696</field>
+        <field name="Estimated Unit Cost USD">0.0061</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">417400</field>
+        <field name="Cost Basis">100 @ $0.0061 each</field>
+        <field name="BOM Comments">RGB channel current limiting; final brightness/current is a bench-verification item.</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07220RL"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C107696"/>
+      <property name="Estimated Unit Cost USD" value="0.0061"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="417400"/>
+      <property name="Cost Basis" value="100 @ $0.0061 each"/>
+      <property name="BOM Comments" value="RGB channel current limiting; final brightness/current is a bench-verification item."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e74cb71c-ce06-4f80-aec2-85be0d372f70</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>TARE/CAL/RECOVERY</value>
+      <footprint>Button_Switch_SMD:SW_SPST_PTS810</footprint>
+      <datasheet>https://www.ckswitches.com/media/1476/pts810.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">C&amp;K (Littelfuse)</field>
+        <field name="MPN">PTS810SJM250SMTRLFS</field>
+        <field name="Supplier">DigiKey</field>
+        <field name="Supplier PN">CKN10502CT-ND</field>
+        <field name="Estimated Unit Cost USD">0.20</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Dedicated user button, active low; firmware differentiates short/long hold. Not the XIAO BOOT/RESET control.</field>
+        <field name="Footprint">Button_Switch_SMD:SW_SPST_PTS810</field>
+        <field name="Datasheet">https://www.ckswitches.com/media/1476/pts810.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="C&amp;K (Littelfuse)"/>
+      <property name="MPN" value="PTS810SJM250SMTRLFS"/>
+      <property name="Supplier" value="DigiKey"/>
+      <property name="Supplier PN" value="CKN10502CT-ND"/>
+      <property name="Estimated Unit Cost USD" value="0.20"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Dedicated user button, active low; firmware differentiates short/long hold. Not the XIAO BOOT/RESET control."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>676bff1d-9c0a-417f-be72-a9a13a605b3c</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>VBUS</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03fa2b7c-6bfa-4ba8-b903-101b5e37dd44</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>+5V_XIAO</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7644f8af-6f2d-4a41-aebb-2833af3f803f</tstamps>
+    </comp>
+    <comp ref="TP3">
+      <value>+3V3</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>56884310-5ebb-408f-bed3-c642147f28f7</tstamps>
+    </comp>
+    <comp ref="TP4">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c0ce8a83-abf2-4378-877f-753c64848660</tstamps>
+    </comp>
+    <comp ref="TP5">
+      <value>AVDD_3V0</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e7cf0051-ce94-462f-b2e5-1233d12a14bd</tstamps>
+    </comp>
+    <comp ref="TP6">
+      <value>I2C_SDA</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c1e1a2f7-97c3-43a0-9a66-e13d6779bc11</tstamps>
+    </comp>
+    <comp ref="TP7">
+      <value>I2C_SCL</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d67938ef-44b9-4957-b1e6-85c526852ea6</tstamps>
+    </comp>
+    <comp ref="TP8">
+      <value>AIN+</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec89ce7a-c147-432f-b4ff-a8e41c5c9ce5</tstamps>
+    </comp>
+    <comp ref="TP9">
+      <value>AIN-</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8fefac2f-a7f7-4a6d-91b7-a8f40fbdb357</tstamps>
+    </comp>
+    <comp ref="TP10">
+      <value>VBG</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Manufacturer">N/A</field>
+        <field name="MPN">PCB_TEST_PAD</field>
+        <field name="Supplier">N/A</field>
+        <field name="Supplier PN">N/A</field>
+        <field name="Estimated Unit Cost USD">0</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal.</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="N/A"/>
+      <property name="MPN" value="PCB_TEST_PAD"/>
+      <property name="Supplier" value="N/A"/>
+      <property name="Supplier PN" value="N/A"/>
+      <property name="Estimated Unit Cost USD" value="0"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Unpopulated labeled PCB test pad; safe probing limits follow the connected rail/signal."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e11e7fe1-ebaf-4c4a-acac-e15e8dec4db3</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>Seeed XIAO ESP32-C3</value>
+      <footprint>spool-sentry:XIAO_ESP32C3</footprint>
+      <datasheet>https://files.seeedstudio.com/Bazaar/product_pdf/113991054.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Seeed Technology Co., Ltd.</field>
+        <field name="MPN">113991054</field>
+        <field name="Supplier">Seeed Studio</field>
+        <field name="Supplier PN">113991054</field>
+        <field name="Estimated Unit Cost USD">4.99</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">Not verified — distributor API credentials unavailable</field>
+        <field name="Cost Basis">Public distributor listing/search estimate; not a quote</field>
+        <field name="BOM Comments">Module USB-C is the supported programming/recovery port; battery pads are DNP/unused.</field>
+        <field name="Footprint">spool-sentry:XIAO_ESP32C3</field>
+        <field name="Datasheet">https://files.seeedstudio.com/Bazaar/product_pdf/113991054.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="spool-sentry" part="XIAO ESP32C3" description="ESP32C3 Transceiver Evaluation Board"/>
+      <property name="Manufacturer" value="Seeed Technology Co., Ltd."/>
+      <property name="MPN" value="113991054"/>
+      <property name="Supplier" value="Seeed Studio"/>
+      <property name="Supplier PN" value="113991054"/>
+      <property name="Estimated Unit Cost USD" value="4.99"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="Not verified — distributor API credentials unavailable"/>
+      <property name="Cost Basis" value="Public distributor listing/search estimate; not a quote"/>
+      <property name="BOM Comments" value="Module USB-C is the supported programming/recovery port; battery pads are DNP/unused."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="ESP32 C3 XIAO"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b1044c6f-7cc8-4150-a9a3-13efc4a8b256</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>NAU7802SGI</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>https://www.nuvoton.com/export/resource-files/en-us--DS_NAU7802_DataSheet_EN_Rev2.6.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Nuvoton Technology Corporation</field>
+        <field name="MPN">NAU7802SGI</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C5180029</field>
+        <field name="Estimated Unit Cost USD">1.7781</field>
+        <field name="Price Observed UTC">2026-08-21</field>
+        <field name="Stock Observed">1427</field>
+        <field name="Cost Basis">1 @ $1.7781</field>
+        <field name="BOM Comments">Configure internal LDO for 3.0 V AVDD, channel 1, PGA128, internal RC, 10 SPS; check CAL_ERR.</field>
+        <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.nuvoton.com/export/resource-files/en-us--DS_NAU7802_DataSheet_EN_Rev2.6.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="spool-sentry" part="NAU7802SGI" description="24-bit dual-channel ADC for bridge sensors, SOP-16"/>
+      <property name="Manufacturer" value="Nuvoton Technology Corporation"/>
+      <property name="MPN" value="NAU7802SGI"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C5180029"/>
+      <property name="Estimated Unit Cost USD" value="1.7781"/>
+      <property name="Price Observed UTC" value="2026-08-21"/>
+      <property name="Stock Observed" value="1427"/>
+      <property name="Cost Basis" value="1 @ $1.7781"/>
+      <property name="BOM Comments" value="Configure internal LDO for 3.0 V AVDD, channel 1, PGA128, internal RC, 10 SPS; check CAL_ERR."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="bridge ADC 24-bit load cell I2C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>842ee485-a81b-4965-a34c-5edad956b20a</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>SHT40-N-NF</value>
+      <footprint>Package_DFN_QFN:DFN-4_1.5x1.5mm_P0.8mm</footprint>
+      <datasheet>https://sensirion.com/media/documents/33FD6951/6555C40E/Sensirion_Datasheet_SHT4x.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Sensirion AG</field>
+        <field name="MPN">SHT40-N-NF</field>
+        <field name="Supplier">LCSC</field>
+        <field name="Supplier PN">C54946589</field>
+        <field name="Estimated Unit Cost USD">0.9568</field>
+        <field name="Price Observed UTC">2026-09-05</field>
+        <field name="Stock Observed">1652</field>
+        <field name="Cost Basis">LCSC listing at 1pc: $0.9568</field>
+        <field name="BOM Comments">Humidity+temperature sensing path over I2C. SHT4x pin assignment (datasheet Fig. 18 top view): 1=SDA, 2=SCL, 3=VDD, 4=VSS.</field>
+        <field name="Footprint">Package_DFN_QFN:DFN-4_1.5x1.5mm_P0.8mm</field>
+        <field name="Datasheet">https://sensirion.com/media/documents/33FD6951/6555C40E/Sensirion_Datasheet_SHT4x.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Sensirion AG"/>
+      <property name="MPN" value="SHT40-N-NF"/>
+      <property name="Supplier" value="LCSC"/>
+      <property name="Supplier PN" value="C54946589"/>
+      <property name="Estimated Unit Cost USD" value="0.9568"/>
+      <property name="Price Observed UTC" value="2026-09-05"/>
+      <property name="Stock Observed" value="1652"/>
+      <property name="Cost Basis" value="LCSC listing at 1pc: $0.9568"/>
+      <property name="BOM Comments" value="Humidity+temperature sensing path over I2C. SHT4x pin assignment (datasheet Fig. 18 top view): 1=SDA, 2=SCL, 3=VDD, 4=VSS."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="spool-sentry.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b28c0116-fdb9-44ec-8764-f375dd5206d6</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="USB_C_Receptacle_USB2.0_16P">
+      <description>USB 2.0-only 16P Type-C Receptacle connector</description>
+      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
+      <footprints>
+        <fp>USB*C*Receptacle*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_C_Receptacle_USB2.0_16P</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+        <field name="Description">USB 2.0-only 16P Type-C Receptacle connector</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="D+" type="bidirectional"/>
+        <pin num="A7" name="D-" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="D+" type="bidirectional"/>
+        <pin num="B7" name="D-" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="S1" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Schottky diode</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_TVS">
+      <description>Bidirectional transient-voltage-suppression diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_TVS</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Bidirectional transient-voltage-suppression diode</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="A2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Polyfuse">
+      <description>Resettable fuse, polymeric positive temperature coefficient</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*polyfuse*</fp>
+        <fp>*PTC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resettable fuse, polymeric positive temperature coefficient</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LED" part="ASMT-YTC2-0AA02">
+      <description>Triple LED RVB (Avago Technology)</description>
+      <docs>http://www.avagotech.com/docs/AV02-2589EN</docs>
+      <footprints>
+        <fp>LED?Avago?PLCC6?3x2.8mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ASMT-YTC2-0AA02</field>
+        <field name="Footprint">LED_SMD:LED_Avago_PLCC6_3x2.8mm</field>
+        <field name="Datasheet">http://www.avagotech.com/docs/AV02-2589EN</field>
+        <field name="Description">Triple LED RVB (Avago Technology)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="KB" type="passive"/>
+        <pin num="2" name="KG" type="passive"/>
+        <pin num="3" name="KR" type="passive"/>
+        <pin num="4" name="AR" type="passive"/>
+        <pin num="5" name="AG" type="passive"/>
+        <pin num="6" name="AB" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="spool-sentry" part="NAU7802SGI">
+      <description>24-bit dual-channel ADC for bridge sensors, SOP-16</description>
+      <docs>https://www.nuvoton.com/export/resource-files/en-us--DS_NAU7802_DataSheet_EN_Rev2.6.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NAU7802SGI</field>
+        <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.nuvoton.com/export/resource-files/en-us--DS_NAU7802_DataSheet_EN_Rev2.6.pdf</field>
+        <field name="Description">24-bit dual-channel ADC for bridge sensors, SOP-16</field>
+      </fields>
+      <pins>
+        <pin num="1" name="REFP" type="input"/>
+        <pin num="2" name="VIN1N" type="input"/>
+        <pin num="3" name="VIN1P" type="input"/>
+        <pin num="4" name="VIN2N" type="input"/>
+        <pin num="5" name="VIN2P" type="input"/>
+        <pin num="6" name="VBG" type="output"/>
+        <pin num="7" name="REFN" type="input"/>
+        <pin num="8" name="AVSS" type="power_in"/>
+        <pin num="9" name="DVSS" type="power_in"/>
+        <pin num="10" name="XIN" type="input"/>
+        <pin num="11" name="XOUT" type="output"/>
+        <pin num="12" name="DRDY" type="output"/>
+        <pin num="13" name="SCLK" type="input"/>
+        <pin num="14" name="SDIO" type="bidirectional"/>
+        <pin num="15" name="DVDD" type="power_in"/>
+        <pin num="16" name="AVDD/LDO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="spool-sentry" part="XIAO ESP32C3">
+      <description>ESP32C3 Transceiver Evaluation Board</description>
+      <docs>https://files.seeedstudio.com/Bazaar/product_pdf/113991054.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">XIAO ESP32C3</field>
+        <field name="Footprint">spool-sentry:XIAO_ESP32C3</field>
+        <field name="Datasheet">https://files.seeedstudio.com/Bazaar/product_pdf/113991054.pdf</field>
+        <field name="Description">ESP32C3 Transceiver Evaluation Board</field>
+        <field name="MANUFACTURER">Seeed Technology</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D0" type="bidirectional"/>
+        <pin num="2" name="D1" type="bidirectional"/>
+        <pin num="3" name="D2" type="bidirectional"/>
+        <pin num="4" name="D3" type="bidirectional"/>
+        <pin num="5" name="D4" type="bidirectional"/>
+        <pin num="6" name="D5" type="bidirectional"/>
+        <pin num="7" name="D6" type="bidirectional"/>
+        <pin num="8" name="D7" type="bidirectional"/>
+        <pin num="9" name="D8" type="bidirectional"/>
+        <pin num="10" name="D9" type="bidirectional"/>
+        <pin num="11" name="D10" type="bidirectional"/>
+        <pin num="12" name="VCC_3V3" type="power_out"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="VUSB" type="power_in"/>
+        <pin num="B+" name="Batt+" type="power_in"/>
+        <pin num="B-" name="Batt-" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/symbols//Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="LED">
+      <uri>/usr/share/kicad/symbols//LED.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/usr/share/kicad/symbols//Switch.kicad_sym</uri>
+    </library>
+    <library logical="spool-sentry">
+      <uri>/home/rwrife/repos/.worktrees/spool-sentry-issue-2/hardware/lib/spool-sentry.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/+3V3" class="Default">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="D3" pin="4" pinfunction="AR" pintype="passive"/>
+      <node ref="D3" pin="5" pinfunction="AG" pintype="passive"/>
+      <node ref="D3" pin="6" pinfunction="AB" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="VCC_3V3" pintype="power_out"/>
+      <node ref="U2" pin="15" pinfunction="DVDD" pintype="power_in"/>
+      <node ref="U3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="2" name="/+5V_XIAO" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="VUSB" pintype="power_in"/>
+    </net>
+    <net code="3" name="/AIN+" class="Default">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="VIN1P" pintype="input"/>
+    </net>
+    <net code="4" name="/AIN-" class="Default">
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="TP9" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="VIN1N" pintype="input"/>
+    </net>
+    <net code="5" name="/AVDD_3V0" class="Default">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="REFP" pintype="input"/>
+      <node ref="U2" pin="16" pinfunction="AVDD/LDO" pintype="power_out"/>
+    </net>
+    <net code="6" name="/BUTTON_N" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="D1" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="/CC1" class="Default">
+      <node ref="J1" pin="A5" pinfunction="CC1" pintype="bidirectional"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="8" name="/CC2" class="Default">
+      <node ref="J1" pin="B5" pinfunction="CC2" pintype="bidirectional"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="/GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A2" pintype="passive"/>
+      <node ref="J1" pin="A1" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="A12" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="B1" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="B12" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="S1" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="7" pinfunction="REFN" pintype="input"/>
+      <node ref="U2" pin="8" pinfunction="AVSS" pintype="power_in"/>
+      <node ref="U2" pin="9" pinfunction="DVSS" pintype="power_in"/>
+      <node ref="U3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="10" name="/I2C_SCL" class="Default">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="D5" pintype="bidirectional"/>
+      <node ref="U2" pin="13" pinfunction="SCLK" pintype="input"/>
+      <node ref="U3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="11" name="/I2C_SDA" class="Default">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="D4" pintype="bidirectional"/>
+      <node ref="U2" pin="14" pinfunction="SDIO" pintype="bidirectional"/>
+      <node ref="U3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="12" name="/LC_S+" class="Default">
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="13" name="/LC_S-" class="Default">
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/LED_B_GPIO" class="Default">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="D10" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="/LED_B_K" class="Default">
+      <node ref="D3" pin="1" pinfunction="KB" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="16" name="/LED_G_GPIO" class="Default">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="D3" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="/LED_G_K" class="Default">
+      <node ref="D3" pin="2" pinfunction="KG" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="18" name="/LED_R_GPIO" class="Default">
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="D2" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="/LED_R_K" class="Default">
+      <node ref="D3" pin="3" pinfunction="KR" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="/PGA_CFILTER" class="Default">
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="VIN2P" pintype="input"/>
+    </net>
+    <net code="21" name="/UART_RX" class="Default">
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="D7" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="/UART_TX" class="Default">
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="D6" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="/VBG" class="Default">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="TP10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="VBG" pintype="output"/>
+    </net>
+    <net code="24" name="/VBUS" class="Default">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="F1" pin="1" pintype="passive"/>
+      <node ref="J1" pin="A4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J1" pin="A9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J1" pin="B4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J1" pin="B9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="25" name="/VBUS_FUSED" class="Default">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="F1" pin="2" pintype="passive"/>
+    </net>
+    <net code="26" name="unconnected-(J1-D+-PadA6)" class="Default">
+      <node ref="J1" pin="A6" pinfunction="D+" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(J1-D+-PadB6)" class="Default">
+      <node ref="J1" pin="B6" pinfunction="D+" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(J1-D--PadA7)" class="Default">
+      <node ref="J1" pin="A7" pinfunction="D-" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(J1-D--PadB7)" class="Default">
+      <node ref="J1" pin="B7" pinfunction="D-" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(J1-SBU1-PadA8)" class="Default">
+      <node ref="J1" pin="A8" pinfunction="SBU1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(J1-SBU2-PadB8)" class="Default">
+      <node ref="J1" pin="B8" pinfunction="SBU2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(U1-Batt+-PadB+)" class="Default">
+      <node ref="U1" pin="B+" pinfunction="Batt+" pintype="power_in+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U1-Batt--PadB-)" class="Default">
+      <node ref="U1" pin="B-" pinfunction="Batt-" pintype="power_in+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U1-D0-Pad1)" class="Default">
+      <node ref="U1" pin="1" pinfunction="D0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(U1-D8-Pad9)" class="Default">
+      <node ref="U1" pin="9" pinfunction="D8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U1-D9-Pad10)" class="Default">
+      <node ref="U1" pin="10" pinfunction="D9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(U2-DRDY-Pad12)" class="Default">
+      <node ref="U2" pin="12" pinfunction="DRDY" pintype="output+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(U2-VIN2N-Pad4)" class="Default">
+      <node ref="U2" pin="4" pinfunction="VIN2N" pintype="input+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(U2-XIN-Pad10)" class="Default">
+      <node ref="U2" pin="10" pinfunction="XIN" pintype="input+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(U2-XOUT-Pad11)" class="Default">
+      <node ref="U2" pin="11" pinfunction="XOUT" pintype="output+no_connect"/>
+    </net>
+  </nets>
+</export>

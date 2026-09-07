@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "schematic_path": "hardware/spool-sentry.kicad_sch",
+  "analysis": {
+    "component_count": 42,
+    "net_count": 25,
+    "component_types": {
+      "C": 11,
+      "D": 3,
+      "F": 1,
+      "J": 3,
+      "R": 10,
+      "SW": 1,
+      "TP": 10,
+      "U": 3
+    },
+    "power_nets": [
+      {"name": "+3V3", "pin_count": 14},
+      {"name": "+5V_XIAO", "pin_count": 5},
+      {"name": "GND", "pin_count": 26},
+      {"name": "VBUS", "pin_count": 8},
+      {"name": "VBUS_FUSED", "pin_count": 2}
+    ],
+    "signal_nets": [
+      {"name": "AIN+", "pin_count": 4},
+      {"name": "AIN-", "pin_count": 4},
+      {"name": "AVDD_3V0", "pin_count": 5},
+      {"name": "BUTTON_N", "pin_count": 4},
+      {"name": "CC1", "pin_count": 2},
+      {"name": "CC2", "pin_count": 2},
+      {"name": "I2C_SCL", "pin_count": 5},
+      {"name": "I2C_SDA", "pin_count": 5},
+      {"name": "LC_S+", "pin_count": 2},
+      {"name": "LC_S-", "pin_count": 2},
+      {"name": "LED_B_GPIO", "pin_count": 2},
+      {"name": "LED_B_K", "pin_count": 2},
+      {"name": "LED_G_GPIO", "pin_count": 2},
+      {"name": "LED_G_K", "pin_count": 2},
+      {"name": "LED_R_GPIO", "pin_count": 2},
+      {"name": "LED_R_K", "pin_count": 2},
+      {"name": "PGA_CFILTER", "pin_count": 2},
+      {"name": "UART_RX", "pin_count": 2},
+      {"name": "UART_TX", "pin_count": 2},
+      {"name": "VBG", "pin_count": 4}
+    ],
+    "potential_issues": []
+  },
+  "parser_path": "cli",
+  "incomplete": false
+}

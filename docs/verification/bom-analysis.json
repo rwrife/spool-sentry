@@ -1,0 +1,18 @@
+{
+  "generated_utc": "2026-09-07T16:27:51.368646+00:00",
+  "component_rows_total": 42,
+  "physical_bom_line_items": 23,
+  "excluded_from_physical_bom_refs": [
+    "TP1",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9",
+    "TP10"
+  ],
+  "missing_required_fields_non_testpoints": []
+}
