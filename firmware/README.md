@@ -21,8 +21,8 @@ That command runs documentation/schema checks, formatting, host clippy/tests, ta
 - Maintain bounded versioned configuration/history with migration and interrupted-write recovery.
 - Serve the companion bundle and versioned local HTTP/SSE API; support the required USB CDC offline subset.
 
-Domain logic stays in host-testable `no_std` code behind sensor, monotonic/wall clock, storage, USB, and network interfaces. Exact hardware drivers wait for issue #2 part/pin decisions.
+Domain logic stays in host-testable `no_std` code behind sensor, monotonic/wall clock, storage, USB, and network interfaces. That domain core now exists in [`domain`](domain) with host tests, target build, and pinned flash/erase/recovery commands; exact hardware driver integration waits for issue #6 bring-up against the issue #2 parts.
 
 ## Evidence boundary
 
-The current proof builds and host-tests but has not been flashed or run on a board. Issue #4 must add pinned flash/recovery commands, serial evidence, full host tests, target size reporting, and selected-part drivers. Issue #6 owns bench fault/calibration/current evidence.
+The domain crate host-tests domain behavior against simulated hardware and links a release image for ESP32-C3 with a size report, but nothing has been flashed or run on a board. Issue #6 owns driver integration, serial/bench evidence, and calibration. See [`domain/README.md`](domain/README.md) for exact commands and evidence limits.

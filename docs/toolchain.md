@@ -35,7 +35,17 @@ cargo clippy --release --locked -- -D warnings
 cargo build --release --locked
 ```
 
-The pinned toolchain automatically installs `rust-src` and the ESP32-C3 target through rustup. Flashing is deliberately not part of this proof; issue #4 must pin and document a compatible flashing tool after issue #2 chooses the exact controller module and USB topology.
+Issue #4 added the host-testable domain crate at `firmware/domain`
+(see its [README](../firmware/domain/README.md) for module map, exact
+test/build/flash/erase/recovery commands, and evidence limits). The
+pinned tool automatically installs `rust-src` and the ESP32-C3 target
+through rustup.
+
+Flashing is pinned to `espflash 4.5.0`
+(`cargo install espflash --locked --version 4.5.0`), wired as the cargo
+runner in each crate's `.cargo/config.toml`. The exact USB topology
+(native USB-Serial-JTAG vs. UART bridge) is finalized in issue #6
+bring-up; no board has been flashed in this repository to date.
 
 ## Architecture rule
 
