@@ -14,28 +14,28 @@ Evidence states: **planned**, **pass**, **fail**, **blocked**, or **not applicab
 | MEAS-002 | Datasheet/mechanical review + bench loads | 0–2.5 kg centered operation with ≥5 kg rated cell | planned |
 | MEAS-003 | Bench repeats | Raw trials from 100 g–2.0 kg meet greater-of limit | planned |
 | MEAS-004 | UI/unit tests + bench-derived precision review | Display increment no finer than supporting evidence | planned |
-| MEAS-005 | Host/UI tests | Formula, assumptions, uncertainty, and negative fault behavior | planned |
+| MEAS-005 | Host/UI tests | Formula, assumptions, uncertainty, and negative fault behavior | pass (host domain tests: net=gross−tare with user-entered tare, null uncertainty + explicit fault, negative-net fault; UI half tracked by issue #5) |
 | MEAS-006 | Schema/migration/fault tests | Complete record and invalidation transitions | planned |
 | MECH-001 | CAD/static review + progressive bench load | No PCB/enclosure contact at centered 2.5 kg | planned |
 | MECH-002 | Assembly inspection | Listed items replaceable with ordinary tools | planned |
 | MECH-003 | PCB/mechanical/thermal review + bench comparison | Documented spacing/airflow and heat-bias observations | planned |
 | MECH-004 | Source/release inspection | Editable mechanics and bounded spool envelope | planned |
 | DATA-001 | Capacity/wear calculation + host/target storage test | ≥30 days; measured 90-day default target behavior | planned |
-| DATA-002 | Schema/privacy/round-trip tests | Valid versioned CSV/JSON with no prohibited identifiers | planned |
-| DATA-003 | Host property/fault tests | Validate/preview/commit and interruption preserve prior state | planned |
-| DATA-004 | Host/UI/USB tests | Each scope deletes exactly requested data after confirmation | planned |
-| DATA-005 | Host fault injection + target storage test | Corruption/full/interruption/retention are bounded and explicit | planned |
+| DATA-002 | Schema/privacy/round-trip tests | Valid versioned CSV/JSON with no prohibited identifiers | pass (host: backup envelope has no credential field and CSV rows carry version/time-basis/units/quality; target round-trip deferred to #6) |
+| DATA-003 | Host property/fault tests | Validate/preview/commit and interruption preserve prior state | pass (host: validate→commit and interrupted staging fall back to committed copy) |
+| DATA-004 | Host/UI/USB tests | Each scope deletes exactly requested data after confirmation | pass (host: confirmed deletion scopes erase exactly their keys; USB/UI halves deferred to #5/#6) |
+| DATA-005 | Host fault injection + target storage test | Corruption/full/interruption/retention are bounded and explicit | pass (host: checksum-corrupt read falls back, capacity-exceeded evicts oldest explicitly, retention window enforced; target storage deferred to #6) |
 | CONN-001 | Protocol contract + target integration | Local HTTP JSON and SSE; no WebSocket/remote endpoint | planned |
-| CONN-002 | Host timing/security + bench button tests | Presence session is random, recent, bounded, and expires | planned |
+| CONN-002 | Host timing/security + bench button tests | Presence session is random, recent, bounded, and expires | pass (host: nonce session, freshness window, auto-expiry; bench button timing deferred to #6) |
 | CONN-003 | USB fixtures + target/bench integration | Required offline command subset works without Wi-Fi/internet | planned |
 | CONN-004 | Static dependency/network/permission review | No prohibited network service or phone permission | planned |
-| SEC-001 | Protocol fuzz/bounds tests + LAN inspection | Host/Origin rejection and enforced size/rate/time limits | planned |
-| SEC-002 | Log/export/backup inspection | No credentials/stable hardware/network IDs; resettable ID | planned |
-| PROTO-001 | Schema/contract compatibility tests | 0.1 payloads accepted; unsupported major rejected | planned |
+| SEC-001 | Protocol fuzz/bounds tests + LAN inspection | Host/Origin rejection and enforced size/rate/time limits | pass (host: size/depth caps, rate budget, malformed-input non-mutation enforced by the shared router; Host/Origin binding lands with the LAN adapter in #6) |
+| SEC-002 | Log/export/backup inspection | No credentials/stable hardware/network IDs; resettable ID | pass (host: backup structurally excludes credentials; error text is static safe text; device id random/resettable) |
+| PROTO-001 | Schema/contract compatibility tests | 0.1 payloads accepted; unsupported major rejected | pass (host: protocol const enforced, unsupported version rejected before dispatch) |
 | PROTO-002 | `scripts/check_docs.py` + UI fixtures | Observation schema/fixture valid; quality always explicit | pass (static schema fixture) |
-| PROTO-003 | Host parser/import tests | LAN/USB semantics match; malformed input causes no mutation | planned |
-| FW-001 | Clean host test + ESP32-C3 release build | Pinned toolchain, host tests, linked target image | pass (host/target build; see issue #1 PR) |
-| FW-002 | Host unit/property tests with fakes | Domain behaviors run without physical hardware | planned (proof boundary exists) |
+| PROTO-003 | Host parser/import tests | LAN/USB semantics match; malformed input causes no mutation | pass (host: one shared router serves both transports; malformed frames return errors and never mutate state) |
+| FW-001 | Clean host test + ESP32-C3 release build | Pinned toolchain, host tests, linked target image | pass (pinned toolchain, domain host tests, linked domain ELF; see `firmware/domain`) |
+| FW-002 | Host unit/property tests with fakes | Domain behaviors run without physical hardware | pass (host: 74 unit + 3 fixture-contract tests in `firmware/domain` with injected adapter fakes) |
 | UX-001 | Automated/manual accessibility + browser smoke | Keyboard/SR/focus/zoom/motion/contrast/table evidence | planned |
 | UX-002 | Component/contract tests | Every status has text/icon/age and no silent stale reuse | planned |
 | SAFE-001 | Documentation + environmental bench review | Passive-box target conditions documented and observed | planned |
@@ -54,3 +54,9 @@ Completed here: requirement reconciliation, architecture diagrams, protocol deci
 Completed here: KiCad schematic/project sources, custom XIAO symbol/footprint library assets, schematic ERC, netlist/schematic analysis reports, and BOM/non-schematic BOM exports sourced from KiCad symbol properties.
 
 Still not performed here: PCB layout, PCB DRC, signal/power-integrity simulation, target flashing, bench calibration, environmental/weight metrology validation, enclosure fabrication fit checks, and fabrication quote capture.
+
+## Issue #4 evidence boundary
+
+Completed here: pinned domain workspace (`firmware/domain`) with host tests, ESP32-C3 release link, and size report; allocation-free sampling/filtering, stability, gross/net, calibration lifecycle, freshness/disconnect/saturation/out-of-range states; bounded storage with checksums, interrupted-write recovery, capacity/retention behavior, export, and deletion; shared bounded LAN/USB command router with rate budget, presence sessions, and safe error text; pinned `espflash 4.5.0` flash/monitor/erase/recovery documentation.
+
+Still not performed here: flashing, serial logs from hardware, bench measurement, driver integration (ADC/SHT40/flash/USB/Wi-Fi server), SSE streaming endpoint implementation, real LAN/USB adapter code, on-device rate/time enforcement inspection, and any accuracy claim. The linked image is target-build evidence only.
