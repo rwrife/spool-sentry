@@ -1,0 +1,21 @@
+{
+  "protocol_version": "0.1",
+  "device_id": "random-resettable-id",
+  "sequence": 45,
+  "sampled_at": "2026-09-01T12:05:00Z",
+  "temperature_c": 25.0,
+  "relative_humidity_pct": 22.5,
+  "gross_mass_g": null,
+  "net_mass_estimate_g": null,
+  "stable": false,
+  "calibration_state": "valid",
+  "quality": {
+    "environment": { "state": "fresh", "sample_age_ms": 900 },
+    "mass": {
+      "state": "saturated",
+      "sample_age_ms": 300,
+      "uncertainty_g": null
+    }
+  },
+  "faults": ["out_of_range", "uncertainty_not_characterized"]
+}

@@ -1,0 +1,115 @@
+/* Accessible styling: visible focus, 200% zoom-safe layout, non-color
+   state cues, high-contrast media support, reduced motion respect. */
+:root {
+  --gap: 1rem;
+  --border: 1px solid currentColor;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+@media (prefers-contrast: more) {
+  :root {
+    --border: 2px solid currentColor;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+body {
+  margin: 0 auto;
+  padding: var(--gap);
+  max-width: 46rem;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+}
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+.skip-link:focus {
+  left: var(--gap);
+  top: var(--gap);
+  background: Canvas;
+  padding: 0.5rem;
+  z-index: 10;
+}
+:focus-visible {
+  outline: 3px solid Highlight;
+  outline-offset: 2px;
+}
+header h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 6vw, 2rem);
+}
+#tagline {
+  margin: 0.25rem 0 1rem;
+}
+section {
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: var(--gap);
+  margin-bottom: var(--gap);
+}
+h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+  margin: 0;
+}
+dt {
+  font-weight: 600;
+}
+dd {
+  margin: 0;
+}
+.state-badge {
+  border: var(--border);
+  border-radius: 0.25rem;
+  padding: 0.05em 0.4em;
+  text-transform: capitalize;
+}
+button {
+  font: inherit;
+  padding: 0.5rem 0.9rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  border-radius: 0.4rem;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: var(--border);
+  padding: 0.3rem 0.5rem;
+  text-align: start;
+}
+fieldset {
+  border: var(--border);
+  border-radius: 0.4rem;
+}
+input,
+select {
+  font: inherit;
+}
+label {
+  display: block;
+  margin: 0.4rem 0 0.15rem;
+}
+.error-box {
+  border: 2px solid currentColor;
+  padding: 0.5rem;
+  font-weight: 600;
+}

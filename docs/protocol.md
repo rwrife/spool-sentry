@@ -82,3 +82,12 @@ Unavailable numbers are `null`, never a reassuring zero. Each channel includes s
 - JSON export and backup are distinct: export is portable observation/event data; backup additionally contains restorable user configuration/calibration but never network credentials.
 - Integrity metadata detects accidental corruption; it is not a cryptographic authenticity claim.
 - Retention and storage-full behavior are explicit and testable. Silent destruction of current committed data is forbidden.
+
+## Implementation reconciliation (issues #4/#5)
+
+- LAN mutation request bodies use the same bounded JSON-RPC envelope as USB operations (`request_id`, `protocol_version`, `op`, `params`) so one firmware router serves both transports (PROTO-003). Calibration LAN steps map to the `calibration_begin_tare` / `calibration_begin_reference` operations.
+- Backup document envelope: `{"schema_version":"0.1","calibration_json","spool_json","events_json","checksum"}`, where `checksum` is FNV-1a 32-bit over the canonical payload `v0.1|cal:{...}|spool:{...}|events:{...}` (authoritative implementation `firmware/domain/src/backup.rs`, mirrored and contract-tested in `app/src/backup.ts`).
+- The CSV export header is frozen in `firmware/domain/src/csv.rs` (`CSV_HEADER`); the companion validates every import row against it before any mutation (`app/src/csvio.ts`).
+- Shared observation fixtures: `docs/fixtures/observation-valid-v0.1.json` is canonical; `app/fixtures/observation-*.json` add stale, disconnected, saturated, uncalibrated, and storage-fault cases. All must validate against `docs/schemas/observation-v0.1.schema.json` (`app/test/contract.test.ts`).
+- Deletion scopes match the enumerated values in mutation rule 4 (`history`, `spool_metadata`, `calibration`, `network`, `all_user_data`); the UI never fabricates the device-issued confirmation token.
+- `GET /api/v1/status` payload minimum fields are listed in `app/src/client.ts` (`StatusPayload`, additive-tolerant); the firmware finalizes the exact shape with the LAN adapter in issue #6.

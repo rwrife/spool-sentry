@@ -15,10 +15,17 @@ jobs:
       - name: Check out source
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
+      - name: Set up pinned Node toolchain
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22.23.1
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
       - name: Install pinned Rust toolchain
         run: |
           rustup toolchain install 1.98.0 --profile minimal --component rust-src,rustfmt,clippy --target riscv32imc-unknown-none-elf
           rustup default 1.98.0
 
-      - name: Verify requirements, protocol, host tests, and ESP32-C3 image
+      - name: Verify requirements, protocol, host tests, companion, and ESP32-C3 image
         run: ./scripts/verify.sh

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Spool Sentry</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+      <h1>Spool Sentry</h1>
+      <p id="tagline">Local-only filament spool monitor status</p>
+    </header>
+    <div id="status-region" role="status" aria-live="polite"></div>
+    <main id="main"></main>
+    <noscript>
+      <p>
+        This page normally shows live device status with JavaScript enabled.
+        Without JavaScript you can still use the USB text commands documented in
+        <code>docs/protocol.md</code>.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

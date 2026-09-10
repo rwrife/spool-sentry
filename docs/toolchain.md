@@ -51,6 +51,16 @@ bring-up; no board has been flashed in this repository to date.
 
 Domain logic shall remain in a host-testable `no_std` library. Hardware-specific sensor, clock, storage, USB, and network adapters may depend on ESP crates. Protocol fixtures are shared with the companion app; neither target adapters nor a fallback may redefine protocol semantics.
 
+## Companion toolchain (issue #5)
+
+- Node.js `22.23.1` / npm `10.9.8` pinned in CI via `actions/setup-node` (SHA-pinned v5); local development may use any Node 22.x, but CI is authoritative.
+- `app/package.json` + committed `app/package-lock.json` pin every dev dependency (TypeScript 5.6.3, Vite 5.4.11, Vitest 2.1.8, Ajv 8.17.1 + ajv-formats 3.0.1 for schema contract tests, jsdom 25.0.1, Prettier 3.3.3).
+- Build is `tsc --noEmit` followed by `vite build`; tests run under Vitest on Node.
+- `./scripts/verify.sh` runs the companion gates (lint, tests, build, loopback serve smoke) after the firmware stages and skips them with an explicit message when npm is missing.
+- The bundle is dependency-free vanilla TypeScript so the device can host `app/dist/` verbatim; the smoke script enforces a raw size budget (<50 kB JS, <10 kB CSS).
+
+Smoke evidence to date is Linux/node + jsdom only. The browser-matrix claims (Android Chrome, iOS Safari, Windows Edge, macOS Safari) remain not-performed until real devices are exercised in issue #6.
+
 ## Bounded fallback gate
 
 Rust remains the default unless issue #4 records a reproducible blocker in the exact selected module path after a time-boxed integration attempt. A fallback may be invoked only if one of these blocks the required target/CI evidence:

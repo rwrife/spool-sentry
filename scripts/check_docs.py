@@ -45,7 +45,12 @@ def check_traceability() -> int:
 
 
 def check_local_links() -> tuple[int, int]:
-    markdown_files = sorted(ROOT.rglob("*.md"))
+    excluded_parts = {"node_modules", "dist", "target", ".git"}
+    markdown_files = sorted(
+        document
+        for document in ROOT.rglob("*.md")
+        if not excluded_parts.intersection(document.relative_to(ROOT).parts[:-1])
+    )
     checked = 0
     failures: list[str] = []
     for document in markdown_files:

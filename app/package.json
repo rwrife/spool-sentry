@@ -1,0 +1,26 @@
+{
+  "name": "spool-sentry-companion",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Device-hosted accessible companion for Spool Sentry (local-only)",
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit && prettier --check .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "smoke": "node scripts/serve_smoke.mjs"
+  },
+  "devDependencies": {
+    "@types/jsdom": "21.1.7",
+    "@types/node": "22.10.2",
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "jsdom": "25.0.1",
+    "prettier": "3.3.3",
+    "typescript": "5.6.3",
+    "vite": "5.4.11",
+    "vitest": "2.1.8"
+  }
+}
