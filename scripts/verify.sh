@@ -4,6 +4,7 @@ set -eu
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 PROOF="$ROOT/firmware/toolchain-proof"
 DOMAIN="$ROOT/firmware/domain"
+APP="$ROOT/app"
 
 if ! command -v cargo >/dev/null 2>&1 && [ -f "$HOME/.cargo/env" ]; then
     # rustup's user-scoped installer documents this environment file.
@@ -48,4 +49,17 @@ if command -v riscv32-esp-elf-size >/dev/null 2>&1; then
 elif command -v size >/dev/null 2>&1; then
     size -A "$DOMAIN_ELF" || true
 fi
+
+echo "== companion app =="
+cd "$APP"
+if command -v npm >/dev/null 2>&1; then
+    npm ci --no-audit --no-fund
+    npm run lint
+    npm test
+    npm run build
+    node scripts/serve_smoke.mjs
+else
+    echo "companion app checks SKIPPED: npm not available (explicit gap)"
+fi
+
 echo "VERIFY: PASS"

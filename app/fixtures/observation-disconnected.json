@@ -1,0 +1,21 @@
+{
+  "protocol_version": "0.1",
+  "device_id": "random-resettable-id",
+  "sequence": 44,
+  "sampled_at": null,
+  "temperature_c": null,
+  "relative_humidity_pct": null,
+  "gross_mass_g": null,
+  "net_mass_estimate_g": null,
+  "stable": false,
+  "calibration_state": "valid",
+  "quality": {
+    "environment": { "state": "disconnected", "sample_age_ms": null },
+    "mass": {
+      "state": "disconnected",
+      "sample_age_ms": null,
+      "uncertainty_g": null
+    }
+  },
+  "faults": ["mass_disconnected", "sensor_disconnected"]
+}

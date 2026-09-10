@@ -2,6 +2,7 @@
 target/
 /build/
 /dist/
+app/dist/
 node_modules/
 .pnpm-store/
 coverage/
