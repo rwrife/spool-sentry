@@ -1,0 +1,69 @@
+{
+  "analyzer_type": "cross_analysis",
+  "schema_version": "1.4.0",
+  "inputs": {
+    "source_files": [
+      "docs/verification/schematic-analysis.json",
+      "docs/verification/pcb-analysis.json"
+    ],
+    "source_hashes": {
+      "docs/verification/schematic-analysis.json": "5e12d6e804a58547d2c9cdb7efa5372c6723ea9085e19cdcf880f0bd7049baea",
+      "docs/verification/pcb-analysis.json": "1a029b8978d74a4d65a47f6ad1cd008fcdfc0be2f9e9eb07305ddd9347def3b9"
+    },
+    "run_id": "20260912T181341Z-a04f99",
+    "config_hash": null,
+    "upstream_artifacts": {
+      "schematic": {
+        "path": "docs/verification/schematic-analysis.json",
+        "sha256": "5e12d6e804a58547d2c9cdb7efa5372c6723ea9085e19cdcf880f0bd7049baea",
+        "schema_version": "1.4.0",
+        "run_id": "20260907T162751Z-9f69f5"
+      },
+      "pcb": {
+        "path": "docs/verification/pcb-analysis.json",
+        "sha256": "1a029b8978d74a4d65a47f6ad1cd008fcdfc0be2f9e9eb07305ddd9347def3b9",
+        "schema_version": "1.4.0",
+        "run_id": "20260912T181341Z-a04f99"
+      }
+    }
+  },
+  "compat": {
+    "minimum_consumer_version": "1.4.0",
+    "deprecated_fields": [],
+    "experimental_fields": []
+  },
+  "elapsed_s": 0.003,
+  "summary": {
+    "total_findings": 0,
+    "by_severity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    }
+  },
+  "findings": [],
+  "assessments": [],
+  "trust_summary": {
+    "total_findings": 0,
+    "trust_level": "high",
+    "by_confidence": {
+      "deterministic": 0,
+      "heuristic": 0,
+      "datasheet_backed": 0
+    },
+    "by_evidence_source": {
+      "datasheet": 0,
+      "topology": 0,
+      "heuristic_rule": 0,
+      "symbol_footprint": 0,
+      "bom": 0,
+      "geometry": 0,
+      "api_lookup": 0
+    },
+    "provenance_coverage_pct": null
+  },
+  "capability_mode_ref": {
+    "source": "analysis/capability_mode.json",
+    "run_id": "20260912T181341Z-a04f99"
+  }
+}

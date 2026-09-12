@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/rwrife/repos/.worktrees/spool-sentry-issue-2/hardware/spool-sentry.kicad_sch</source>
-    <date>2026-09-07T16:27:51+0000</date>
+    <source>/home/rwrife/repos/.worktrees/spool-sentry-issue-3/hardware/spool-sentry.kicad_sch</source>
+    <date>2026-09-12T18:35:55+0000</date>
     <tool>Eeschema 9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1785,7 +1785,7 @@
       <uri>/usr/share/kicad/symbols//Switch.kicad_sym</uri>
     </library>
     <library logical="spool-sentry">
-      <uri>/home/rwrife/repos/.worktrees/spool-sentry-issue-2/hardware/lib/spool-sentry.kicad_sym</uri>
+      <uri>/home/rwrife/repos/.worktrees/spool-sentry-issue-3/hardware/lib/spool-sentry.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
