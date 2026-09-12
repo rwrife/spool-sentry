@@ -70,3 +70,19 @@ Rust remains the default unless issue #4 records a reproducible blocker in the e
 3. a toolchain defect prevents a clean target image and has no bounded patch/upstream release.
 
 If triggered, use a pinned Espressif ESP-IDF C/C++ toolchain only for target adapters and orchestration. Preserve the versioned protocol schemas/fixtures, fault semantics, storage/export behavior, and equivalent host tests. Record the blocker, versions, minimal reproducer, decision date, and migration cost in an architecture decision record before changing implementation language. The fallback does not authorize cloud, actuation, weaker validation, or unsupported hardware claims.
+
+## Hardware verification toolchain (issue #3)
+
+- `kicad-cli` on this machine is a Docker wrapper for the pinned image
+  `parts-tally-kicad:9-arm64` (KiCad 9.0.9); all pcbnew-API scripts run in
+  that image via `docker run --user $(id -u):$(id -g)` (see
+  `scripts/*.py` usage strings).
+- Autorouter: FreeRouter `2.1.0` headless with Temurin JDK 21
+  (class-file 65; the JDK 17 copy fails `UnsupportedClassVersionError`).
+  Incremental passes use `-hf true` (fanout mode converges to natural exit
+  and writes the SES session; full-mode plateau never flushes).
+- Mechanics: OpenSCAD `2021.01` via Docker image
+  `parts-tally-openscad:arm64` (`scripts/export_mechanical_stl.sh`);
+  STL outputs are review-only previews, not fabricated parts.
+- BOM tooling unchanged (issue #2); no new schematic inputs were added in
+  issue #3, so `bom/bom.csv` is re-exported from the same properties.

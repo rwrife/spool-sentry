@@ -1,0 +1,6267 @@
+{
+  "analyzer_type": "pcb",
+  "schema_version": "1.4.0",
+  "kicad_version": "9.0",
+  "file_version": "20241229",
+  "statistics": {
+    "footprint_count": 46,
+    "front_side": 33,
+    "back_side": 13,
+    "smd_count": 31,
+    "tht_count": 1,
+    "copper_layers_used": 2,
+    "copper_layer_names": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "track_segments": 203,
+    "via_count": 17,
+    "zone_count": 8,
+    "total_track_length_mm": 820.64,
+    "board_width_mm": 66.0,
+    "board_height_mm": 75.0,
+    "board_area_mm2": 4950.0,
+    "net_count": 40,
+    "routing_complete": false,
+    "unrouted_net_count": 4
+  },
+  "layers": [
+    {
+      "number": 0,
+      "name": "F.Cu",
+      "type": "signal",
+      "alias": null
+    },
+    {
+      "number": 2,
+      "name": "B.Cu",
+      "type": "signal",
+      "alias": null
+    },
+    {
+      "number": 9,
+      "name": "F.Adhes",
+      "type": "user",
+      "alias": "F.Adhesive"
+    },
+    {
+      "number": 11,
+      "name": "B.Adhes",
+      "type": "user",
+      "alias": "B.Adhesive"
+    },
+    {
+      "number": 13,
+      "name": "F.Paste",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 15,
+      "name": "B.Paste",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 5,
+      "name": "F.SilkS",
+      "type": "user",
+      "alias": "F.Silkscreen"
+    },
+    {
+      "number": 7,
+      "name": "B.SilkS",
+      "type": "user",
+      "alias": "B.Silkscreen"
+    },
+    {
+      "number": 1,
+      "name": "F.Mask",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 3,
+      "name": "B.Mask",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 17,
+      "name": "Dwgs.User",
+      "type": "user",
+      "alias": "User.Drawings"
+    },
+    {
+      "number": 19,
+      "name": "Cmts.User",
+      "type": "user",
+      "alias": "User.Comments"
+    },
+    {
+      "number": 21,
+      "name": "Eco1.User",
+      "type": "user",
+      "alias": "User.Eco1"
+    },
+    {
+      "number": 23,
+      "name": "Eco2.User",
+      "type": "user",
+      "alias": "User.Eco2"
+    },
+    {
+      "number": 25,
+      "name": "Edge.Cuts",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 27,
+      "name": "Margin",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 31,
+      "name": "F.CrtYd",
+      "type": "user",
+      "alias": "F.Courtyard"
+    },
+    {
+      "number": 29,
+      "name": "B.CrtYd",
+      "type": "user",
+      "alias": "B.Courtyard"
+    },
+    {
+      "number": 35,
+      "name": "F.Fab",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 33,
+      "name": "B.Fab",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 39,
+      "name": "User.1",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 41,
+      "name": "User.2",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 43,
+      "name": "User.3",
+      "type": "user",
+      "alias": null
+    },
+    {
+      "number": 45,
+      "name": "User.4",
+      "type": "user",
+      "alias": null
+    }
+  ],
+  "setup": {
+    "board_thickness_mm": 1.6,
+    "pad_to_mask_clearance": 0.0,
+    "legacy_teardrops": "no",
+    "allow_soldermask_bridges": "no"
+  },
+  "nets": {
+    "1": "+3V3",
+    "2": "+5V_XIAO",
+    "3": "AIN+",
+    "4": "AIN-",
+    "5": "AVDD_3V0",
+    "6": "BUTTON_N",
+    "7": "CC1",
+    "8": "CC2",
+    "9": "GND",
+    "10": "I2C_SCL",
+    "11": "I2C_SDA",
+    "12": "LC_S+",
+    "13": "LC_S-",
+    "14": "LED_B_GPIO",
+    "15": "LED_B_K",
+    "16": "LED_G_GPIO",
+    "17": "LED_G_K",
+    "18": "LED_R_GPIO",
+    "19": "LED_R_K",
+    "20": "PGA_CFILTER",
+    "21": "UART_RX",
+    "22": "UART_TX",
+    "23": "VBG",
+    "24": "VBUS",
+    "25": "VBUS_FUSED",
+    "26": "__unnamed_0",
+    "27": "__unnamed_1",
+    "28": "__unnamed_10",
+    "29": "__unnamed_11",
+    "30": "__unnamed_12",
+    "31": "__unnamed_13",
+    "32": "__unnamed_14",
+    "33": "__unnamed_2",
+    "34": "__unnamed_3",
+    "35": "__unnamed_4",
+    "36": "__unnamed_5",
+    "37": "__unnamed_6",
+    "38": "__unnamed_7",
+    "39": "__unnamed_8",
+    "40": "__unnamed_9"
+  },
+  "net_name_to_id": {
+    "+3V3": 1,
+    "+5V_XIAO": 2,
+    "AIN+": 3,
+    "AIN-": 4,
+    "AVDD_3V0": 5,
+    "BUTTON_N": 6,
+    "CC1": 7,
+    "CC2": 8,
+    "GND": 9,
+    "I2C_SCL": 10,
+    "I2C_SDA": 11,
+    "LC_S+": 12,
+    "LC_S-": 13,
+    "LED_B_GPIO": 14,
+    "LED_B_K": 15,
+    "LED_G_GPIO": 16,
+    "LED_G_K": 17,
+    "LED_R_GPIO": 18,
+    "LED_R_K": 19,
+    "PGA_CFILTER": 20,
+    "UART_RX": 21,
+    "UART_TX": 22,
+    "VBG": 23,
+    "VBUS": 24,
+    "VBUS_FUSED": 25,
+    "__unnamed_0": 26,
+    "__unnamed_1": 27,
+    "__unnamed_10": 28,
+    "__unnamed_11": 29,
+    "__unnamed_12": 30,
+    "__unnamed_13": 31,
+    "__unnamed_14": 32,
+    "__unnamed_2": 33,
+    "__unnamed_3": 34,
+    "__unnamed_4": 35,
+    "__unnamed_5": 36,
+    "__unnamed_6": 37,
+    "__unnamed_7": 38,
+    "__unnamed_8": 39,
+    "__unnamed_9": 40
+  },
+  "board_outline": {
+    "edge_count": 4,
+    "edges": [
+      {
+        "type": "line",
+        "start": [
+          0.0,
+          0.0
+        ],
+        "end": [
+          66.0,
+          0.0
+        ]
+      },
+      {
+        "type": "line",
+        "start": [
+          0.0,
+          75.0
+        ],
+        "end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "type": "line",
+        "start": [
+          66.0,
+          0.0
+        ],
+        "end": [
+          66.0,
+          75.0
+        ]
+      },
+      {
+        "type": "line",
+        "start": [
+          66.0,
+          75.0
+        ],
+        "end": [
+          0.0,
+          75.0
+        ]
+      }
+    ],
+    "bounding_box": {
+      "min_x": 0.0,
+      "min_y": 0.0,
+      "max_x": 66.0,
+      "max_y": 75.0,
+      "width": 66.0,
+      "height": 75.0
+    },
+    "width_mm": 66.0,
+    "height_mm": 75.0
+  },
+  "component_groups": {
+    "C": {
+      "count": 11,
+      "references": [
+        "C1",
+        "C10",
+        "C11",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ]
+    },
+    "D": {
+      "count": 3,
+      "references": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    "F": {
+      "count": 1,
+      "references": [
+        "F1"
+      ]
+    },
+    "J": {
+      "count": 3,
+      "references": [
+        "J1",
+        "J2",
+        "J3"
+      ]
+    },
+    "MH": {
+      "count": 4,
+      "references": [
+        "MH1",
+        "MH2",
+        "MH3",
+        "MH4"
+      ]
+    },
+    "R": {
+      "count": 10,
+      "references": [
+        "R1",
+        "R10",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9"
+      ]
+    },
+    "SW": {
+      "count": 1,
+      "references": [
+        "SW1"
+      ]
+    },
+    "TP": {
+      "count": 10,
+      "references": [
+        "TP1",
+        "TP10",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP8",
+        "TP9"
+      ]
+    },
+    "U": {
+      "count": 3,
+      "references": [
+        "U1",
+        "U2",
+        "U3"
+      ]
+    }
+  },
+  "footprints": [
+    {
+      "library": "C_0603_1608Metric",
+      "reference": "C5",
+      "value": "C_0603_1608Metric",
+      "mpn": "",
+      "x": 41.5,
+      "y": 16.5,
+      "angle": 90.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 40.77,
+        "min_y": 15.02,
+        "max_x": 42.23,
+        "max_y": 17.98
+      },
+      "courtyard_poly": [
+        [
+          [
+            42.23,
+            17.98
+          ],
+          [
+            40.77,
+            17.98
+          ],
+          [
+            40.77,
+            15.02
+          ],
+          [
+            42.23,
+            15.02
+          ]
+        ]
+      ],
+      "footprint": "C_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "+3V3"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    {
+      "library": "MountingHole_3.2mm_M3",
+      "reference": "MH1",
+      "value": "MountingHole_3.2mm_M3",
+      "mpn": "",
+      "x": 3.6,
+      "y": 3.6,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 3.6,
+        "min_y": 3.6,
+        "max_x": 7.05,
+        "max_y": 3.6
+      },
+      "footprint": "MountingHole_3.2mm_M3",
+      "pad_nets": {},
+      "connected_nets": []
+    },
+    {
+      "library": "SW_SPST_PTS810",
+      "reference": "SW1",
+      "value": "SW_SPST_PTS810",
+      "mpn": "",
+      "x": 46.0,
+      "y": 69.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 4,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_PTS810.wrl"
+      ],
+      "courtyard": {
+        "min_x": 43.15,
+        "min_y": 67.15,
+        "max_x": 48.85,
+        "max_y": 70.85
+      },
+      "courtyard_poly": [
+        [
+          [
+            48.85,
+            70.85
+          ],
+          [
+            43.15,
+            70.85
+          ],
+          [
+            43.15,
+            67.15
+          ],
+          [
+            48.85,
+            67.15
+          ]
+        ]
+      ],
+      "footprint": "SW_SPST_PTS810",
+      "pad_nets": {
+        "1": {
+          "net": "BUTTON_N"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "BUTTON_N",
+        "GND"
+      ]
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP8",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 41.0,
+      "y": 12.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 41.0,
+        "min_y": 12.0,
+        "max_x": 42.25,
+        "max_y": 12.0
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "AIN+"
+        }
+      },
+      "connected_nets": [
+        "AIN+"
+      ]
+    },
+    {
+      "library": "PinHeader_1x04_P2.54mm_Vertical",
+      "reference": "J3",
+      "value": "PinHeader_1x04_P2.54mm_Vertical",
+      "mpn": "",
+      "x": 46.0,
+      "y": 3.5,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "through_hole",
+      "pad_count": 4,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.wrl"
+      ],
+      "courtyard": {
+        "min_x": 44.2,
+        "min_y": 1.7,
+        "max_x": 47.8,
+        "max_y": 12.9
+      },
+      "courtyard_poly": [
+        [
+          [
+            47.8,
+            12.9
+          ],
+          [
+            47.8,
+            1.7
+          ],
+          [
+            44.2,
+            1.7
+          ],
+          [
+            44.2,
+            12.9
+          ]
+        ]
+      ],
+      "footprint": "PinHeader_1x04_P2.54mm_Vertical",
+      "pad_nets": {
+        "1": {
+          "net": "+3V3"
+        },
+        "2": {
+          "net": "GND"
+        },
+        "3": {
+          "net": "UART_TX"
+        },
+        "4": {
+          "net": "UART_RX"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "GND",
+        "UART_RX",
+        "UART_TX"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R8",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 54.4,
+      "y": 64.5,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 52.92,
+        "min_y": 63.77,
+        "max_x": 55.88,
+        "max_y": 65.23
+      },
+      "courtyard_poly": [
+        [
+          [
+            55.88,
+            65.23
+          ],
+          [
+            52.92,
+            65.23
+          ],
+          [
+            52.92,
+            63.77
+          ],
+          [
+            55.88,
+            63.77
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "LED_R_GPIO"
+        },
+        "2": {
+          "net": "LED_R_K"
+        }
+      },
+      "connected_nets": [
+        "LED_R_GPIO",
+        "LED_R_K"
+      ]
+    },
+    {
+      "library": "MountingHole_3.2mm_M3",
+      "reference": "MH3",
+      "value": "MountingHole_3.2mm_M3",
+      "mpn": "",
+      "x": 62.4,
+      "y": 71.4,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 62.4,
+        "min_y": 71.4,
+        "max_x": 65.85,
+        "max_y": 71.4
+      },
+      "footprint": "MountingHole_3.2mm_M3",
+      "pad_nets": {},
+      "connected_nets": []
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP1",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 12.0,
+      "y": 69.5,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 12.0,
+        "min_y": 69.5,
+        "max_x": 13.25,
+        "max_y": 69.5
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "VBUS"
+        }
+      },
+      "connected_nets": [
+        "VBUS"
+      ]
+    },
+    {
+      "library": "SOIC-16_3.9x9.9mm_P1.27mm",
+      "reference": "U2",
+      "value": "SOIC-16_3.9x9.9mm_P1.27mm",
+      "mpn": "",
+      "x": 36.5,
+      "y": 21.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 16,
+      "models_3d": [
+        "${KICAD7_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-16_3.9x9.9mm_P1.27mm.wrl"
+      ],
+      "courtyard": {
+        "min_x": 32.8,
+        "min_y": 15.8,
+        "max_x": 40.2,
+        "max_y": 26.2
+      },
+      "courtyard_poly": [
+        [
+          [
+            40.2,
+            26.2
+          ],
+          [
+            40.2,
+            15.8
+          ],
+          [
+            32.8,
+            15.8
+          ],
+          [
+            32.8,
+            26.2
+          ]
+        ]
+      ],
+      "footprint": "SOIC-16_3.9x9.9mm_P1.27mm",
+      "pad_nets": {
+        "1": {
+          "net": "AVDD_3V0"
+        },
+        "2": {
+          "net": "AIN-"
+        },
+        "3": {
+          "net": "AIN+"
+        },
+        "4": {
+          "net": "__unnamed_11"
+        },
+        "5": {
+          "net": "PGA_CFILTER"
+        },
+        "6": {
+          "net": "VBG"
+        },
+        "7": {
+          "net": "GND"
+        },
+        "8": {
+          "net": "GND"
+        },
+        "9": {
+          "net": "GND"
+        },
+        "10": {
+          "net": "__unnamed_12"
+        },
+        "11": {
+          "net": "__unnamed_13"
+        },
+        "12": {
+          "net": "__unnamed_14"
+        },
+        "13": {
+          "net": "I2C_SCL"
+        },
+        "14": {
+          "net": "I2C_SDA"
+        },
+        "15": {
+          "net": "+3V3"
+        },
+        "16": {
+          "net": "AVDD_3V0"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "AIN+",
+        "AIN-",
+        "AVDD_3V0",
+        "GND",
+        "I2C_SCL",
+        "I2C_SDA",
+        "PGA_CFILTER",
+        "VBG",
+        "__unnamed_11",
+        "__unnamed_12",
+        "__unnamed_13",
+        "__unnamed_14"
+      ]
+    },
+    {
+      "library": "C_0603_1608Metric",
+      "reference": "C6",
+      "value": "C_0603_1608Metric",
+      "mpn": "",
+      "x": 32.0,
+      "y": 17.0,
+      "angle": 90.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 31.27,
+        "min_y": 15.52,
+        "max_x": 32.73,
+        "max_y": 18.48
+      },
+      "courtyard_poly": [
+        [
+          [
+            32.73,
+            18.48
+          ],
+          [
+            31.27,
+            18.48
+          ],
+          [
+            31.27,
+            15.52
+          ],
+          [
+            32.73,
+            15.52
+          ]
+        ]
+      ],
+      "footprint": "C_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "AVDD_3V0"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "AVDD_3V0",
+        "GND"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R6",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 39.0,
+      "y": 31.6,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 37.52,
+        "min_y": 30.87,
+        "max_x": 40.48,
+        "max_y": 32.33
+      },
+      "courtyard_poly": [
+        [
+          [
+            40.48,
+            32.33
+          ],
+          [
+            37.52,
+            32.33
+          ],
+          [
+            37.52,
+            30.87
+          ],
+          [
+            40.48,
+            30.87
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "+3V3"
+        },
+        "2": {
+          "net": "I2C_SCL"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "I2C_SCL"
+      ]
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP2",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 40.0,
+      "y": 40.5,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 40.0,
+        "min_y": 40.5,
+        "max_x": 41.25,
+        "max_y": 40.5
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "+5V_XIAO"
+        }
+      },
+      "connected_nets": [
+        "+5V_XIAO"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R7",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 51.5,
+      "y": 69.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 50.02,
+        "min_y": 68.27,
+        "max_x": 52.98,
+        "max_y": 69.73
+      },
+      "courtyard_poly": [
+        [
+          [
+            52.98,
+            69.73
+          ],
+          [
+            50.02,
+            69.73
+          ],
+          [
+            50.02,
+            68.27
+          ],
+          [
+            52.98,
+            68.27
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "+3V3"
+        },
+        "2": {
+          "net": "BUTTON_N"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "BUTTON_N"
+      ]
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP9",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 41.0,
+      "y": 9.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 41.0,
+        "min_y": 9.0,
+        "max_x": 42.25,
+        "max_y": 9.0
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "AIN-"
+        }
+      },
+      "connected_nets": [
+        "AIN-"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R9",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 57.7,
+      "y": 64.5,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 56.22,
+        "min_y": 63.77,
+        "max_x": 59.18,
+        "max_y": 65.23
+      },
+      "courtyard_poly": [
+        [
+          [
+            59.18,
+            65.23
+          ],
+          [
+            56.22,
+            65.23
+          ],
+          [
+            56.22,
+            63.77
+          ],
+          [
+            59.18,
+            63.77
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "LED_G_GPIO"
+        },
+        "2": {
+          "net": "LED_G_K"
+        }
+      },
+      "connected_nets": [
+        "LED_G_GPIO",
+        "LED_G_K"
+      ]
+    },
+    {
+      "library": "MountingHole_3.2mm_M3",
+      "reference": "MH4",
+      "value": "MountingHole_3.2mm_M3",
+      "mpn": "",
+      "x": 3.6,
+      "y": 48.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 3.6,
+        "min_y": 48.0,
+        "max_x": 7.05,
+        "max_y": 48.0
+      },
+      "footprint": "MountingHole_3.2mm_M3",
+      "pad_nets": {},
+      "connected_nets": []
+    },
+    {
+      "library": "LED_Avago_PLCC6_3x2.8mm",
+      "reference": "D3",
+      "value": "LED_Avago_PLCC6_3x2.8mm",
+      "mpn": "",
+      "x": 56.0,
+      "y": 68.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 6,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/LED_SMD.3dshapes/LED_Avago_PLCC6_3x2.8mm.wrl"
+      ],
+      "courtyard": {
+        "min_x": 53.47,
+        "min_y": 66.35,
+        "max_x": 58.53,
+        "max_y": 69.65
+      },
+      "courtyard_poly": [
+        [
+          [
+            58.53,
+            66.35
+          ],
+          [
+            58.53,
+            69.65
+          ],
+          [
+            53.47,
+            69.65
+          ],
+          [
+            53.47,
+            66.35
+          ]
+        ]
+      ],
+      "footprint": "LED_Avago_PLCC6_3x2.8mm",
+      "pad_nets": {
+        "1": {
+          "net": "LED_B_K"
+        },
+        "2": {
+          "net": "LED_G_K"
+        },
+        "3": {
+          "net": "LED_R_K"
+        },
+        "4": {
+          "net": "+3V3"
+        },
+        "5": {
+          "net": "+3V3"
+        },
+        "6": {
+          "net": "+3V3"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "LED_B_K",
+        "LED_G_K",
+        "LED_R_K"
+      ]
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP7",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 8.5,
+      "y": 34.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 8.5,
+        "min_y": 34.0,
+        "max_x": 9.75,
+        "max_y": 34.0
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "I2C_SCL"
+        }
+      },
+      "connected_nets": [
+        "I2C_SCL"
+      ]
+    },
+    {
+      "library": "C_0603_1608Metric",
+      "reference": "C10",
+      "value": "C_0603_1608Metric",
+      "mpn": "",
+      "x": 51.5,
+      "y": 71.5,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 50.02,
+        "min_y": 70.77,
+        "max_x": 52.98,
+        "max_y": 72.23
+      },
+      "courtyard_poly": [
+        [
+          [
+            52.98,
+            72.23
+          ],
+          [
+            50.02,
+            72.23
+          ],
+          [
+            50.02,
+            70.77
+          ],
+          [
+            52.98,
+            70.77
+          ]
+        ]
+      ],
+      "footprint": "C_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "BUTTON_N"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "BUTTON_N",
+        "GND"
+      ]
+    },
+    {
+      "library": "MountingHole_3.2mm_M3",
+      "reference": "MH2",
+      "value": "MountingHole_3.2mm_M3",
+      "mpn": "",
+      "x": 62.4,
+      "y": 3.6,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 62.4,
+        "min_y": 3.6,
+        "max_x": 65.85,
+        "max_y": 3.6
+      },
+      "footprint": "MountingHole_3.2mm_M3",
+      "pad_nets": {},
+      "connected_nets": []
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP4",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 40.0,
+      "y": 47.5,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 40.0,
+        "min_y": 47.5,
+        "max_x": 41.25,
+        "max_y": 47.5
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "GND"
+      ]
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP6",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 6.0,
+      "y": 34.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 6.0,
+        "min_y": 34.0,
+        "max_x": 7.25,
+        "max_y": 34.0
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "I2C_SDA"
+        }
+      },
+      "connected_nets": [
+        "I2C_SDA"
+      ]
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP10",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 30.0,
+      "y": 21.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 30.0,
+        "min_y": 21.0,
+        "max_x": 31.25,
+        "max_y": 21.0
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "VBG"
+        }
+      },
+      "connected_nets": [
+        "VBG"
+      ]
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP3",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 40.0,
+      "y": 44.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 40.0,
+        "min_y": 44.0,
+        "max_x": 41.25,
+        "max_y": 44.0
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "+3V3"
+        }
+      },
+      "connected_nets": [
+        "+3V3"
+      ]
+    },
+    {
+      "library": "TestPoint_Pad_D1.5mm",
+      "reference": "TP5",
+      "value": "TestPoint_Pad_D1.5mm",
+      "mpn": "",
+      "x": 27.5,
+      "y": 21.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "exclude_from_pos_files",
+      "pad_count": 1,
+      "exclude_from_bom": true,
+      "exclude_from_pos": true,
+      "courtyard": {
+        "min_x": 27.5,
+        "min_y": 21.0,
+        "max_x": 28.75,
+        "max_y": 21.0
+      },
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pad_nets": {
+        "1": {
+          "net": "AVDD_3V0"
+        }
+      },
+      "connected_nets": [
+        "AVDD_3V0"
+      ]
+    },
+    {
+      "library": "XIAO_ESP32C3",
+      "reference": "U1",
+      "value": "Seeed XIAO ESP32-C3",
+      "mpn": "",
+      "x": 23.5,
+      "y": 47.0,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 16,
+      "description": "ESP32-C3-MINI-1 is a general-purpose Wi-Fi and Bluetooth LE module. This module features a rich set of peripherals and a small size, which makes it an ideal choice for smart home, industrial automation, health care, consumer electronics, etc",
+      "courtyard": {
+        "min_x": 11.525,
+        "min_y": 35.8,
+        "max_x": 33.5,
+        "max_y": 54.6
+      },
+      "courtyard_poly": [
+        [
+          [
+            33.5,
+            54.6
+          ],
+          [
+            33.5,
+            35.8
+          ],
+          [
+            11.525,
+            35.8
+          ],
+          [
+            11.525,
+            54.6
+          ]
+        ]
+      ],
+      "footprint": "XIAO_ESP32C3",
+      "pad_nets": {
+        "1": {
+          "net": "__unnamed_8"
+        },
+        "2": {
+          "net": "BUTTON_N"
+        },
+        "3": {
+          "net": "LED_R_GPIO"
+        },
+        "4": {
+          "net": "LED_G_GPIO"
+        },
+        "5": {
+          "net": "I2C_SDA"
+        },
+        "6": {
+          "net": "I2C_SCL"
+        },
+        "7": {
+          "net": "UART_TX"
+        },
+        "8": {
+          "net": "UART_RX"
+        },
+        "9": {
+          "net": "__unnamed_10"
+        },
+        "10": {
+          "net": "__unnamed_9"
+        },
+        "11": {
+          "net": "LED_B_GPIO"
+        },
+        "12": {
+          "net": "+3V3"
+        },
+        "13": {
+          "net": "GND"
+        },
+        "14": {
+          "net": "+5V_XIAO"
+        },
+        "B+": {
+          "net": "__unnamed_6"
+        },
+        "B-": {
+          "net": "__unnamed_7"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "+5V_XIAO",
+        "BUTTON_N",
+        "GND",
+        "I2C_SCL",
+        "I2C_SDA",
+        "LED_B_GPIO",
+        "LED_G_GPIO",
+        "LED_R_GPIO",
+        "UART_RX",
+        "UART_TX",
+        "__unnamed_10",
+        "__unnamed_6",
+        "__unnamed_7",
+        "__unnamed_8",
+        "__unnamed_9"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R5",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 35.5,
+      "y": 31.6,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 34.02,
+        "min_y": 30.87,
+        "max_x": 36.98,
+        "max_y": 32.33
+      },
+      "courtyard_poly": [
+        [
+          [
+            36.98,
+            32.33
+          ],
+          [
+            34.02,
+            32.33
+          ],
+          [
+            34.02,
+            30.87
+          ],
+          [
+            36.98,
+            30.87
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "+3V3"
+        },
+        "2": {
+          "net": "I2C_SDA"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "I2C_SDA"
+      ]
+    },
+    {
+      "library": "C_0603_1608Metric",
+      "reference": "C4",
+      "value": "C_0603_1608Metric",
+      "mpn": "",
+      "x": 41.5,
+      "y": 20.0,
+      "angle": 90.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 40.77,
+        "min_y": 18.52,
+        "max_x": 42.23,
+        "max_y": 21.48
+      },
+      "courtyard_poly": [
+        [
+          [
+            42.23,
+            21.48
+          ],
+          [
+            40.77,
+            21.48
+          ],
+          [
+            40.77,
+            18.52
+          ],
+          [
+            42.23,
+            18.52
+          ]
+        ]
+      ],
+      "footprint": "C_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "+3V3"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    {
+      "library": "Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad",
+      "reference": "U3",
+      "value": "Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad",
+      "mpn": "",
+      "x": 62.0,
+      "y": 44.0,
+      "angle": 90.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 4,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Sensor_Humidity.3dshapes/Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad.wrl"
+      ],
+      "courtyard": {
+        "min_x": 61.0,
+        "min_y": 42.8,
+        "max_x": 63.0,
+        "max_y": 45.2
+      },
+      "courtyard_poly": [
+        [
+          [
+            63.0,
+            45.2
+          ],
+          [
+            63.0,
+            42.8
+          ],
+          [
+            61.0,
+            42.8
+          ],
+          [
+            61.0,
+            45.2
+          ]
+        ]
+      ],
+      "footprint": "Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad",
+      "pad_nets": {
+        "1": {
+          "net": "I2C_SDA"
+        },
+        "2": {
+          "net": "I2C_SCL"
+        },
+        "3": {
+          "net": "+3V3"
+        },
+        "4": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "GND",
+        "I2C_SCL",
+        "I2C_SDA"
+      ]
+    },
+    {
+      "library": "C_0603_1608Metric",
+      "reference": "C9",
+      "value": "C_0603_1608Metric",
+      "mpn": "",
+      "x": 41.5,
+      "y": 27.5,
+      "angle": 90.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 40.77,
+        "min_y": 26.02,
+        "max_x": 42.23,
+        "max_y": 28.98
+      },
+      "courtyard_poly": [
+        [
+          [
+            42.23,
+            28.98
+          ],
+          [
+            40.77,
+            28.98
+          ],
+          [
+            40.77,
+            26.02
+          ],
+          [
+            42.23,
+            26.02
+          ]
+        ]
+      ],
+      "footprint": "C_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "PGA_CFILTER"
+        },
+        "2": {
+          "net": "VBG"
+        }
+      },
+      "connected_nets": [
+        "PGA_CFILTER",
+        "VBG"
+      ]
+    },
+    {
+      "library": "C_1206_3216Metric",
+      "reference": "C3",
+      "value": "C_1206_3216Metric",
+      "mpn": "",
+      "x": 36.0,
+      "y": 40.5,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 33.7,
+        "min_y": 39.35,
+        "max_x": 38.3,
+        "max_y": 41.65
+      },
+      "courtyard_poly": [
+        [
+          [
+            38.3,
+            41.65
+          ],
+          [
+            33.7,
+            41.65
+          ],
+          [
+            33.7,
+            39.35
+          ],
+          [
+            38.3,
+            39.35
+          ]
+        ]
+      ],
+      "footprint": "C_1206_3216Metric",
+      "pad_nets": {
+        "1": {
+          "net": "+3V3"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R10",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 61.0,
+      "y": 64.5,
+      "angle": 0.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 59.52,
+        "min_y": 63.77,
+        "max_x": 62.48,
+        "max_y": 65.23
+      },
+      "courtyard_poly": [
+        [
+          [
+            62.48,
+            65.23
+          ],
+          [
+            59.52,
+            65.23
+          ],
+          [
+            59.52,
+            63.77
+          ],
+          [
+            62.48,
+            63.77
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "LED_B_GPIO"
+        },
+        "2": {
+          "net": "LED_B_K"
+        }
+      },
+      "connected_nets": [
+        "LED_B_GPIO",
+        "LED_B_K"
+      ]
+    },
+    {
+      "library": "C_0603_1608Metric",
+      "reference": "C7",
+      "value": "C_0603_1608Metric",
+      "mpn": "",
+      "x": 41.5,
+      "y": 24.0,
+      "angle": 90.0,
+      "layer": "F.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 40.77,
+        "min_y": 22.52,
+        "max_x": 42.23,
+        "max_y": 25.48
+      },
+      "courtyard_poly": [
+        [
+          [
+            42.23,
+            25.48
+          ],
+          [
+            40.77,
+            25.48
+          ],
+          [
+            40.77,
+            22.52
+          ],
+          [
+            42.23,
+            22.52
+          ]
+        ]
+      ],
+      "footprint": "C_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "VBG"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "GND",
+        "VBG"
+      ]
+    },
+    {
+      "library": "D_SOD-123F",
+      "reference": "D1",
+      "value": "D_SOD-123F",
+      "mpn": "",
+      "x": 9.4,
+      "y": 61.0,
+      "angle": 0.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123F.wrl"
+      ],
+      "courtyard": {
+        "min_x": 7.2,
+        "min_y": 59.85,
+        "max_x": 11.6,
+        "max_y": 62.15
+      },
+      "courtyard_poly": [
+        [
+          [
+            11.6,
+            62.15
+          ],
+          [
+            7.2,
+            62.15
+          ],
+          [
+            7.2,
+            59.85
+          ],
+          [
+            11.6,
+            59.85
+          ]
+        ]
+      ],
+      "footprint": "D_SOD-123F",
+      "pad_nets": {
+        "1": {
+          "net": "VBUS"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "GND",
+        "VBUS"
+      ]
+    },
+    {
+      "library": "Fuse_1812_4532Metric",
+      "reference": "F1",
+      "value": "Fuse_1812_4532Metric",
+      "mpn": "",
+      "x": 14.95,
+      "y": 61.0,
+      "angle": 180.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1812_4532Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 12.0,
+        "min_y": 59.05,
+        "max_x": 17.9,
+        "max_y": 62.95
+      },
+      "courtyard_poly": [
+        [
+          [
+            17.9,
+            62.95
+          ],
+          [
+            12.0,
+            62.95
+          ],
+          [
+            12.0,
+            59.05
+          ],
+          [
+            17.9,
+            59.05
+          ]
+        ]
+      ],
+      "footprint": "Fuse_1812_4532Metric",
+      "pad_nets": {
+        "1": {
+          "net": "VBUS"
+        },
+        "2": {
+          "net": "VBUS_FUSED"
+        }
+      },
+      "connected_nets": [
+        "VBUS",
+        "VBUS_FUSED"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R1",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 28.3,
+      "y": 61.0,
+      "angle": 0.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 26.82,
+        "min_y": 60.27,
+        "max_x": 29.78,
+        "max_y": 61.73
+      },
+      "courtyard_poly": [
+        [
+          [
+            29.78,
+            61.73
+          ],
+          [
+            26.82,
+            61.73
+          ],
+          [
+            26.82,
+            60.27
+          ],
+          [
+            29.78,
+            60.27
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "CC1"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "CC1",
+        "GND"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R3",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 30.5,
+      "y": 12.0,
+      "angle": 0.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 29.02,
+        "min_y": 11.27,
+        "max_x": 31.98,
+        "max_y": 12.73
+      },
+      "courtyard_poly": [
+        [
+          [
+            31.98,
+            12.73
+          ],
+          [
+            29.02,
+            12.73
+          ],
+          [
+            29.02,
+            11.27
+          ],
+          [
+            31.98,
+            11.27
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "LC_S+"
+        },
+        "2": {
+          "net": "AIN+"
+        }
+      },
+      "connected_nets": [
+        "AIN+",
+        "LC_S+"
+      ]
+    },
+    {
+      "library": "C_1206_3216Metric",
+      "reference": "C1",
+      "value": "C_1206_3216Metric",
+      "mpn": "",
+      "x": 15.0,
+      "y": 65.0,
+      "angle": 0.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 12.7,
+        "min_y": 63.85,
+        "max_x": 17.3,
+        "max_y": 66.15
+      },
+      "courtyard_poly": [
+        [
+          [
+            17.3,
+            66.15
+          ],
+          [
+            12.7,
+            66.15
+          ],
+          [
+            12.7,
+            63.85
+          ],
+          [
+            17.3,
+            63.85
+          ]
+        ]
+      ],
+      "footprint": "C_1206_3216Metric",
+      "pad_nets": {
+        "1": {
+          "net": "+5V_XIAO"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "+5V_XIAO",
+        "GND"
+      ]
+    },
+    {
+      "library": "JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal",
+      "reference": "J2",
+      "value": "JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal",
+      "mpn": "",
+      "x": 3.3,
+      "y": 13.0,
+      "angle": -90.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 6,
+      "models_3d": [
+        "${KICAD7_3DMODEL_DIR}/Connector_JST.3dshapes/JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal.wrl"
+      ],
+      "courtyard": {
+        "min_x": 0.1,
+        "min_y": 8.28,
+        "max_x": 6.5,
+        "max_y": 17.72
+      },
+      "courtyard_poly": [
+        [
+          [
+            6.5,
+            17.72
+          ],
+          [
+            6.5,
+            8.28
+          ],
+          [
+            0.1,
+            8.28
+          ],
+          [
+            0.1,
+            17.72
+          ]
+        ]
+      ],
+      "footprint": "JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal",
+      "pad_nets": {
+        "1": {
+          "net": "AVDD_3V0"
+        },
+        "2": {
+          "net": "GND"
+        },
+        "3": {
+          "net": "LC_S+"
+        },
+        "4": {
+          "net": "LC_S-"
+        },
+        "MP": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "AVDD_3V0",
+        "GND",
+        "LC_S+",
+        "LC_S-"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R2",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 31.9,
+      "y": 61.0,
+      "angle": 0.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 30.42,
+        "min_y": 60.27,
+        "max_x": 33.38,
+        "max_y": 61.73
+      },
+      "courtyard_poly": [
+        [
+          [
+            33.38,
+            61.73
+          ],
+          [
+            30.42,
+            61.73
+          ],
+          [
+            30.42,
+            60.27
+          ],
+          [
+            33.38,
+            60.27
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "CC2"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "CC2",
+        "GND"
+      ]
+    },
+    {
+      "library": "R_0603_1608Metric",
+      "reference": "R4",
+      "value": "R_0603_1608Metric",
+      "mpn": "",
+      "x": 30.5,
+      "y": 9.0,
+      "angle": 0.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 29.02,
+        "min_y": 8.27,
+        "max_x": 31.98,
+        "max_y": 9.73
+      },
+      "courtyard_poly": [
+        [
+          [
+            31.98,
+            9.73
+          ],
+          [
+            29.02,
+            9.73
+          ],
+          [
+            29.02,
+            8.27
+          ],
+          [
+            31.98,
+            8.27
+          ]
+        ]
+      ],
+      "footprint": "R_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "LC_S-"
+        },
+        "2": {
+          "net": "AIN-"
+        }
+      },
+      "connected_nets": [
+        "AIN-",
+        "LC_S-"
+      ]
+    },
+    {
+      "library": "USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "reference": "J1",
+      "value": "USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "mpn": "",
+      "x": 2.6,
+      "y": 68.0,
+      "angle": -90.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 22,
+      "models_3d": [
+        "${KICAD7_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.wrl"
+      ],
+      "courtyard": {
+        "min_x": -1.58,
+        "min_y": 62.68,
+        "max_x": 7.36,
+        "max_y": 73.32
+      },
+      "courtyard_poly": [
+        [
+          [
+            7.36,
+            62.68
+          ],
+          [
+            7.36,
+            73.32
+          ],
+          [
+            -1.58,
+            73.32
+          ],
+          [
+            -1.58,
+            62.68
+          ]
+        ]
+      ],
+      "footprint": "USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "pad_nets": {
+        "A1": {
+          "net": "GND"
+        },
+        "A4": {
+          "net": "VBUS"
+        },
+        "A5": {
+          "net": "CC1"
+        },
+        "A6": {
+          "net": "__unnamed_0"
+        },
+        "A7": {
+          "net": "__unnamed_1"
+        },
+        "A8": {
+          "net": "__unnamed_2"
+        },
+        "A9": {
+          "net": "VBUS"
+        },
+        "A12": {
+          "net": "GND"
+        },
+        "B1": {
+          "net": "GND"
+        },
+        "B4": {
+          "net": "VBUS"
+        },
+        "B5": {
+          "net": "CC2"
+        },
+        "B6": {
+          "net": "__unnamed_3"
+        },
+        "B7": {
+          "net": "__unnamed_4"
+        },
+        "B8": {
+          "net": "__unnamed_5"
+        },
+        "B9": {
+          "net": "VBUS"
+        },
+        "B12": {
+          "net": "GND"
+        },
+        "S1": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "CC1",
+        "CC2",
+        "GND",
+        "VBUS",
+        "__unnamed_0",
+        "__unnamed_1",
+        "__unnamed_2",
+        "__unnamed_3",
+        "__unnamed_4",
+        "__unnamed_5"
+      ]
+    },
+    {
+      "library": "C_0603_1608Metric",
+      "reference": "C8",
+      "value": "C_0603_1608Metric",
+      "mpn": "",
+      "x": 34.0,
+      "y": 10.5,
+      "angle": 0.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 32.52,
+        "min_y": 9.77,
+        "max_x": 35.48,
+        "max_y": 11.23
+      },
+      "courtyard_poly": [
+        [
+          [
+            35.48,
+            11.23
+          ],
+          [
+            32.52,
+            11.23
+          ],
+          [
+            32.52,
+            9.77
+          ],
+          [
+            35.48,
+            9.77
+          ]
+        ]
+      ],
+      "footprint": "C_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "AIN+"
+        },
+        "2": {
+          "net": "AIN-"
+        }
+      },
+      "connected_nets": [
+        "AIN+",
+        "AIN-"
+      ]
+    },
+    {
+      "library": "C_0603_1608Metric",
+      "reference": "C11",
+      "value": "C_0603_1608Metric",
+      "mpn": "",
+      "x": 10.5,
+      "y": 64.5,
+      "angle": 0.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 9.02,
+        "min_y": 63.77,
+        "max_x": 11.98,
+        "max_y": 65.23
+      },
+      "courtyard_poly": [
+        [
+          [
+            11.98,
+            65.23
+          ],
+          [
+            9.02,
+            65.23
+          ],
+          [
+            9.02,
+            63.77
+          ],
+          [
+            11.98,
+            63.77
+          ]
+        ]
+      ],
+      "footprint": "C_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "VBUS"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "GND",
+        "VBUS"
+      ]
+    },
+    {
+      "library": "D_SMA",
+      "reference": "D2",
+      "value": "D_SMA",
+      "mpn": "",
+      "x": 21.75,
+      "y": 61.0,
+      "angle": 180.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMA.wrl"
+      ],
+      "courtyard": {
+        "min_x": 18.25,
+        "min_y": 59.25,
+        "max_x": 25.25,
+        "max_y": 62.75
+      },
+      "courtyard_poly": [
+        [
+          [
+            25.25,
+            62.75
+          ],
+          [
+            18.25,
+            62.75
+          ],
+          [
+            18.25,
+            59.25
+          ],
+          [
+            25.25,
+            59.25
+          ]
+        ]
+      ],
+      "footprint": "D_SMA",
+      "pad_nets": {
+        "1": {
+          "net": "+5V_XIAO"
+        },
+        "2": {
+          "net": "VBUS_FUSED"
+        }
+      },
+      "connected_nets": [
+        "+5V_XIAO",
+        "VBUS_FUSED"
+      ]
+    },
+    {
+      "library": "C_0603_1608Metric",
+      "reference": "C2",
+      "value": "C_0603_1608Metric",
+      "mpn": "",
+      "x": 22.5,
+      "y": 65.0,
+      "angle": 0.0,
+      "layer": "B.Cu",
+      "type": "smd",
+      "pad_count": 2,
+      "models_3d": [
+        "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
+      ],
+      "courtyard": {
+        "min_x": 21.02,
+        "min_y": 64.27,
+        "max_x": 23.98,
+        "max_y": 65.73
+      },
+      "courtyard_poly": [
+        [
+          [
+            23.98,
+            65.73
+          ],
+          [
+            21.02,
+            65.73
+          ],
+          [
+            21.02,
+            64.27
+          ],
+          [
+            23.98,
+            64.27
+          ]
+        ]
+      ],
+      "footprint": "C_0603_1608Metric",
+      "pad_nets": {
+        "1": {
+          "net": "+5V_XIAO"
+        },
+        "2": {
+          "net": "GND"
+        }
+      },
+      "connected_nets": [
+        "+5V_XIAO",
+        "GND"
+      ]
+    }
+  ],
+  "tracks": {
+    "segment_count": 203,
+    "arc_count": 0,
+    "width_distribution": {
+      "0.2": 203
+    },
+    "layer_distribution": {
+      "F.Cu": 177,
+      "B.Cu": 26
+    }
+  },
+  "vias": {
+    "count": 17,
+    "size_distribution": {
+      "0.6/0.3": 17
+    },
+    "via_analysis": {
+      "type_breakdown": {
+        "through": {
+          "count": 17,
+          "size_distribution": {
+            "0.6/0.3": 17
+          }
+        }
+      },
+      "annular_ring": {
+        "min_mm": 0.15,
+        "max_mm": 0.15,
+        "distribution": {
+          "0.15": 17
+        }
+      },
+      "current_capacity": {
+        "drill_size_distribution": {
+          "0.3": 17
+        },
+        "min_drill_mm": 0.3,
+        "max_drill_mm": 0.3,
+        "total_vias": 17,
+        "ratings": [
+          {
+            "drill_mm": 0.3,
+            "count": 17,
+            "plating_area_mm2": 0.0236,
+            "approx_current_A": 7.9
+          }
+        ]
+      }
+    }
+  },
+  "zones": [
+    {
+      "net": 0,
+      "net_name": "",
+      "layers": [
+        "F.Cu"
+      ],
+      "clearance": 0.0,
+      "min_thickness": 0.25,
+      "thermal_gap": 0.5,
+      "thermal_bridge_width": 0.5,
+      "outline_points": 4,
+      "outline_area_mm2": 123.25,
+      "is_filled": false,
+      "outline_bbox": [
+        0.0,
+        60.5,
+        8.5,
+        75.0
+      ],
+      "is_keepout": true,
+      "keepout": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "priority": 1
+    },
+    {
+      "net": 0,
+      "net_name": "",
+      "layers": [
+        "F.Cu"
+      ],
+      "clearance": 0.0,
+      "min_thickness": 0.25,
+      "thermal_gap": 0.5,
+      "thermal_bridge_width": 0.5,
+      "outline_points": 4,
+      "outline_area_mm2": 232.5,
+      "is_filled": false,
+      "outline_bbox": [
+        16.0,
+        25.0,
+        31.0,
+        40.5
+      ],
+      "is_keepout": true,
+      "keepout": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "priority": 1
+    },
+    {
+      "net": 9,
+      "net_name": "GND",
+      "layers": [
+        "F.Cu"
+      ],
+      "clearance": 0.5,
+      "min_thickness": 0.25,
+      "thermal_gap": 0.5,
+      "thermal_bridge_width": 0.5,
+      "outline_points": 4,
+      "outline_area_mm2": 4837.84,
+      "is_filled": true,
+      "outline_bbox": [
+        0.4,
+        0.4,
+        65.6,
+        74.6
+      ],
+      "filled_area_mm2": 2999.61,
+      "fill_region_count": 5,
+      "filled_bbox": [
+        0.5,
+        0.5,
+        65.499,
+        74.499
+      ],
+      "fill_ratio": 0.62
+    },
+    {
+      "net": 0,
+      "net_name": "",
+      "layers": [
+        "F.Cu"
+      ],
+      "clearance": 0.0,
+      "min_thickness": 0.25,
+      "thermal_gap": 0.5,
+      "thermal_bridge_width": 0.5,
+      "outline_points": 4,
+      "outline_area_mm2": 141.75,
+      "is_filled": false,
+      "outline_bbox": [
+        0.0,
+        5.0,
+        10.5,
+        18.5
+      ],
+      "is_keepout": true,
+      "keepout": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "priority": 1
+    },
+    {
+      "net": 0,
+      "net_name": "",
+      "layers": [
+        "B.Cu"
+      ],
+      "clearance": 0.0,
+      "min_thickness": 0.25,
+      "thermal_gap": 0.5,
+      "thermal_bridge_width": 0.5,
+      "outline_points": 4,
+      "outline_area_mm2": 232.5,
+      "is_filled": false,
+      "outline_bbox": [
+        16.0,
+        25.0,
+        31.0,
+        40.5
+      ],
+      "is_keepout": true,
+      "keepout": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "priority": 1
+    },
+    {
+      "net": 0,
+      "net_name": "",
+      "layers": [
+        "B.Cu"
+      ],
+      "clearance": 0.0,
+      "min_thickness": 0.25,
+      "thermal_gap": 0.5,
+      "thermal_bridge_width": 0.5,
+      "outline_points": 4,
+      "outline_area_mm2": 123.25,
+      "is_filled": false,
+      "outline_bbox": [
+        0.0,
+        60.5,
+        8.5,
+        75.0
+      ],
+      "is_keepout": true,
+      "keepout": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "priority": 1
+    },
+    {
+      "net": 9,
+      "net_name": "GND",
+      "layers": [
+        "B.Cu"
+      ],
+      "clearance": 0.5,
+      "min_thickness": 0.25,
+      "thermal_gap": 0.5,
+      "thermal_bridge_width": 0.5,
+      "outline_points": 4,
+      "outline_area_mm2": 4837.84,
+      "is_filled": true,
+      "outline_bbox": [
+        0.4,
+        0.4,
+        65.6,
+        74.6
+      ],
+      "filled_area_mm2": 3977.8,
+      "fill_region_count": 1,
+      "filled_bbox": [
+        0.5,
+        0.5,
+        65.499,
+        74.499
+      ],
+      "fill_ratio": 0.822
+    },
+    {
+      "net": 0,
+      "net_name": "",
+      "layers": [
+        "B.Cu"
+      ],
+      "clearance": 0.0,
+      "min_thickness": 0.25,
+      "thermal_gap": 0.5,
+      "thermal_bridge_width": 0.5,
+      "outline_points": 4,
+      "outline_area_mm2": 141.75,
+      "is_filled": false,
+      "outline_bbox": [
+        0.0,
+        5.0,
+        10.5,
+        18.5
+      ],
+      "is_keepout": true,
+      "keepout": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "priority": 1
+    }
+  ],
+  "keepout_zones": [
+    {
+      "name": "",
+      "layers": [
+        "F.Cu"
+      ],
+      "restrictions": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "bounding_box": [
+        0.0,
+        60.5,
+        8.5,
+        75.0
+      ],
+      "area_mm2": 123.25,
+      "net": 0,
+      "net_name": "",
+      "nearby_components": [
+        "C11",
+        "D1",
+        "J1",
+        "TP1"
+      ]
+    },
+    {
+      "name": "",
+      "layers": [
+        "F.Cu"
+      ],
+      "restrictions": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "bounding_box": [
+        16.0,
+        25.0,
+        31.0,
+        40.5
+      ],
+      "area_mm2": 232.5,
+      "net": 0,
+      "net_name": "",
+      "nearby_components": [
+        "C3",
+        "R5",
+        "TP10",
+        "TP5"
+      ]
+    },
+    {
+      "name": "",
+      "layers": [
+        "F.Cu"
+      ],
+      "restrictions": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "bounding_box": [
+        0.0,
+        5.0,
+        10.5,
+        18.5
+      ],
+      "area_mm2": 141.75,
+      "net": 0,
+      "net_name": "",
+      "nearby_components": [
+        "J2",
+        "MH1"
+      ]
+    },
+    {
+      "name": "",
+      "layers": [
+        "B.Cu"
+      ],
+      "restrictions": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "bounding_box": [
+        16.0,
+        25.0,
+        31.0,
+        40.5
+      ],
+      "area_mm2": 232.5,
+      "net": 0,
+      "net_name": "",
+      "nearby_components": [
+        "C3",
+        "R5",
+        "TP10",
+        "TP5"
+      ]
+    },
+    {
+      "name": "",
+      "layers": [
+        "B.Cu"
+      ],
+      "restrictions": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "bounding_box": [
+        0.0,
+        60.5,
+        8.5,
+        75.0
+      ],
+      "area_mm2": 123.25,
+      "net": 0,
+      "net_name": "",
+      "nearby_components": [
+        "C11",
+        "D1",
+        "J1",
+        "TP1"
+      ]
+    },
+    {
+      "name": "",
+      "layers": [
+        "B.Cu"
+      ],
+      "restrictions": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "bounding_box": [
+        0.0,
+        5.0,
+        10.5,
+        18.5
+      ],
+      "area_mm2": 141.75,
+      "net": 0,
+      "net_name": "",
+      "nearby_components": [
+        "J2",
+        "MH1"
+      ]
+    }
+  ],
+  "connectivity": {
+    "total_nets_with_pads": 40,
+    "routed_nets": 21,
+    "unrouted_count": 4,
+    "routing_complete": false
+  },
+  "net_lengths": [
+    {
+      "net": "+3V3",
+      "net_number": 1,
+      "total_length_mm": 150.764,
+      "segment_count": 52,
+      "via_count": 2,
+      "layers": {
+        "B.Cu": {
+          "length_mm": 9.325,
+          "segments": 7
+        },
+        "F.Cu": {
+          "length_mm": 141.439,
+          "segments": 45
+        }
+      }
+    },
+    {
+      "net": "I2C_SDA",
+      "net_number": 11,
+      "total_length_mm": 85.777,
+      "segment_count": 18,
+      "via_count": 2,
+      "layers": {
+        "B.Cu": {
+          "length_mm": 19.662,
+          "segments": 3
+        },
+        "F.Cu": {
+          "length_mm": 66.115,
+          "segments": 15
+        }
+      }
+    },
+    {
+      "net": "I2C_SCL",
+      "net_number": 10,
+      "total_length_mm": 79.901,
+      "segment_count": 20,
+      "via_count": 2,
+      "layers": {
+        "B.Cu": {
+          "length_mm": 30.599,
+          "segments": 2
+        },
+        "F.Cu": {
+          "length_mm": 49.302,
+          "segments": 18
+        }
+      }
+    },
+    {
+      "net": "UART_TX",
+      "net_number": 22,
+      "total_length_mm": 73.275,
+      "segment_count": 6,
+      "via_count": 1,
+      "layers": {
+        "B.Cu": {
+          "length_mm": 33.262,
+          "segments": 3
+        },
+        "F.Cu": {
+          "length_mm": 40.012,
+          "segments": 3
+        }
+      }
+    },
+    {
+      "net": "+5V_XIAO",
+      "net_number": 2,
+      "total_length_mm": 61.331,
+      "segment_count": 13,
+      "via_count": 2,
+      "layers": {
+        "B.Cu": {
+          "length_mm": 18.641,
+          "segments": 2
+        },
+        "F.Cu": {
+          "length_mm": 42.689,
+          "segments": 11
+        }
+      }
+    },
+    {
+      "net": "UART_RX",
+      "net_number": 21,
+      "total_length_mm": 56.618,
+      "segment_count": 10,
+      "via_count": 2,
+      "layers": {
+        "B.Cu": {
+          "length_mm": 13.803,
+          "segments": 2
+        },
+        "F.Cu": {
+          "length_mm": 42.815,
+          "segments": 8
+        }
+      }
+    },
+    {
+      "net": "LED_G_GPIO",
+      "net_number": 16,
+      "total_length_mm": 51.596,
+      "segment_count": 8,
+      "via_count": 2,
+      "layers": {
+        "B.Cu": {
+          "length_mm": 45.521,
+          "segments": 3
+        },
+        "F.Cu": {
+          "length_mm": 6.076,
+          "segments": 5
+        }
+      }
+    },
+    {
+      "net": "BUTTON_N",
+      "net_number": 6,
+      "total_length_mm": 50.285,
+      "segment_count": 10,
+      "via_count": 2,
+      "layers": {
+        "B.Cu": {
+          "length_mm": 7.096,
+          "segments": 2
+        },
+        "F.Cu": {
+          "length_mm": 43.189,
+          "segments": 8
+        }
+      }
+    },
+    {
+      "net": "LED_R_GPIO",
+      "net_number": 18,
+      "total_length_mm": 48.342,
+      "segment_count": 6,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 48.342,
+          "segments": 6
+        }
+      }
+    },
+    {
+      "net": "LED_B_GPIO",
+      "net_number": 14,
+      "total_length_mm": 37.244,
+      "segment_count": 4,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 37.244,
+          "segments": 4
+        }
+      }
+    },
+    {
+      "net": "AIN+",
+      "net_number": 3,
+      "total_length_mm": 27.154,
+      "segment_count": 17,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 27.154,
+          "segments": 17
+        }
+      }
+    },
+    {
+      "net": "AVDD_3V0",
+      "net_number": 5,
+      "total_length_mm": 17.99,
+      "segment_count": 9,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 17.99,
+          "segments": 9
+        }
+      }
+    },
+    {
+      "net": "PGA_CFILTER",
+      "net_number": 20,
+      "total_length_mm": 17.74,
+      "segment_count": 6,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 17.74,
+          "segments": 6
+        }
+      }
+    },
+    {
+      "net": "VBUS",
+      "net_number": 24,
+      "total_length_mm": 16.55,
+      "segment_count": 5,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 16.55,
+          "segments": 5
+        }
+      }
+    },
+    {
+      "net": "AIN-",
+      "net_number": 4,
+      "total_length_mm": 9.675,
+      "segment_count": 1,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 9.675,
+          "segments": 1
+        }
+      }
+    },
+    {
+      "net": "LED_B_K",
+      "net_number": 15,
+      "total_length_mm": 8.956,
+      "segment_count": 6,
+      "via_count": 2,
+      "layers": {
+        "B.Cu": {
+          "length_mm": 6.006,
+          "segments": 2
+        },
+        "F.Cu": {
+          "length_mm": 2.95,
+          "segments": 4
+        }
+      }
+    },
+    {
+      "net": "VBUS_FUSED",
+      "net_number": 25,
+      "total_length_mm": 8.629,
+      "segment_count": 3,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 8.629,
+          "segments": 3
+        }
+      }
+    },
+    {
+      "net": "VBG",
+      "net_number": 23,
+      "total_length_mm": 6.764,
+      "segment_count": 3,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 6.764,
+          "segments": 3
+        }
+      }
+    },
+    {
+      "net": "LED_R_K",
+      "net_number": 19,
+      "total_length_mm": 6.248,
+      "segment_count": 3,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 6.248,
+          "segments": 3
+        }
+      }
+    },
+    {
+      "net": "LED_G_K",
+      "net_number": 17,
+      "total_length_mm": 5.802,
+      "segment_count": 3,
+      "via_count": 0,
+      "layers": {
+        "F.Cu": {
+          "length_mm": 5.802,
+          "segments": 3
+        }
+      }
+    }
+  ],
+  "power_net_routing": [
+    {
+      "net": "+3V3",
+      "track_count": 52,
+      "total_length_mm": 150.76,
+      "min_width_mm": 0.2,
+      "max_width_mm": 0.2,
+      "widths_used": [
+        0.2
+      ]
+    },
+    {
+      "net": "+5V_XIAO",
+      "track_count": 13,
+      "total_length_mm": 61.33,
+      "min_width_mm": 0.2,
+      "max_width_mm": 0.2,
+      "widths_used": [
+        0.2
+      ]
+    },
+    {
+      "net": "AVDD_3V0",
+      "track_count": 9,
+      "total_length_mm": 17.99,
+      "min_width_mm": 0.2,
+      "max_width_mm": 0.2,
+      "widths_used": [
+        0.2
+      ]
+    },
+    {
+      "net": "VBUS",
+      "track_count": 5,
+      "total_length_mm": 16.55,
+      "min_width_mm": 0.2,
+      "max_width_mm": 0.2,
+      "widths_used": [
+        0.2
+      ]
+    },
+    {
+      "net": "VBUS_FUSED",
+      "track_count": 3,
+      "total_length_mm": 8.63,
+      "min_width_mm": 0.2,
+      "max_width_mm": 0.2,
+      "widths_used": [
+        0.2
+      ]
+    }
+  ],
+  "decoupling_placement": [
+    {
+      "ic": "U2",
+      "value": "SOIC-16_3.9x9.9mm_P1.27mm",
+      "layer": "F.Cu",
+      "nearby_caps": [
+        {
+          "cap": "C6",
+          "value": "C_0603_1608Metric",
+          "distance_mm": 2.05,
+          "shared_nets": [
+            "AVDD_3V0",
+            "GND"
+          ],
+          "same_side": true
+        },
+        {
+          "cap": "C5",
+          "value": "C_0603_1608Metric",
+          "distance_mm": 2.58,
+          "shared_nets": [
+            "+3V3",
+            "GND"
+          ],
+          "same_side": true
+        },
+        {
+          "cap": "C7",
+          "value": "C_0603_1608Metric",
+          "distance_mm": 2.61,
+          "shared_nets": [
+            "GND",
+            "VBG"
+          ],
+          "same_side": true
+        },
+        {
+          "cap": "C9",
+          "value": "C_0603_1608Metric",
+          "distance_mm": 2.83,
+          "shared_nets": [
+            "PGA_CFILTER",
+            "VBG"
+          ],
+          "same_side": true
+        },
+        {
+          "cap": "C4",
+          "value": "C_0603_1608Metric",
+          "distance_mm": 2.89,
+          "shared_nets": [
+            "+3V3",
+            "GND"
+          ],
+          "same_side": true
+        },
+        {
+          "cap": "C8",
+          "value": "C_0603_1608Metric",
+          "distance_mm": 6.1,
+          "shared_nets": [
+            "AIN+",
+            "AIN-"
+          ],
+          "same_side": false
+        }
+      ],
+      "closest_cap_mm": 2.05
+    },
+    {
+      "ic": "U1",
+      "value": "Seeed XIAO ESP32-C3",
+      "layer": "F.Cu",
+      "nearby_caps": [
+        {
+          "cap": "C3",
+          "value": "C_1206_3216Metric",
+          "distance_mm": 3.62,
+          "shared_nets": [
+            "+3V3",
+            "GND"
+          ],
+          "same_side": true
+        }
+      ],
+      "closest_cap_mm": 3.62
+    }
+  ],
+  "decoupling_proximity": [
+    {
+      "ic_ref": "U2",
+      "cap_ref": "C6",
+      "distance_mm": 2.05,
+      "cap_value": "C_0603_1608Metric",
+      "same_side": true,
+      "shared_nets": [
+        "AVDD_3V0",
+        "GND"
+      ]
+    },
+    {
+      "ic_ref": "U2",
+      "cap_ref": "C5",
+      "distance_mm": 2.58,
+      "cap_value": "C_0603_1608Metric",
+      "same_side": true,
+      "shared_nets": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    {
+      "ic_ref": "U2",
+      "cap_ref": "C7",
+      "distance_mm": 2.61,
+      "cap_value": "C_0603_1608Metric",
+      "same_side": true,
+      "shared_nets": [
+        "GND",
+        "VBG"
+      ]
+    },
+    {
+      "ic_ref": "U2",
+      "cap_ref": "C9",
+      "distance_mm": 2.83,
+      "cap_value": "C_0603_1608Metric",
+      "same_side": true,
+      "shared_nets": [
+        "PGA_CFILTER",
+        "VBG"
+      ]
+    },
+    {
+      "ic_ref": "U2",
+      "cap_ref": "C4",
+      "distance_mm": 2.89,
+      "cap_value": "C_0603_1608Metric",
+      "same_side": true,
+      "shared_nets": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    {
+      "ic_ref": "U2",
+      "cap_ref": "C8",
+      "distance_mm": 6.1,
+      "cap_value": "C_0603_1608Metric",
+      "same_side": false,
+      "shared_nets": [
+        "AIN+",
+        "AIN-"
+      ]
+    },
+    {
+      "ic_ref": "U1",
+      "cap_ref": "C3",
+      "distance_mm": 3.62,
+      "cap_value": "C_1206_3216Metric",
+      "same_side": true,
+      "shared_nets": [
+        "+3V3",
+        "GND"
+      ]
+    }
+  ],
+  "ground_domains": {
+    "domain_count": 1,
+    "domains": [
+      {
+        "net": "GND",
+        "net_number": 9,
+        "component_count": 20,
+        "components": [
+          "C1",
+          "C10",
+          "C11",
+          "C2",
+          "C3",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "D1",
+          "J1",
+          "J2",
+          "J3",
+          "R1",
+          "R2",
+          "SW1",
+          "TP4",
+          "U1",
+          "U2",
+          "U3"
+        ],
+        "has_zone": true,
+        "zone_layers": [
+          "B.Cu",
+          "F.Cu"
+        ]
+      }
+    ],
+    "multi_domain_components": []
+  },
+  "layer_transitions": [
+    {
+      "net": "BUTTON_N",
+      "net_number": 6,
+      "copper_layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "layer_count": 2,
+      "via_count": 2,
+      "via_positions": [
+        {
+          "x": 27.44,
+          "y": 47.12,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "x": 33.47,
+          "y": 49.68,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        }
+      ]
+    },
+    {
+      "net": "I2C_SCL",
+      "net_number": 10,
+      "copper_layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "layer_count": 2,
+      "via_count": 2,
+      "via_positions": [
+        {
+          "x": 39.51,
+          "y": 33.38,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "x": 12.17,
+          "y": 41.24,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        }
+      ]
+    },
+    {
+      "net": "I2C_SDA",
+      "net_number": 11,
+      "copper_layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "layer_count": 2,
+      "via_count": 2,
+      "via_positions": [
+        {
+          "x": 18.87,
+          "y": 47.36,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "x": 36.0,
+          "y": 41.25,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        }
+      ]
+    },
+    {
+      "net": "LED_B_K",
+      "net_number": 15,
+      "copper_layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "layer_count": 2,
+      "via_count": 2,
+      "via_positions": [
+        {
+          "x": 60.87,
+          "y": 65.63,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "x": 54.96,
+          "y": 65.85,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        }
+      ]
+    },
+    {
+      "net": "LED_G_GPIO",
+      "net_number": 16,
+      "copper_layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "layer_count": 2,
+      "via_count": 2,
+      "via_positions": [
+        {
+          "x": 16.82,
+          "y": 46.71,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "x": 55.87,
+          "y": 62.25,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        }
+      ]
+    },
+    {
+      "net": "UART_RX",
+      "net_number": 21,
+      "copper_layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "layer_count": 2,
+      "via_count": 2,
+      "via_positions": [
+        {
+          "x": 35.88,
+          "y": 49.68,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "x": 47.56,
+          "y": 44.56,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        }
+      ]
+    },
+    {
+      "net": "UART_TX",
+      "net_number": 22,
+      "copper_layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "layer_count": 2,
+      "via_count": 1,
+      "via_positions": [
+        {
+          "x": 15.73,
+          "y": 15.81,
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ]
+        }
+      ]
+    }
+  ],
+  "silkscreen": {
+    "board_text_count": 17,
+    "refs_visible_on_silk": 46,
+    "refs_hidden_on_silk": 0,
+    "board_texts": [
+      {
+        "text": "USB 5V",
+        "layer": "F.SilkS",
+        "x": 4.5,
+        "y": 57.5
+      },
+      {
+        "text": "SDA",
+        "layer": "F.SilkS",
+        "x": 6.0,
+        "y": 38.5
+      },
+      {
+        "text": "LOAD CELL",
+        "layer": "F.SilkS",
+        "x": 8.0,
+        "y": 21.0
+      },
+      {
+        "text": "SCL",
+        "layer": "F.SilkS",
+        "x": 8.5,
+        "y": 38.5
+      },
+      {
+        "text": "VBUS",
+        "layer": "F.SilkS",
+        "x": 16.0,
+        "y": 69.8
+      },
+      {
+        "text": "ANTENNA KEEPOUT - NO COPPER - NO METAL",
+        "layer": "F.SilkS",
+        "x": 23.5,
+        "y": 27.5
+      },
+      {
+        "text": "VBG",
+        "layer": "F.SilkS",
+        "x": 24.0,
+        "y": 19.5
+      },
+      {
+        "text": "AVDD",
+        "layer": "F.SilkS",
+        "x": 24.5,
+        "y": 22.0
+      },
+      {
+        "text": "USB 5V SELV ONLY - OBSERVATION ONLY - MIT",
+        "layer": "F.SilkS",
+        "x": 25.5,
+        "y": 1.6
+      },
+      {
+        "text": "AIN+",
+        "layer": "F.SilkS",
+        "x": 43.2,
+        "y": 14.2
+      },
+      {
+        "text": "5V",
+        "layer": "F.SilkS",
+        "x": 43.5,
+        "y": 40.5
+      },
+      {
+        "text": "GND",
+        "layer": "F.SilkS",
+        "x": 43.5,
+        "y": 44.0
+      },
+      {
+        "text": "3V3",
+        "layer": "F.SilkS",
+        "x": 43.5,
+        "y": 47.5
+      },
+      {
+        "text": "AIN-",
+        "layer": "F.SilkS",
+        "x": 45.5,
+        "y": 17.0
+      },
+      {
+        "text": "TARE",
+        "layer": "F.SilkS",
+        "x": 46.0,
+        "y": 65.4
+      },
+      {
+        "text": "UART 3V3 GND TX RX",
+        "layer": "F.SilkS",
+        "x": 54.5,
+        "y": 6.0
+      },
+      {
+        "text": "SPOOL SENTRY  CARRIER  REV A0",
+        "layer": "F.SilkS",
+        "x": 34.0,
+        "y": 73.0
+      }
+    ],
+    "documentation_warnings": [
+      {
+        "type": "missing_switch_labels",
+        "severity": "warning",
+        "components": [
+          "SW1"
+        ],
+        "message": "Switches without function labels on silkscreen: ['SW1']. Add ON/OFF, RESET, BOOT, or function description near each switch."
+      },
+      {
+        "type": "missing_connector_labels",
+        "severity": "suggestion",
+        "components": [
+          "J3",
+          "J2",
+          "J1"
+        ],
+        "message": "Connectors (3+ pins) without silkscreen labels: ['J3', 'J2', 'J1']. Consider adding pin names, signal names, or connector function labels."
+      }
+    ],
+    "fab_notes_completeness": {
+      "checks": {
+        "ipc_class": false,
+        "surface_finish": false,
+        "board_thickness": false,
+        "copper_weight": false,
+        "solder_mask": false,
+        "material": false
+      },
+      "missing": [
+        "ipc class",
+        "surface finish",
+        "board thickness",
+        "copper weight",
+        "solder mask",
+        "material"
+      ],
+      "completeness_pct": 0,
+      "status": "warning"
+    },
+    "silkscreen_completeness": {
+      "checks": {
+        "revision_marking": true,
+        "board_name": true,
+        "ref_designators_visible": true,
+        "connector_labels": false,
+        "polarity_markers": true
+      },
+      "missing": [
+        "connector labels"
+      ],
+      "completeness_pct": 80,
+      "status": "warning"
+    }
+  },
+  "board_metadata": {
+    "paper": "A4"
+  },
+  "net_classes": [
+    {
+      "name": "Default",
+      "clearance": 0.2,
+      "track_width": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3,
+      "diff_pair_width": 0.2,
+      "diff_pair_gap": 0.25
+    },
+    {
+      "name": "Analog",
+      "clearance": 0.2,
+      "track_width": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3,
+      "diff_pair_width": 0.2,
+      "diff_pair_gap": 0.25
+    },
+    {
+      "name": "Power",
+      "clearance": 0.25,
+      "track_width": 0.4,
+      "via_diameter": 0.7,
+      "via_drill": 0.3,
+      "diff_pair_width": 0.2,
+      "diff_pair_gap": 0.25
+    }
+  ],
+  "project_settings": {
+    "source": "spool-sentry.kicad_pro",
+    "net_classes": [
+      {
+        "name": "Default",
+        "clearance": 0.2,
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.25
+      },
+      {
+        "name": "Analog",
+        "clearance": 0.2,
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.25
+      },
+      {
+        "name": "Power",
+        "clearance": 0.25,
+        "track_width": 0.4,
+        "via_diameter": 0.7,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.25
+      }
+    ],
+    "design_rules": {
+      "min_clearance": 0.2,
+      "min_connection": 0.0,
+      "min_copper_edge_clearance": 0.5,
+      "min_groove_width": 0.0,
+      "min_hole_clearance": 0.25,
+      "min_hole_to_hole": 0.25,
+      "min_microvia_diameter": 0.2,
+      "min_microvia_drill": 0.1,
+      "min_resolved_spokes": 2,
+      "min_silk_clearance": 0.2,
+      "min_text_height": 0.8,
+      "min_text_thickness": 0.08,
+      "min_through_hole_diameter": 0.3,
+      "min_track_width": 0.15,
+      "min_via_annular_width": 0.1,
+      "min_via_diameter": 0.6
+    },
+    "footprint_libs": [
+      {
+        "name": "spool-sentry",
+        "type": "KiCad",
+        "uri": "${KIPRJMOD}/lib/spool-sentry.pretty",
+        "descr": "Spool Sentry project footprints"
+      },
+      {
+        "name": "Button_Switch_SMD",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Button_Switch_SMD.pretty"
+      },
+      {
+        "name": "Capacitor_SMD",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Capacitor_SMD.pretty"
+      },
+      {
+        "name": "Connector_JST",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Connector_JST.pretty"
+      },
+      {
+        "name": "Connector_PinHeader_2.54mm",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Connector_PinHeader_2.54mm.pretty"
+      },
+      {
+        "name": "Connector_USB",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Connector_USB.pretty"
+      },
+      {
+        "name": "Diode_SMD",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Diode_SMD.pretty"
+      },
+      {
+        "name": "Fuse",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Fuse.pretty"
+      },
+      {
+        "name": "LED_SMD",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/LED_SMD.pretty"
+      },
+      {
+        "name": "MountingHole",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/MountingHole.pretty"
+      },
+      {
+        "name": "Package_SO",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Package_SO.pretty"
+      },
+      {
+        "name": "Package_DFN_QFN",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Package_DFN_QFN.pretty"
+      },
+      {
+        "name": "Resistor_SMD",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/Resistor_SMD.pretty"
+      },
+      {
+        "name": "TestPoint",
+        "type": "KiCad",
+        "uri": "${KICAD9_FOOTPRINT_DIR}/TestPoint.pretty"
+      }
+    ]
+  },
+  "design_rule_compliance": {
+    "compliant": true,
+    "rules_checked": 3,
+    "rules_source": "spool-sentry.kicad_pro",
+    "net_class_summary": [
+      {
+        "name": "Analog",
+        "track_width_mm": 0.2,
+        "clearance_mm": 0.2,
+        "diff_pair_width_mm": 0.2,
+        "diff_pair_gap_mm": 0.25
+      },
+      {
+        "name": "Power",
+        "track_width_mm": 0.4,
+        "clearance_mm": 0.25,
+        "diff_pair_width_mm": 0.2,
+        "diff_pair_gap_mm": 0.25
+      }
+    ]
+  },
+  "dfm_summary": {
+    "dfm_tier": "standard",
+    "metrics": {
+      "min_track_width_mm": 0.2,
+      "approx_min_spacing_mm": 0.2603,
+      "min_drill_mm": 0.3,
+      "min_annular_ring_mm": 0.15,
+      "board_width_mm": 66.0,
+      "board_height_mm": 75.0
+    },
+    "violation_count": 0
+  },
+  "placement_density": {
+    "board_area_cm2": 49.5,
+    "front_density_per_cm2": 0.7,
+    "back_density_per_cm2": 0.3
+  },
+  "board_thickness_mm": 1.6,
+  "copper_presence_summary": [
+    {
+      "opposite_layer_nets": "GND",
+      "component_count": 34,
+      "components": [
+        "C1",
+        "C10",
+        "C11",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C9",
+        "D1",
+        "D3",
+        "J3",
+        "R1",
+        "R10",
+        "R2",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "SW1",
+        "TP1",
+        "TP10",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP9",
+        "U1",
+        "U2",
+        "U3"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "net": "+3V3",
+      "net_number": 1,
+      "min_track_width_mm": 0.2,
+      "max_track_width_mm": 0.2,
+      "track_widths_used": [
+        0.2
+      ],
+      "copper_layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "segment_count": 52,
+      "via_count": 2,
+      "via_drill_sizes_mm": [
+        0.3
+      ],
+      "detector": "analyze_current_capacity",
+      "rule_id": "CC-DET",
+      "category": "current_capacity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Power net +3V3: 0.2mm min trace",
+      "description": "Power/ground net +3V3: min trace 0.2mm, max 0.2mm, 52 segments.",
+      "components": [],
+      "nets": [
+        "+3V3"
+      ],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Current Capacity",
+        "impact": "Power delivery",
+        "standard_ref": "IPC-2221"
+      },
+      "stages": [
+        "layout",
+        "pre_fab"
+      ],
+      "finding_id": "pcb:CC-DET-+3v3"
+    },
+    {
+      "net": "+5V_XIAO",
+      "net_number": 2,
+      "min_track_width_mm": 0.2,
+      "max_track_width_mm": 0.2,
+      "track_widths_used": [
+        0.2
+      ],
+      "copper_layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "segment_count": 13,
+      "via_count": 2,
+      "via_drill_sizes_mm": [
+        0.3
+      ],
+      "detector": "analyze_current_capacity",
+      "rule_id": "CC-DET",
+      "category": "current_capacity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Power net +5V_XIAO: 0.2mm min trace",
+      "description": "Power/ground net +5V_XIAO: min trace 0.2mm, max 0.2mm, 13 segments.",
+      "components": [],
+      "nets": [
+        "+5V_XIAO"
+      ],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Current Capacity",
+        "impact": "Power delivery",
+        "standard_ref": "IPC-2221"
+      },
+      "stages": [
+        "layout",
+        "pre_fab"
+      ],
+      "finding_id": "pcb:CC-DET-+5v_xiao"
+    },
+    {
+      "net": "AVDD_3V0",
+      "net_number": 5,
+      "min_track_width_mm": 0.2,
+      "max_track_width_mm": 0.2,
+      "track_widths_used": [
+        0.2
+      ],
+      "copper_layers": [
+        "F.Cu"
+      ],
+      "segment_count": 9,
+      "via_count": 0,
+      "detector": "analyze_current_capacity",
+      "rule_id": "CC-DET",
+      "category": "current_capacity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Power net AVDD_3V0: 0.2mm min trace",
+      "description": "Power/ground net AVDD_3V0: min trace 0.2mm, max 0.2mm, 9 segments.",
+      "components": [],
+      "nets": [
+        "AVDD_3V0"
+      ],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Current Capacity",
+        "impact": "Power delivery",
+        "standard_ref": "IPC-2221"
+      },
+      "stages": [
+        "layout",
+        "pre_fab"
+      ],
+      "finding_id": "pcb:CC-DET-avdd_3v0"
+    },
+    {
+      "net": "VBUS",
+      "net_number": 24,
+      "min_track_width_mm": 0.2,
+      "max_track_width_mm": 0.2,
+      "track_widths_used": [
+        0.2
+      ],
+      "copper_layers": [
+        "F.Cu"
+      ],
+      "segment_count": 5,
+      "via_count": 0,
+      "detector": "analyze_current_capacity",
+      "rule_id": "CC-DET",
+      "category": "current_capacity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Power net VBUS: 0.2mm min trace",
+      "description": "Power/ground net VBUS: min trace 0.2mm, max 0.2mm, 5 segments.",
+      "components": [],
+      "nets": [
+        "VBUS"
+      ],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Current Capacity",
+        "impact": "Power delivery",
+        "standard_ref": "IPC-2221"
+      },
+      "stages": [
+        "layout",
+        "pre_fab"
+      ],
+      "finding_id": "pcb:CC-DET-vbus"
+    },
+    {
+      "net": "VBUS_FUSED",
+      "net_number": 25,
+      "min_track_width_mm": 0.2,
+      "max_track_width_mm": 0.2,
+      "track_widths_used": [
+        0.2
+      ],
+      "copper_layers": [
+        "F.Cu"
+      ],
+      "segment_count": 3,
+      "via_count": 0,
+      "detector": "analyze_current_capacity",
+      "rule_id": "CC-DET",
+      "category": "current_capacity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Power net VBUS_FUSED: 0.2mm min trace",
+      "description": "Power/ground net VBUS_FUSED: min trace 0.2mm, max 0.2mm, 3 segments.",
+      "components": [],
+      "nets": [
+        "VBUS_FUSED"
+      ],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Current Capacity",
+        "impact": "Power delivery",
+        "standard_ref": "IPC-2221"
+      },
+      "stages": [
+        "layout",
+        "pre_fab"
+      ],
+      "finding_id": "pcb:CC-DET-vbus_fused"
+    },
+    {
+      "component": "C1",
+      "value": "C_1206_3216Metric",
+      "layer": "B.Cu",
+      "pads": [
+        {
+          "pad": "1",
+          "position": [
+            13.525,
+            65.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        }
+      ],
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-001",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Foreign zone under C1",
+      "description": "Component C1 has same-layer copper from foreign zone(s): GND.",
+      "components": [
+        "C1"
+      ],
+      "nets": [
+        "GND"
+      ],
+      "pins": [
+        "1"
+      ],
+      "recommendation": "No action. Bypass caps are intentionally placed over the ground return to minimise loop area.",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Decoupling / bypass cap sitting over the GND pour \u2014 expected layout, not a clearance violation.",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-001:c1"
+    },
+    {
+      "component": "C11",
+      "value": "C_0603_1608Metric",
+      "layer": "B.Cu",
+      "pads": [
+        {
+          "pad": "1",
+          "position": [
+            9.725,
+            64.5
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        }
+      ],
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-001",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Foreign zone under C11",
+      "description": "Component C11 has same-layer copper from foreign zone(s): GND.",
+      "components": [
+        "C11"
+      ],
+      "nets": [
+        "GND"
+      ],
+      "pins": [
+        "1"
+      ],
+      "recommendation": "No action. Bypass caps are intentionally placed over the ground return to minimise loop area.",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Decoupling / bypass cap sitting over the GND pour \u2014 expected layout, not a clearance violation.",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-001:c11"
+    },
+    {
+      "component": "C2",
+      "value": "C_0603_1608Metric",
+      "layer": "B.Cu",
+      "pads": [
+        {
+          "pad": "1",
+          "position": [
+            21.725,
+            65.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        }
+      ],
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-001",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Foreign zone under C2",
+      "description": "Component C2 has same-layer copper from foreign zone(s): GND.",
+      "components": [
+        "C2"
+      ],
+      "nets": [
+        "GND"
+      ],
+      "pins": [
+        "1"
+      ],
+      "recommendation": "No action. Bypass caps are intentionally placed over the ground return to minimise loop area.",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Decoupling / bypass cap sitting over the GND pour \u2014 expected layout, not a clearance violation.",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-001:c2"
+    },
+    {
+      "component": "C8",
+      "value": "C_0603_1608Metric",
+      "layer": "B.Cu",
+      "pads": [
+        {
+          "pad": "1",
+          "position": [
+            33.225,
+            10.5
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        },
+        {
+          "pad": "2",
+          "position": [
+            34.775,
+            10.5
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        }
+      ],
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-001",
+      "category": "copper_integrity",
+      "severity": "warning",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Foreign zone under C8",
+      "description": "Component C8 has same-layer copper from foreign zone(s): GND.",
+      "components": [
+        "C8"
+      ],
+      "nets": [
+        "GND"
+      ],
+      "pins": [
+        "1",
+        "2"
+      ],
+      "recommendation": "Verify zone clearance rules or add keepout.",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Electrical isolation",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-001:c8"
+    },
+    {
+      "component": "D2",
+      "value": "D_SMA",
+      "layer": "B.Cu",
+      "pads": [
+        {
+          "pad": "1",
+          "position": [
+            23.75,
+            61.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        },
+        {
+          "pad": "2",
+          "position": [
+            19.75,
+            61.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        }
+      ],
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-001",
+      "category": "copper_integrity",
+      "severity": "warning",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Foreign zone under D2",
+      "description": "Component D2 has same-layer copper from foreign zone(s): GND.",
+      "components": [
+        "D2"
+      ],
+      "nets": [
+        "GND"
+      ],
+      "pins": [
+        "1",
+        "2"
+      ],
+      "recommendation": "Verify zone clearance rules or add keepout.",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Electrical isolation",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-001:d2"
+    },
+    {
+      "component": "F1",
+      "value": "Fuse_1812_4532Metric",
+      "layer": "B.Cu",
+      "pads": [
+        {
+          "pad": "1",
+          "position": [
+            17.087,
+            61.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        },
+        {
+          "pad": "2",
+          "position": [
+            12.812,
+            61.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        }
+      ],
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-001",
+      "category": "copper_integrity",
+      "severity": "warning",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Foreign zone under F1",
+      "description": "Component F1 has same-layer copper from foreign zone(s): GND.",
+      "components": [
+        "F1"
+      ],
+      "nets": [
+        "GND"
+      ],
+      "pins": [
+        "1",
+        "2"
+      ],
+      "recommendation": "Verify zone clearance rules or add keepout.",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Electrical isolation",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-001:f1"
+    },
+    {
+      "component": "R1",
+      "value": "R_0603_1608Metric",
+      "layer": "B.Cu",
+      "pads": [
+        {
+          "pad": "1",
+          "position": [
+            27.475,
+            61.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        }
+      ],
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-001",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Foreign zone under R1",
+      "description": "Component R1 has same-layer copper from foreign zone(s): GND.",
+      "components": [
+        "R1"
+      ],
+      "nets": [
+        "GND"
+      ],
+      "pins": [
+        "1"
+      ],
+      "recommendation": "No action. Bypass caps are intentionally placed over the ground return to minimise loop area.",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Decoupling / bypass cap sitting over the GND pour \u2014 expected layout, not a clearance violation.",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-001:r1"
+    },
+    {
+      "component": "R3",
+      "value": "R_0603_1608Metric",
+      "layer": "B.Cu",
+      "pads": [
+        {
+          "pad": "1",
+          "position": [
+            29.675,
+            12.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        },
+        {
+          "pad": "2",
+          "position": [
+            31.325,
+            12.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        }
+      ],
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-001",
+      "category": "copper_integrity",
+      "severity": "warning",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Foreign zone under R3",
+      "description": "Component R3 has same-layer copper from foreign zone(s): GND.",
+      "components": [
+        "R3"
+      ],
+      "nets": [
+        "GND"
+      ],
+      "pins": [
+        "1",
+        "2"
+      ],
+      "recommendation": "Verify zone clearance rules or add keepout.",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Electrical isolation",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-001:r3"
+    },
+    {
+      "component": "R4",
+      "value": "R_0603_1608Metric",
+      "layer": "B.Cu",
+      "pads": [
+        {
+          "pad": "1",
+          "position": [
+            29.675,
+            9.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        },
+        {
+          "pad": "2",
+          "position": [
+            31.325,
+            9.0
+          ],
+          "foreign_zones": [
+            "GND"
+          ]
+        }
+      ],
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-001",
+      "category": "copper_integrity",
+      "severity": "warning",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Foreign zone under R4",
+      "description": "Component R4 has same-layer copper from foreign zone(s): GND.",
+      "components": [
+        "R4"
+      ],
+      "nets": [
+        "GND"
+      ],
+      "pins": [
+        "1",
+        "2"
+      ],
+      "recommendation": "Verify zone clearance rules or add keepout.",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Electrical isolation",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-001:r4"
+    },
+    {
+      "component": "D2",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-002",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "No opposite-layer copper under D2",
+      "description": "Component D2 has no copper zone on the opposite layer.",
+      "components": [
+        "D2"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Return path / shielding",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-002:d2"
+    },
+    {
+      "component": "F1",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-002",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "No opposite-layer copper under F1",
+      "description": "Component F1 has no copper zone on the opposite layer.",
+      "components": [
+        "F1"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Return path / shielding",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-002:f1"
+    },
+    {
+      "component": "J1",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-002",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "No opposite-layer copper under J1",
+      "description": "Component J1 has no copper zone on the opposite layer.",
+      "components": [
+        "J1"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Return path / shielding",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-002:j1"
+    },
+    {
+      "component": "J2",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-002",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "No opposite-layer copper under J2",
+      "description": "Component J2 has no copper zone on the opposite layer.",
+      "components": [
+        "J2"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Return path / shielding",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-002:j2"
+    },
+    {
+      "component": "MH1",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-002",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "No opposite-layer copper under MH1",
+      "description": "Component MH1 has no copper zone on the opposite layer.",
+      "components": [
+        "MH1"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Return path / shielding",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-002:mh1"
+    },
+    {
+      "component": "MH2",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-002",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "No opposite-layer copper under MH2",
+      "description": "Component MH2 has no copper zone on the opposite layer.",
+      "components": [
+        "MH2"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Return path / shielding",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-002:mh2"
+    },
+    {
+      "component": "MH3",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-002",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "No opposite-layer copper under MH3",
+      "description": "Component MH3 has no copper zone on the opposite layer.",
+      "components": [
+        "MH3"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Return path / shielding",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-002:mh3"
+    },
+    {
+      "component": "MH4",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-002",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "No opposite-layer copper under MH4",
+      "description": "Component MH4 has no copper zone on the opposite layer.",
+      "components": [
+        "MH4"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Return path / shielding",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-002:mh4"
+    },
+    {
+      "component": "TP8",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-002",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "No opposite-layer copper under TP8",
+      "description": "Component TP8 has no copper zone on the opposite layer.",
+      "components": [
+        "TP8"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Return path / shielding",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-002:tp8"
+    },
+    {
+      "ref": "TP8",
+      "layer": "F.Cu",
+      "gnd_clearance_mm": 0.0,
+      "measurement_basis": "filled_bbox",
+      "detector": "analyze_copper_presence",
+      "rule_id": "CP-003",
+      "category": "copper_integrity",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "geometry",
+      "summary": "Touch pad TP8 GND clearance 0.0mm",
+      "description": "Touch pad TP8 on F.Cu: 0.0mm clearance to nearest GND zone copper.",
+      "components": [
+        "TP8"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "Copper Integrity",
+        "impact": "Touch sensitivity",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:CP-003:tp8"
+    },
+    {
+      "side": "B.Cu",
+      "fiducial_count": 0,
+      "fiducial_refs": [],
+      "smd_component_count": 13,
+      "finest_smd_pad_dim_mm": 0.3,
+      "detector": "analyze_fiducials",
+      "rule_id": "FD-001",
+      "category": "assembly",
+      "severity": "error",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "No fiducials on B.Cu (13 SMD components) (finest pad dim 0.30mm \u2014 BGA/fine-pitch QFN present)",
+      "description": "B.Cu has 0 fiducial(s) but 13 SMD components. Assembly machines need >= 3 fiducials for accurate placement.",
+      "components": [],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Add fiducial markers for pick-and-place alignment (3 per side with SMD).",
+      "report_context": {
+        "section": "Assembly",
+        "impact": "Pick-and-place alignment",
+        "standard_ref": "IPC-7351"
+      },
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "pcb:FD-001:85013955622a"
+    },
+    {
+      "side": "F.Cu",
+      "fiducial_count": 0,
+      "fiducial_refs": [],
+      "smd_component_count": 28,
+      "finest_smd_pad_dim_mm": 0.3,
+      "detector": "analyze_fiducials",
+      "rule_id": "FD-001",
+      "category": "assembly",
+      "severity": "error",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "No fiducials on F.Cu (28 SMD components) (finest pad dim 0.30mm \u2014 BGA/fine-pitch QFN present)",
+      "description": "F.Cu has 0 fiducial(s) but 28 SMD components. Assembly machines need >= 3 fiducials for accurate placement.",
+      "components": [],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Add fiducial markers for pick-and-place alignment (3 per side with SMD).",
+      "report_context": {
+        "section": "Assembly",
+        "impact": "Pick-and-place alignment",
+        "standard_ref": "IPC-7351"
+      },
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "pcb:FD-001:7e7ab1b794e6"
+    },
+    {
+      "component": "J1",
+      "keepout_name": "",
+      "keepout_layers": [
+        "B.Cu"
+      ],
+      "keepout_allowed_net": "",
+      "detector": "analyze_keepout_violations",
+      "rule_id": "KO-001",
+      "category": "placement",
+      "severity": "error",
+      "confidence": "heuristic",
+      "evidence_source": "topology",
+      "summary": "Keepout violation: J1 inside keepout zone ",
+      "description": "Component J1 center is inside keepout zone  (bbox check).",
+      "components": [
+        "J1"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Move J1 outside the keepout zone.",
+      "report_context": {
+        "section": "Placement",
+        "impact": "Design rule violation",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:KO-001:j1"
+    },
+    {
+      "component": "J2",
+      "keepout_name": "",
+      "keepout_layers": [
+        "B.Cu"
+      ],
+      "keepout_allowed_net": "",
+      "detector": "analyze_keepout_violations",
+      "rule_id": "KO-001",
+      "category": "placement",
+      "severity": "error",
+      "confidence": "heuristic",
+      "evidence_source": "topology",
+      "summary": "Keepout violation: J2 inside keepout zone ",
+      "description": "Component J2 center is inside keepout zone  (bbox check).",
+      "components": [
+        "J2"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Move J2 outside the keepout zone.",
+      "report_context": {
+        "section": "Placement",
+        "impact": "Design rule violation",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:KO-001:j2"
+    },
+    {
+      "side": "F.Cu",
+      "total_passives": 13,
+      "majority_angle": 0,
+      "majority_count": 8,
+      "deviator_count": 5,
+      "deviator_refs": [
+        "C5",
+        "C6",
+        "C4",
+        "C9",
+        "C7"
+      ],
+      "detector": "analyze_orientation_consistency",
+      "rule_id": "OR-001",
+      "category": "assembly",
+      "severity": "info",
+      "confidence": "heuristic",
+      "evidence_source": "topology",
+      "summary": "Orientation: 5 passives on F.Cu deviate from 0 deg majority",
+      "description": "5 of 13 passives on F.Cu are not at the majority 0 deg orientation.",
+      "components": [
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C9"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Align passive component orientations for consistent pick-and-place.",
+      "report_context": {
+        "section": "Assembly",
+        "impact": "Pick-and-place efficiency",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:OR-001:c4"
+    },
+    {
+      "component": "J1",
+      "layer": "B.Cu",
+      "edge_clearance_mm": -1.58,
+      "detector": "analyze_placement",
+      "rule_id": "PM-002",
+      "category": "placement",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "J1 is -1.58mm from board edge (edge-mount footprint \u2014 by-design at board edge)",
+      "description": "Component J1 on B.Cu is only -1.58mm from the board edge, risking damage during depaneling or handling.",
+      "components": [
+        "J1"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Move J1 further from board edge (currently -1.58mm, recommend >= 1.0mm)",
+      "report_context": {
+        "section": "Placement",
+        "impact": "manufacturability",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:PM-002:j1"
+    },
+    {
+      "component": "J2",
+      "layer": "B.Cu",
+      "edge_clearance_mm": 0.1,
+      "detector": "analyze_placement",
+      "rule_id": "PM-002",
+      "category": "placement",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "J2 is 0.1mm from board edge (edge-mount footprint \u2014 by-design at board edge)",
+      "description": "Component J2 on B.Cu is only 0.1mm from the board edge, risking damage during depaneling or handling.",
+      "components": [
+        "J2"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Move J2 further from board edge (currently 0.1mm, recommend >= 1.0mm)",
+      "report_context": {
+        "section": "Placement",
+        "impact": "manufacturability",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:PM-002:j2"
+    },
+    {
+      "component": "MH2",
+      "layer": "F.Cu",
+      "edge_clearance_mm": 0.15,
+      "detector": "analyze_placement",
+      "rule_id": "PM-002",
+      "category": "placement",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "MH2 is 0.15mm from board edge (edge-mount footprint \u2014 by-design at board edge)",
+      "description": "Component MH2 on F.Cu is only 0.15mm from the board edge, risking damage during depaneling or handling.",
+      "components": [
+        "MH2"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Move MH2 further from board edge (currently 0.15mm, recommend >= 1.0mm)",
+      "report_context": {
+        "section": "Placement",
+        "impact": "manufacturability",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:PM-002:mh2"
+    },
+    {
+      "component": "MH3",
+      "layer": "F.Cu",
+      "edge_clearance_mm": 0.15,
+      "detector": "analyze_placement",
+      "rule_id": "PM-002",
+      "category": "placement",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "MH3 is 0.15mm from board edge (edge-mount footprint \u2014 by-design at board edge)",
+      "description": "Component MH3 on F.Cu is only 0.15mm from the board edge, risking damage during depaneling or handling.",
+      "components": [
+        "MH3"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Move MH3 further from board edge (currently 0.15mm, recommend >= 1.0mm)",
+      "report_context": {
+        "section": "Placement",
+        "impact": "manufacturability",
+        "standard_ref": ""
+      },
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "pcb:PM-002:mh3"
+    },
+    {
+      "net_number": 7,
+      "net_name": "CC1",
+      "pad_count": 2,
+      "pads": [
+        "R1.1",
+        "J1.A5"
+      ],
+      "detector": "analyze_connectivity",
+      "rule_id": "RT-001",
+      "category": "connectivity",
+      "severity": "error",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Unrouted net CC1 (2 pads)",
+      "description": "Net CC1 has 2 pads but no routing (tracks, vias, or zones).",
+      "components": [
+        "J1",
+        "R1"
+      ],
+      "nets": [
+        "CC1"
+      ],
+      "pins": [],
+      "recommendation": "Route net CC1 to connect 2 pads",
+      "report_context": {
+        "section": "Connectivity",
+        "impact": "functionality",
+        "standard_ref": ""
+      },
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "pcb:RT-001:j1"
+    },
+    {
+      "net_number": 8,
+      "net_name": "CC2",
+      "pad_count": 2,
+      "pads": [
+        "R2.1",
+        "J1.B5"
+      ],
+      "detector": "analyze_connectivity",
+      "rule_id": "RT-001",
+      "category": "connectivity",
+      "severity": "error",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Unrouted net CC2 (2 pads)",
+      "description": "Net CC2 has 2 pads but no routing (tracks, vias, or zones).",
+      "components": [
+        "J1",
+        "R2"
+      ],
+      "nets": [
+        "CC2"
+      ],
+      "pins": [],
+      "recommendation": "Route net CC2 to connect 2 pads",
+      "report_context": {
+        "section": "Connectivity",
+        "impact": "functionality",
+        "standard_ref": ""
+      },
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "pcb:RT-001:j1#1"
+    },
+    {
+      "net_number": 12,
+      "net_name": "LC_S+",
+      "pad_count": 2,
+      "pads": [
+        "R3.1",
+        "J2.3"
+      ],
+      "detector": "analyze_connectivity",
+      "rule_id": "RT-001",
+      "category": "connectivity",
+      "severity": "error",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Unrouted net LC_S+ (2 pads)",
+      "description": "Net LC_S+ has 2 pads but no routing (tracks, vias, or zones).",
+      "components": [
+        "J2",
+        "R3"
+      ],
+      "nets": [
+        "LC_S+"
+      ],
+      "pins": [],
+      "recommendation": "Route net LC_S+ to connect 2 pads",
+      "report_context": {
+        "section": "Connectivity",
+        "impact": "functionality",
+        "standard_ref": ""
+      },
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "pcb:RT-001:j2"
+    },
+    {
+      "net_number": 13,
+      "net_name": "LC_S-",
+      "pad_count": 2,
+      "pads": [
+        "J2.4",
+        "R4.1"
+      ],
+      "detector": "analyze_connectivity",
+      "rule_id": "RT-001",
+      "category": "connectivity",
+      "severity": "error",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Unrouted net LC_S- (2 pads)",
+      "description": "Net LC_S- has 2 pads but no routing (tracks, vias, or zones).",
+      "components": [
+        "J2",
+        "R4"
+      ],
+      "nets": [
+        "LC_S-"
+      ],
+      "pins": [],
+      "recommendation": "Route net LC_S- to connect 2 pads",
+      "report_context": {
+        "section": "Connectivity",
+        "impact": "functionality",
+        "standard_ref": ""
+      },
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "pcb:RT-001:j2#1"
+    },
+    {
+      "total_signal_nets": 37,
+      "nets_with_test_points": 7,
+      "coverage_pct": 18.9,
+      "test_point_count": 10,
+      "detector": "analyze_test_point_coverage",
+      "rule_id": "TE-001",
+      "category": "testability",
+      "severity": "warning",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Test point coverage: 7/37 nets (19%)",
+      "description": "7 of 37 signal nets have test points (19% coverage).",
+      "components": [],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Add test points to improve ICT/flying probe coverage.",
+      "report_context": {
+        "section": "Testability",
+        "impact": "ICT accessibility",
+        "standard_ref": ""
+      },
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "pcb:TE-001:d36ba1b68da2"
+    }
+  ],
+  "assessments": [],
+  "trust_summary": {
+    "total_findings": 38,
+    "trust_level": "high",
+    "by_confidence": {
+      "deterministic": 35,
+      "heuristic": 3,
+      "datasheet_backed": 0
+    },
+    "by_evidence_source": {
+      "datasheet": 0,
+      "topology": 19,
+      "heuristic_rule": 0,
+      "symbol_footprint": 0,
+      "bom": 0,
+      "geometry": 19,
+      "api_lookup": 0
+    },
+    "provenance_coverage_pct": 0.0
+  },
+  "summary": {
+    "total_findings": 38,
+    "by_severity": {
+      "error": 8,
+      "warning": 6,
+      "info": 24
+    }
+  },
+  "inputs": {
+    "source_files": [
+      "/home/rwrife/repos/.worktrees/spool-sentry-issue-3/hardware/spool-sentry.kicad_pcb"
+    ],
+    "source_hashes": {
+      "/home/rwrife/repos/.worktrees/spool-sentry-issue-3/hardware/spool-sentry.kicad_pcb": "a93a843d2979f30c900685be1e9ba7e77e7c7222e14f74f039c2217e349e05b6"
+    },
+    "run_id": "20260912T181341Z-a04f99",
+    "config_hash": null,
+    "upstream_artifacts": {}
+  },
+  "compat": {
+    "minimum_consumer_version": "1.4.0",
+    "deprecated_fields": [],
+    "experimental_fields": []
+  },
+  "design_intent": {
+    "product_class": "prototype",
+    "ipc_class": 2,
+    "target_market": "hobby",
+    "expected_lifetime_years": 5,
+    "operating_temp_range": [
+      -10,
+      70
+    ],
+    "preferred_passive_size": "0603",
+    "test_coverage_target": 0.85,
+    "approved_manufacturers": [],
+    "confidence": 0.5,
+    "detection_signals": [
+      "controlled impedance net classes present",
+      "10 test points (TP*) detected"
+    ],
+    "source": {
+      "ipc_class": "auto",
+      "product_class": "auto",
+      "target_market": "auto",
+      "expected_lifetime_years": "auto",
+      "operating_temp_range": "auto",
+      "preferred_passive_size": "auto",
+      "test_coverage_target": "auto",
+      "approved_manufacturers": "auto"
+    }
+  },
+  "audience_summary": {
+    "designer": {
+      "total_findings": 38,
+      "by_severity": {
+        "error": 8,
+        "warning": 6,
+        "info": 24
+      },
+      "by_category": {
+        "current_capacity": 5,
+        "copper_integrity": 19,
+        "assembly": 3,
+        "placement": 6,
+        "connectivity": 4,
+        "testability": 1
+      },
+      "top_issues": [
+        {
+          "side": "B.Cu",
+          "fiducial_count": 0,
+          "fiducial_refs": [],
+          "smd_component_count": 13,
+          "finest_smd_pad_dim_mm": 0.3,
+          "detector": "analyze_fiducials",
+          "rule_id": "FD-001",
+          "category": "assembly",
+          "severity": "error",
+          "confidence": "deterministic",
+          "evidence_source": "topology",
+          "summary": "No fiducials on B.Cu (13 SMD components) (finest pad dim 0.30mm \u2014 BGA/fine-pitch QFN present)",
+          "description": "B.Cu has 0 fiducial(s) but 13 SMD components. Assembly machines need >= 3 fiducials for accurate placement.",
+          "components": [],
+          "nets": [],
+          "pins": [],
+          "recommendation": "Add fiducial markers for pick-and-place alignment (3 per side with SMD).",
+          "report_context": {
+            "section": "Assembly",
+            "impact": "Pick-and-place alignment",
+            "standard_ref": "IPC-7351"
+          },
+          "stages": [
+            "pre_fab"
+          ],
+          "finding_id": "pcb:FD-001:85013955622a"
+        },
+        {
+          "side": "F.Cu",
+          "fiducial_count": 0,
+          "fiducial_refs": [],
+          "smd_component_count": 28,
+          "finest_smd_pad_dim_mm": 0.3,
+          "detector": "analyze_fiducials",
+          "rule_id": "FD-001",
+          "category": "assembly",
+          "severity": "error",
+          "confidence": "deterministic",
+          "evidence_source": "topology",
+          "summary": "No fiducials on F.Cu (28 SMD components) (finest pad dim 0.30mm \u2014 BGA/fine-pitch QFN present)",
+          "description": "F.Cu has 0 fiducial(s) but 28 SMD components. Assembly machines need >= 3 fiducials for accurate placement.",
+          "components": [],
+          "nets": [],
+          "pins": [],
+          "recommendation": "Add fiducial markers for pick-and-place alignment (3 per side with SMD).",
+          "report_context": {
+            "section": "Assembly",
+            "impact": "Pick-and-place alignment",
+            "standard_ref": "IPC-7351"
+          },
+          "stages": [
+            "pre_fab"
+          ],
+          "finding_id": "pcb:FD-001:7e7ab1b794e6"
+        },
+        {
+          "component": "J1",
+          "keepout_name": "",
+          "keepout_layers": [
+            "B.Cu"
+          ],
+          "keepout_allowed_net": "",
+          "detector": "analyze_keepout_violations",
+          "rule_id": "KO-001",
+          "category": "placement",
+          "severity": "error",
+          "confidence": "heuristic",
+          "evidence_source": "topology",
+          "summary": "Keepout violation: J1 inside keepout zone ",
+          "description": "Component J1 center is inside keepout zone  (bbox check).",
+          "components": [
+            "J1"
+          ],
+          "nets": [],
+          "pins": [],
+          "recommendation": "Move J1 outside the keepout zone.",
+          "report_context": {
+            "section": "Placement",
+            "impact": "Design rule violation",
+            "standard_ref": ""
+          },
+          "stages": [
+            "layout"
+          ],
+          "finding_id": "pcb:KO-001:j1"
+        },
+        {
+          "component": "J2",
+          "keepout_name": "",
+          "keepout_layers": [
+            "B.Cu"
+          ],
+          "keepout_allowed_net": "",
+          "detector": "analyze_keepout_violations",
+          "rule_id": "KO-001",
+          "category": "placement",
+          "severity": "error",
+          "confidence": "heuristic",
+          "evidence_source": "topology",
+          "summary": "Keepout violation: J2 inside keepout zone ",
+          "description": "Component J2 center is inside keepout zone  (bbox check).",
+          "components": [
+            "J2"
+          ],
+          "nets": [],
+          "pins": [],
+          "recommendation": "Move J2 outside the keepout zone.",
+          "report_context": {
+            "section": "Placement",
+            "impact": "Design rule violation",
+            "standard_ref": ""
+          },
+          "stages": [
+            "layout"
+          ],
+          "finding_id": "pcb:KO-001:j2"
+        },
+        {
+          "net_number": 7,
+          "net_name": "CC1",
+          "pad_count": 2,
+          "pads": [
+            "R1.1",
+            "J1.A5"
+          ],
+          "detector": "analyze_connectivity",
+          "rule_id": "RT-001",
+          "category": "connectivity",
+          "severity": "error",
+          "confidence": "deterministic",
+          "evidence_source": "topology",
+          "summary": "Unrouted net CC1 (2 pads)",
+          "description": "Net CC1 has 2 pads but no routing (tracks, vias, or zones).",
+          "components": [
+            "J1",
+            "R1"
+          ],
+          "nets": [
+            "CC1"
+          ],
+          "pins": [],
+          "recommendation": "Route net CC1 to connect 2 pads",
+          "report_context": {
+            "section": "Connectivity",
+            "impact": "functionality",
+            "standard_ref": ""
+          },
+          "stages": [
+            "pre_fab"
+          ],
+          "finding_id": "pcb:RT-001:j1"
+        },
+        {
+          "net_number": 8,
+          "net_name": "CC2",
+          "pad_count": 2,
+          "pads": [
+            "R2.1",
+            "J1.B5"
+          ],
+          "detector": "analyze_connectivity",
+          "rule_id": "RT-001",
+          "category": "connectivity",
+          "severity": "error",
+          "confidence": "deterministic",
+          "evidence_source": "topology",
+          "summary": "Unrouted net CC2 (2 pads)",
+          "description": "Net CC2 has 2 pads but no routing (tracks, vias, or zones).",
+          "components": [
+            "J1",
+            "R2"
+          ],
+          "nets": [
+            "CC2"
+          ],
+          "pins": [],
+          "recommendation": "Route net CC2 to connect 2 pads",
+          "report_context": {
+            "section": "Connectivity",
+            "impact": "functionality",
+            "standard_ref": ""
+          },
+          "stages": [
+            "pre_fab"
+          ],
+          "finding_id": "pcb:RT-001:j1#1"
+        },
+        {
+          "net_number": 12,
+          "net_name": "LC_S+",
+          "pad_count": 2,
+          "pads": [
+            "R3.1",
+            "J2.3"
+          ],
+          "detector": "analyze_connectivity",
+          "rule_id": "RT-001",
+          "category": "connectivity",
+          "severity": "error",
+          "confidence": "deterministic",
+          "evidence_source": "topology",
+          "summary": "Unrouted net LC_S+ (2 pads)",
+          "description": "Net LC_S+ has 2 pads but no routing (tracks, vias, or zones).",
+          "components": [
+            "J2",
+            "R3"
+          ],
+          "nets": [
+            "LC_S+"
+          ],
+          "pins": [],
+          "recommendation": "Route net LC_S+ to connect 2 pads",
+          "report_context": {
+            "section": "Connectivity",
+            "impact": "functionality",
+            "standard_ref": ""
+          },
+          "stages": [
+            "pre_fab"
+          ],
+          "finding_id": "pcb:RT-001:j2"
+        },
+        {
+          "net_number": 13,
+          "net_name": "LC_S-",
+          "pad_count": 2,
+          "pads": [
+            "J2.4",
+            "R4.1"
+          ],
+          "detector": "analyze_connectivity",
+          "rule_id": "RT-001",
+          "category": "connectivity",
+          "severity": "error",
+          "confidence": "deterministic",
+          "evidence_source": "topology",
+          "summary": "Unrouted net LC_S- (2 pads)",
+          "description": "Net LC_S- has 2 pads but no routing (tracks, vias, or zones).",
+          "components": [
+            "J2",
+            "R4"
+          ],
+          "nets": [
+            "LC_S-"
+          ],
+          "pins": [],
+          "recommendation": "Route net LC_S- to connect 2 pads",
+          "report_context": {
+            "section": "Connectivity",
+            "impact": "functionality",
+            "standard_ref": ""
+          },
+          "stages": [
+            "pre_fab"
+          ],
+          "finding_id": "pcb:RT-001:j2#1"
+        },
+        {
+          "component": "C8",
+          "value": "C_0603_1608Metric",
+          "layer": "B.Cu",
+          "pads": [
+            {
+              "pad": "1",
+              "position": [
+                33.225,
+                10.5
+              ],
+              "foreign_zones": [
+                "GND"
+              ]
+            },
+            {
+              "pad": "2",
+              "position": [
+                34.775,
+                10.5
+              ],
+              "foreign_zones": [
+                "GND"
+              ]
+            }
+          ],
+          "detector": "analyze_copper_presence",
+          "rule_id": "CP-001",
+          "category": "copper_integrity",
+          "severity": "warning",
+          "confidence": "deterministic",
+          "evidence_source": "geometry",
+          "summary": "Foreign zone under C8",
+          "description": "Component C8 has same-layer copper from foreign zone(s): GND.",
+          "components": [
+            "C8"
+          ],
+          "nets": [
+            "GND"
+          ],
+          "pins": [
+            "1",
+            "2"
+          ],
+          "recommendation": "Verify zone clearance rules or add keepout.",
+          "report_context": {
+            "section": "Copper Integrity",
+            "impact": "Electrical isolation",
+            "standard_ref": ""
+          },
+          "stages": [
+            "layout"
+          ],
+          "finding_id": "pcb:CP-001:c8"
+        },
+        {
+          "component": "D2",
+          "value": "D_SMA",
+          "layer": "B.Cu",
+          "pads": [
+            {
+              "pad": "1",
+              "position": [
+                23.75,
+                61.0
+              ],
+              "foreign_zones": [
+                "GND"
+              ]
+            },
+            {
+              "pad": "2",
+              "position": [
+                19.75,
+                61.0
+              ],
+              "foreign_zones": [
+                "GND"
+              ]
+            }
+          ],
+          "detector": "analyze_copper_presence",
+          "rule_id": "CP-001",
+          "category": "copper_integrity",
+          "severity": "warning",
+          "confidence": "deterministic",
+          "evidence_source": "geometry",
+          "summary": "Foreign zone under D2",
+          "description": "Component D2 has same-layer copper from foreign zone(s): GND.",
+          "components": [
+            "D2"
+          ],
+          "nets": [
+            "GND"
+          ],
+          "pins": [
+            "1",
+            "2"
+          ],
+          "recommendation": "Verify zone clearance rules or add keepout.",
+          "report_context": {
+            "section": "Copper Integrity",
+            "impact": "Electrical isolation",
+            "standard_ref": ""
+          },
+          "stages": [
+            "layout"
+          ],
+          "finding_id": "pcb:CP-001:d2"
+        }
+      ]
+    },
+    "reviewer": {
+      "total_findings": 14,
+      "by_category": {
+        "copper_integrity": 5,
+        "assembly": 2,
+        "placement": 2,
+        "connectivity": 4,
+        "testability": 1
+      },
+      "top_issues": [
+        {
+          "rule_id": "FD-001",
+          "severity": "error",
+          "summary": "No fiducials on B.Cu (13 SMD components) (finest pad dim 0.30mm \u2014 BGA/fine-pitch QFN present)",
+          "recommendation": "Add fiducial markers for pick-and-place alignment (3 per side with SMD).",
+          "category": "assembly"
+        },
+        {
+          "rule_id": "FD-001",
+          "severity": "error",
+          "summary": "No fiducials on F.Cu (28 SMD components) (finest pad dim 0.30mm \u2014 BGA/fine-pitch QFN present)",
+          "recommendation": "Add fiducial markers for pick-and-place alignment (3 per side with SMD).",
+          "category": "assembly"
+        },
+        {
+          "rule_id": "KO-001",
+          "severity": "error",
+          "summary": "Keepout violation: J1 inside keepout zone ",
+          "recommendation": "Move J1 outside the keepout zone.",
+          "category": "placement"
+        },
+        {
+          "rule_id": "KO-001",
+          "severity": "error",
+          "summary": "Keepout violation: J2 inside keepout zone ",
+          "recommendation": "Move J2 outside the keepout zone.",
+          "category": "placement"
+        },
+        {
+          "rule_id": "RT-001",
+          "severity": "error",
+          "summary": "Unrouted net CC1 (2 pads)",
+          "recommendation": "Route net CC1 to connect 2 pads",
+          "category": "connectivity"
+        },
+        {
+          "rule_id": "RT-001",
+          "severity": "error",
+          "summary": "Unrouted net CC2 (2 pads)",
+          "recommendation": "Route net CC2 to connect 2 pads",
+          "category": "connectivity"
+        },
+        {
+          "rule_id": "RT-001",
+          "severity": "error",
+          "summary": "Unrouted net LC_S+ (2 pads)",
+          "recommendation": "Route net LC_S+ to connect 2 pads",
+          "category": "connectivity"
+        },
+        {
+          "rule_id": "RT-001",
+          "severity": "error",
+          "summary": "Unrouted net LC_S- (2 pads)",
+          "recommendation": "Route net LC_S- to connect 2 pads",
+          "category": "connectivity"
+        },
+        {
+          "rule_id": "CP-001",
+          "severity": "warning",
+          "summary": "Foreign zone under C8",
+          "recommendation": "Verify zone clearance rules or add keepout.",
+          "category": "copper_integrity"
+        },
+        {
+          "rule_id": "CP-001",
+          "severity": "warning",
+          "summary": "Foreign zone under D2",
+          "recommendation": "Verify zone clearance rules or add keepout.",
+          "category": "copper_integrity"
+        },
+        {
+          "rule_id": "CP-001",
+          "severity": "warning",
+          "summary": "Foreign zone under F1",
+          "recommendation": "Verify zone clearance rules or add keepout.",
+          "category": "copper_integrity"
+        },
+        {
+          "rule_id": "CP-001",
+          "severity": "warning",
+          "summary": "Foreign zone under R3",
+          "recommendation": "Verify zone clearance rules or add keepout.",
+          "category": "copper_integrity"
+        },
+        {
+          "rule_id": "CP-001",
+          "severity": "warning",
+          "summary": "Foreign zone under R4",
+          "recommendation": "Verify zone clearance rules or add keepout.",
+          "category": "copper_integrity"
+        },
+        {
+          "rule_id": "TE-001",
+          "severity": "warning",
+          "summary": "Test point coverage: 7/37 nets (19%)",
+          "recommendation": "Add test points to improve ICT/flying probe coverage.",
+          "category": "testability"
+        }
+      ]
+    },
+    "manager": {
+      "risk_level": "high",
+      "blocker_count": 8,
+      "warning_count": 6,
+      "stage_readiness": {
+        "schematic": "pass",
+        "layout": "needs_work",
+        "pre_fab": "needs_work",
+        "bring_up": "pass"
+      },
+      "one_liner": "8 errors, 6 warnings across 5 categories. Layout, pre-fab stages have blockers."
+    }
+  },
+  "capability_mode_ref": {
+    "source": "analysis/capability_mode.json",
+    "run_id": "20260912T181341Z-a04f99"
+  }
+}

@@ -1,0 +1,678 @@
+{
+  "analyzer_type": "emc",
+  "schema_version": "1.4.0",
+  "inputs": {
+    "source_files": [
+      "docs/verification/schematic-analysis.json",
+      "docs/verification/pcb-analysis.json"
+    ],
+    "source_hashes": {
+      "docs/verification/schematic-analysis.json": "5e12d6e804a58547d2c9cdb7efa5372c6723ea9085e19cdcf880f0bd7049baea",
+      "docs/verification/pcb-analysis.json": "1a029b8978d74a4d65a47f6ad1cd008fcdfc0be2f9e9eb07305ddd9347def3b9"
+    },
+    "run_id": "20260912T181341Z-a04f99",
+    "config_hash": null,
+    "upstream_artifacts": {
+      "schematic": {
+        "path": "docs/verification/schematic-analysis.json",
+        "sha256": "5e12d6e804a58547d2c9cdb7efa5372c6723ea9085e19cdcf880f0bd7049baea",
+        "schema_version": "1.4.0",
+        "run_id": "20260907T162751Z-9f69f5"
+      },
+      "pcb": {
+        "path": "docs/verification/pcb-analysis.json",
+        "sha256": "1a029b8978d74a4d65a47f6ad1cd008fcdfc0be2f9e9eb07305ddd9347def3b9",
+        "schema_version": "1.4.0",
+        "run_id": "20260912T181341Z-a04f99"
+      }
+    }
+  },
+  "compat": {
+    "minimum_consumer_version": "1.4.0",
+    "deprecated_fields": [],
+    "experimental_fields": []
+  },
+  "summary": {
+    "total_findings": 7,
+    "categories_checked": 5,
+    "active": 7,
+    "suppressed": 0,
+    "by_severity": {
+      "error": 3,
+      "warning": 0,
+      "info": 4
+    },
+    "emc_risk_score": 76.0
+  },
+  "target_standard": "fcc-class-b",
+  "findings": [
+    {
+      "category": "ground_plane",
+      "severity": "info",
+      "rule_id": "GP-001",
+      "confidence": "deterministic",
+      "title": "Return path analysis data not available",
+      "description": "PCB analysis did not include return path continuity data. Run the PCB analyzer with --full flag to enable GP-001 reference plane coverage checking.",
+      "components": [],
+      "nets": [],
+      "recommendation": "Re-run PCB analysis with: python3 analyze_pcb.py <file> --full",
+      "detector": "emc_ground_plane",
+      "summary": "Return path analysis data not available",
+      "pins": [],
+      "evidence_source": "topology",
+      "report_context": {
+        "section": "Ground Plane",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "suppressed": false,
+      "suppression_reason": "",
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "emc:GP-001:c6f889950823"
+    },
+    {
+      "category": "decoupling",
+      "severity": "error",
+      "rule_id": "DC-002",
+      "confidence": "heuristic",
+      "title": "No decoupling cap found near U3",
+      "description": "U3 (Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad) has no capacitor within 10mm. Every IC with power pins needs at least one decoupling capacitor.",
+      "components": [
+        "U3"
+      ],
+      "nets": [],
+      "recommendation": "Add 100nF X7R 0402 + 1\u00b5F X5R 0603 close to U3 power pins. For high-speed ICs, add 10nF C0G for high-frequency decoupling. Place caps on the same side as U3 with short, wide traces to vias.",
+      "detector": "emc_decoupling",
+      "summary": "No decoupling cap found near U3",
+      "pins": [],
+      "evidence_source": "heuristic_rule",
+      "report_context": {
+        "section": "Decoupling",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "fix_params": {
+        "type": "add_component",
+        "components": [
+          {
+            "type": "capacitor",
+            "value": "100n"
+          }
+        ],
+        "basis": "Standard 100nF decoupling per IC"
+      },
+      "suppressed": false,
+      "suppression_reason": "",
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "emc:DC-002:u3"
+    },
+    {
+      "category": "io_filtering",
+      "severity": "info",
+      "rule_id": "IO-001",
+      "confidence": "heuristic",
+      "title": "No EMC filtering near J3",
+      "description": "Connector J3 (PinHeader_1x04_P2.54mm_Vertical) has no ferrite bead, CM choke, or ESD protection within 25mm. Unfiltered I/O cables are the dominant source of radiated emissions \u2014 common-mode current as low as 5 \u00b5A can exceed FCC Class B.",
+      "components": [
+        "J3"
+      ],
+      "nets": [],
+      "recommendation": "Add a ferrite bead (e.g., BLM18AG601SN1D, 600\u03a9@100MHz) on signal lines near J3. Add ESD/TVS protection for external interfaces.",
+      "detector": "emc_io_filtering",
+      "summary": "No EMC filtering near J3",
+      "pins": [],
+      "evidence_source": "heuristic_rule",
+      "report_context": {
+        "section": "Io Filtering",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "fix_params": {
+        "type": "add_component",
+        "components": [
+          {
+            "type": "ferrite_bead"
+          }
+        ],
+        "basis": "EMI filter on external I/O"
+      },
+      "suppressed": false,
+      "suppression_reason": "",
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "emc:IO-001:j3"
+    },
+    {
+      "category": "io_filtering",
+      "severity": "info",
+      "rule_id": "IO-001",
+      "confidence": "heuristic",
+      "title": "No EMC filtering near J2",
+      "description": "Connector J2 (JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal) has no ferrite bead, CM choke, or ESD protection within 25mm. Unfiltered I/O cables are the dominant source of radiated emissions \u2014 common-mode current as low as 5 \u00b5A can exceed FCC Class B.",
+      "components": [
+        "J2"
+      ],
+      "nets": [],
+      "recommendation": "Add a ferrite bead (e.g., BLM18AG601SN1D, 600\u03a9@100MHz) on signal lines near J2. Add ESD/TVS protection for external interfaces.",
+      "detector": "emc_io_filtering",
+      "summary": "No EMC filtering near J2",
+      "pins": [],
+      "evidence_source": "heuristic_rule",
+      "report_context": {
+        "section": "Io Filtering",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "fix_params": {
+        "type": "add_component",
+        "components": [
+          {
+            "type": "ferrite_bead"
+          }
+        ],
+        "basis": "EMI filter on external I/O"
+      },
+      "suppressed": false,
+      "suppression_reason": "",
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "emc:IO-001:j2"
+    },
+    {
+      "category": "io_filtering",
+      "severity": "error",
+      "rule_id": "IO-001",
+      "confidence": "heuristic",
+      "title": "No EMC filtering near J1",
+      "description": "Connector J1 (USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal) has no ferrite bead, CM choke, or ESD protection within 25mm. Unfiltered I/O cables are the dominant source of radiated emissions \u2014 common-mode current as low as 5 \u00b5A can exceed FCC Class B.",
+      "components": [
+        "J1"
+      ],
+      "nets": [],
+      "recommendation": "Add ESD protection (e.g., USBLC6-2SC6 or TPD2E2U06) on J1 data lines. Add ferrite bead (600\u03a9@100MHz) on VBUS. For USB 3.x, add common-mode choke on SuperSpeed pairs.",
+      "detector": "emc_io_filtering",
+      "summary": "No EMC filtering near J1",
+      "pins": [],
+      "evidence_source": "heuristic_rule",
+      "report_context": {
+        "section": "Io Filtering",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "fix_params": {
+        "type": "add_component",
+        "components": [
+          {
+            "type": "ferrite_bead"
+          }
+        ],
+        "basis": "EMI filter on external I/O"
+      },
+      "suppressed": false,
+      "suppression_reason": "",
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "emc:IO-001:j1"
+    },
+    {
+      "category": "emission_estimate",
+      "severity": "info",
+      "rule_id": "EE-001",
+      "confidence": "heuristic",
+      "title": "Board cavity resonance frequencies",
+      "description": "Board (66\u00d775mm, \u03b5r=4.4) cavity resonances: (0,1) at 953 MHz; (1,0) at 1083 MHz; (1,1) at 1442 MHz; (0,2) at 1906 MHz; (2,0) at 2166 MHz. PDN impedance spikes at these frequencies. Ensure adequate decoupling at and around these frequencies.",
+      "components": [],
+      "nets": [],
+      "recommendation": "Add decoupling capacitors with SRF near these frequencies.",
+      "detector": "emc_emission_estimate",
+      "summary": "Board cavity resonance frequencies",
+      "pins": [],
+      "evidence_source": "heuristic_rule",
+      "report_context": {
+        "section": "Emission Estimate",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "suppressed": false,
+      "suppression_reason": "",
+      "stages": [
+        "schematic"
+      ],
+      "finding_id": "emc:EE-001:14ba23cdf0dc"
+    },
+    {
+      "category": "diff_pair",
+      "severity": "error",
+      "rule_id": "DP-001",
+      "confidence": "deterministic",
+      "title": "differential diff pair skew exceeds limit",
+      "description": "Differential pair AIN+/AIN- has 17.5mm length mismatch (95.8 ps skew). Exceeds differential limit of 50 ps by 92%.",
+      "components": [
+        "C8",
+        "U2"
+      ],
+      "nets": [
+        "AIN+",
+        "AIN-"
+      ],
+      "recommendation": "Match trace lengths to within 25 ps (4.6mm). Use length-matched serpentine routing.",
+      "detector": "emc_diff_pair",
+      "summary": "differential diff pair skew exceeds limit",
+      "pins": [],
+      "evidence_source": "topology",
+      "report_context": {
+        "section": "Diff Pair",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "suppressed": false,
+      "suppression_reason": "",
+      "stages": [
+        "layout"
+      ],
+      "finding_id": "emc:DP-001:c8"
+    }
+  ],
+  "assessments": [],
+  "per_net_scores": [
+    {
+      "net": "AIN+",
+      "score": 88.0,
+      "finding_count": 1,
+      "rules": [
+        "DP-001"
+      ]
+    },
+    {
+      "net": "AIN-",
+      "score": 88.0,
+      "finding_count": 1,
+      "rules": [
+        "DP-001"
+      ]
+    }
+  ],
+  "test_plan": {
+    "frequency_bands": [
+      {
+        "band": "30-88 MHz",
+        "freq_min_hz": 30000000.0,
+        "freq_max_hz": 88000000.0,
+        "risk_level": "none",
+        "source_count": 0,
+        "sources": []
+      },
+      {
+        "band": "88-216 MHz",
+        "freq_min_hz": 88000000.0,
+        "freq_max_hz": 216000000.0,
+        "risk_level": "none",
+        "source_count": 0,
+        "sources": []
+      },
+      {
+        "band": "216-960 MHz",
+        "freq_min_hz": 216000000.0,
+        "freq_max_hz": 960000000.0,
+        "risk_level": "none",
+        "source_count": 0,
+        "sources": []
+      },
+      {
+        "band": "960-40000 MHz",
+        "freq_min_hz": 960000000.0,
+        "freq_max_hz": 40000000000.0,
+        "risk_level": "none",
+        "source_count": 0,
+        "sources": []
+      }
+    ],
+    "interface_risks": [
+      {
+        "connector": "J3",
+        "value": "PinHeader_1x04_P2.54mm_Vertical",
+        "protocol": "unknown",
+        "risk_score": 5,
+        "reasons": [
+          "No EMC filtering detected"
+        ]
+      },
+      {
+        "connector": "J2",
+        "value": "JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal",
+        "protocol": "unknown",
+        "risk_score": 5,
+        "reasons": [
+          "No EMC filtering detected"
+        ]
+      },
+      {
+        "connector": "J1",
+        "value": "USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+        "protocol": "unknown",
+        "risk_score": 5,
+        "reasons": [
+          "No EMC filtering detected"
+        ]
+      }
+    ],
+    "probe_points": [
+      {
+        "x": 46.0,
+        "y": 3.5,
+        "type": "unfiltered_connector",
+        "ref": "J3",
+        "reason": "Unfiltered I/O \u2014 cable radiation risk"
+      },
+      {
+        "x": 3.3,
+        "y": 13.0,
+        "type": "unfiltered_connector",
+        "ref": "J2",
+        "reason": "Unfiltered I/O \u2014 cable radiation risk"
+      },
+      {
+        "x": 2.6,
+        "y": 68.0,
+        "type": "unfiltered_connector",
+        "ref": "J1",
+        "reason": "Unfiltered I/O \u2014 cable radiation risk"
+      }
+    ]
+  },
+  "regulatory_coverage": {
+    "market": "us",
+    "applicable_standards": [
+      "FCC Part 15 Class B",
+      "FCC Part 15 Class B"
+    ],
+    "coverage_matrix": [
+      {
+        "standard": "FCC Part 15 Class B",
+        "test_type": "radiated",
+        "coverage": "minimal",
+        "checked_rules": [
+          "GP-001",
+          "DC-002",
+          "IO-001",
+          "DP-001",
+          "EE-001"
+        ],
+        "total_applicable_rules": 23,
+        "note": "Design rule checks identify common radiation sources. Cannot predict absolute emission levels."
+      },
+      {
+        "standard": "FCC Part 15 Class B",
+        "test_type": "conducted",
+        "coverage": "minimal",
+        "checked_rules": [
+          "DC-002"
+        ],
+        "total_applicable_rules": 4,
+        "note": "Switching harmonic analysis and decoupling checks. EMI filter verification not yet implemented."
+      }
+    ]
+  },
+  "category_summary": {
+    "ground_plane": {
+      "count": 1,
+      "max_severity": "info",
+      "severities": {
+        "error": 0,
+        "warning": 0,
+        "info": 1
+      },
+      "suppressed_count": 0
+    },
+    "decoupling": {
+      "count": 1,
+      "max_severity": "error",
+      "severities": {
+        "error": 1,
+        "warning": 0,
+        "info": 0
+      },
+      "suppressed_count": 0
+    },
+    "io_filtering": {
+      "count": 3,
+      "max_severity": "error",
+      "severities": {
+        "error": 1,
+        "warning": 0,
+        "info": 2
+      },
+      "suppressed_count": 0
+    },
+    "emission_estimate": {
+      "count": 1,
+      "max_severity": "info",
+      "severities": {
+        "error": 0,
+        "warning": 0,
+        "info": 1
+      },
+      "suppressed_count": 0
+    },
+    "diff_pair": {
+      "count": 1,
+      "max_severity": "error",
+      "severities": {
+        "error": 1,
+        "warning": 0,
+        "info": 0
+      },
+      "suppressed_count": 0
+    }
+  },
+  "board_info": {
+    "board_width_mm": 66.0,
+    "board_height_mm": 75.0,
+    "layer_count": 2,
+    "footprint_count": 46,
+    "via_count": 17,
+    "has_stackup": false,
+    "total_components": 42,
+    "total_nets": 40
+  },
+  "elapsed_s": 0.0,
+  "audience_summary": {
+    "designer": {
+      "total_findings": 7,
+      "by_severity": {
+        "error": 3,
+        "warning": 0,
+        "info": 4
+      },
+      "by_category": {
+        "ground_plane": 1,
+        "decoupling": 1,
+        "io_filtering": 3,
+        "emission_estimate": 1,
+        "diff_pair": 1
+      },
+      "top_issues": [
+        {
+          "category": "decoupling",
+          "severity": "error",
+          "rule_id": "DC-002",
+          "confidence": "heuristic",
+          "title": "No decoupling cap found near U3",
+          "description": "U3 (Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad) has no capacitor within 10mm. Every IC with power pins needs at least one decoupling capacitor.",
+          "components": [
+            "U3"
+          ],
+          "nets": [],
+          "recommendation": "Add 100nF X7R 0402 + 1\u00b5F X5R 0603 close to U3 power pins. For high-speed ICs, add 10nF C0G for high-frequency decoupling. Place caps on the same side as U3 with short, wide traces to vias.",
+          "detector": "emc_decoupling",
+          "summary": "No decoupling cap found near U3",
+          "pins": [],
+          "evidence_source": "heuristic_rule",
+          "report_context": {
+            "section": "Decoupling",
+            "impact": "",
+            "standard_ref": ""
+          },
+          "fix_params": {
+            "type": "add_component",
+            "components": [
+              {
+                "type": "capacitor",
+                "value": "100n"
+              }
+            ],
+            "basis": "Standard 100nF decoupling per IC"
+          },
+          "suppressed": false,
+          "suppression_reason": "",
+          "stages": [
+            "layout"
+          ],
+          "finding_id": "emc:DC-002:u3"
+        },
+        {
+          "category": "io_filtering",
+          "severity": "error",
+          "rule_id": "IO-001",
+          "confidence": "heuristic",
+          "title": "No EMC filtering near J1",
+          "description": "Connector J1 (USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal) has no ferrite bead, CM choke, or ESD protection within 25mm. Unfiltered I/O cables are the dominant source of radiated emissions \u2014 common-mode current as low as 5 \u00b5A can exceed FCC Class B.",
+          "components": [
+            "J1"
+          ],
+          "nets": [],
+          "recommendation": "Add ESD protection (e.g., USBLC6-2SC6 or TPD2E2U06) on J1 data lines. Add ferrite bead (600\u03a9@100MHz) on VBUS. For USB 3.x, add common-mode choke on SuperSpeed pairs.",
+          "detector": "emc_io_filtering",
+          "summary": "No EMC filtering near J1",
+          "pins": [],
+          "evidence_source": "heuristic_rule",
+          "report_context": {
+            "section": "Io Filtering",
+            "impact": "",
+            "standard_ref": ""
+          },
+          "fix_params": {
+            "type": "add_component",
+            "components": [
+              {
+                "type": "ferrite_bead"
+              }
+            ],
+            "basis": "EMI filter on external I/O"
+          },
+          "suppressed": false,
+          "suppression_reason": "",
+          "stages": [
+            "pre_fab"
+          ],
+          "finding_id": "emc:IO-001:j1"
+        },
+        {
+          "category": "diff_pair",
+          "severity": "error",
+          "rule_id": "DP-001",
+          "confidence": "deterministic",
+          "title": "differential diff pair skew exceeds limit",
+          "description": "Differential pair AIN+/AIN- has 17.5mm length mismatch (95.8 ps skew). Exceeds differential limit of 50 ps by 92%.",
+          "components": [
+            "C8",
+            "U2"
+          ],
+          "nets": [
+            "AIN+",
+            "AIN-"
+          ],
+          "recommendation": "Match trace lengths to within 25 ps (4.6mm). Use length-matched serpentine routing.",
+          "detector": "emc_diff_pair",
+          "summary": "differential diff pair skew exceeds limit",
+          "pins": [],
+          "evidence_source": "topology",
+          "report_context": {
+            "section": "Diff Pair",
+            "impact": "",
+            "standard_ref": ""
+          },
+          "suppressed": false,
+          "suppression_reason": "",
+          "stages": [
+            "layout"
+          ],
+          "finding_id": "emc:DP-001:c8"
+        }
+      ]
+    },
+    "reviewer": {
+      "total_findings": 3,
+      "by_category": {
+        "decoupling": 1,
+        "io_filtering": 1,
+        "diff_pair": 1
+      },
+      "top_issues": [
+        {
+          "rule_id": "DC-002",
+          "severity": "error",
+          "summary": "No decoupling cap found near U3",
+          "recommendation": "Add 100nF X7R 0402 + 1\u00b5F X5R 0603 close to U3 power pins. For high-speed ICs, add 10nF C0G for high-frequency decoupling. Place caps on the same side as U3 with short, wide traces to vias.",
+          "category": "decoupling"
+        },
+        {
+          "rule_id": "IO-001",
+          "severity": "error",
+          "summary": "No EMC filtering near J1",
+          "recommendation": "Add ESD protection (e.g., USBLC6-2SC6 or TPD2E2U06) on J1 data lines. Add ferrite bead (600\u03a9@100MHz) on VBUS. For USB 3.x, add common-mode choke on SuperSpeed pairs.",
+          "category": "io_filtering"
+        },
+        {
+          "rule_id": "DP-001",
+          "severity": "error",
+          "summary": "differential diff pair skew exceeds limit",
+          "recommendation": "Match trace lengths to within 25 ps (4.6mm). Use length-matched serpentine routing.",
+          "category": "diff_pair"
+        }
+      ]
+    },
+    "manager": {
+      "risk_level": "moderate",
+      "blocker_count": 3,
+      "warning_count": 0,
+      "stage_readiness": {
+        "schematic": "pass",
+        "layout": "needs_work",
+        "pre_fab": "needs_work",
+        "bring_up": "pass"
+      },
+      "one_liner": "3 errors across 3 categories. Layout, pre-fab stages have blockers."
+    }
+  },
+  "trust_summary": {
+    "total_findings": 7,
+    "trust_level": "low",
+    "by_confidence": {
+      "deterministic": 2,
+      "heuristic": 5,
+      "datasheet_backed": 0
+    },
+    "by_evidence_source": {
+      "datasheet": 0,
+      "topology": 2,
+      "heuristic_rule": 5,
+      "symbol_footprint": 0,
+      "bom": 0,
+      "geometry": 0,
+      "api_lookup": 0
+    },
+    "provenance_coverage_pct": 0.0
+  },
+  "capability_mode_ref": {
+    "source": "analysis/capability_mode.json",
+    "run_id": "20260912T181341Z-a04f99"
+  }
+}

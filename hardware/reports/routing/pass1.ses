@@ -1,0 +1,200 @@
+(session pass1
+  (base_design pass1)
+  (placement
+    (resolution um 10)
+    (component C_0603_1608Metric
+      (place C5 415000 -165000 front 90)
+      (place C6 320000 -170000 front 90)
+      (place C4 415000 -200000 front 90)
+      (place C9 415000 -275000 front 90)
+      (place C7 415000 -240000 front 90)
+    )
+    (component MountingHole_3.2mm_M3
+      (place MH1 36000 -36000 front 0)
+      (place MH3 624000 -714000 front 0)
+      (place MH4 36000 -480000 front 0)
+      (place MH2 624000 -36000 front 0)
+    )
+    (component SW_SPST_PTS810
+      (place SW1 460000 -690000 front 0)
+    )
+    (component TestPoint_Pad_D1.5mm
+      (place TP8 410000 -120000 front 0)
+      (place TP1 120000 -695000 front 0)
+      (place TP2 400000 -405000 front 0)
+      (place TP9 410000 -90000 front 0)
+      (place TP7 85000 -340000 front 0)
+      (place TP4 400000 -475000 front 0)
+      (place TP6 60000 -340000 front 0)
+      (place TP10 300000 -210000 front 0)
+      (place TP3 400000 -440000 front 0)
+      (place TP5 275000 -210000 front 0)
+    )
+    (component PinHeader_1x04_P2.54mm_Vertical
+      (place J3 460000 -35000 front 0)
+    )
+    (component R_0603_1608Metric
+      (place R8 544000 -645000 front 0)
+      (place R6 390000 -316000 front 0)
+      (place R7 515000 -690000 front 0)
+      (place R9 577000 -645000 front 0)
+      (place R5 355000 -316000 front 0)
+      (place R10 610000 -645000 front 0)
+    )
+    (component "SOIC-16_3.9x9.9mm_P1.27mm"
+      (place U2 365000 -210000 front 0)
+    )
+    (component LED_Avago_PLCC6_3x2.8mm
+      (place D3 560000 -680000 front 0)
+    )
+    (component C_0603_1608Metric::1
+      (place C10 515000 -715000 front 0)
+    )
+    (component XIAO_ESP32C3
+      (place U1 235000 -470000 front 0)
+    )
+    (component "Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad"
+      (place U3 620000 -440000 front 90)
+    )
+    (component C_1206_3216Metric
+      (place C3 360000 -405000 front 0)
+    )
+    (component "D_SOD-123F"
+      (place D1 94000 -610000 back 180)
+    )
+    (component Fuse_1812_4532Metric
+      (place F1 149500 -610000 back 0)
+    )
+    (component R_0603_1608Metric::1
+      (place R1 283000 -610000 back 180)
+      (place R3 305000 -120000 back 180)
+      (place R2 319000 -610000 back 180)
+      (place R4 305000 -90000 back 180)
+    )
+    (component C_1206_3216Metric::1
+      (place C1 150000 -650000 back 180)
+    )
+    (component "JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal"
+      (place J2 33000 -130000 back 90)
+    )
+    (component "USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+      (place J1 26000 -680000 back 90)
+    )
+    (component C_0603_1608Metric::2
+      (place C8 340000 -105000 back 180)
+      (place C11 105000 -645000 back 180)
+      (place C2 225000 -650000 back 180)
+    )
+    (component D_SMA
+      (place D2 217500 -610000 back 0)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution um 10)
+    (parser
+      (host_cad "KiCad's Pcbnew")
+      (host_version "9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1")
+    )
+    (library_out 
+      (padstack "Via[0-1]_600:300_um"
+        (shape
+          (circle F.Cu 6000 0 0)
+        )
+        (shape
+          (circle B.Cu 6000 0 0)
+        )
+        (attach off)
+      )
+      (padstack "Via[0-1]_600:300_um"
+        (shape
+          (circle F.Cu 6000 0 0)
+        )
+        (shape
+          (circle B.Cu 6000 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net I2C_SDA
+        (wire
+          (path F.Cu 2000
+            389750 -190950
+            385763 -190950
+            363250 -213463
+            363250 -316000
+          )
+        )
+      )
+      (net LED_R_GPIO
+        (wire
+          (path F.Cu 2000
+            149000 -426600
+            167767 -426600
+          )
+        )
+        (wire
+          (path F.Cu 2000
+            167767 -426600
+            175263 -419104
+            206665 -419104
+            272978 -485417
+            376167 -485417
+            535750 -645000
+          )
+        )
+      )
+      (net UART_TX
+        (wire
+          (path F.Cu 2000
+            149000 -528200
+            130233 -528200
+          )
+        )
+        (wire
+          (path B.Cu 2000
+            460000 -85800
+            448483 -85800
+          )
+        )
+        (wire
+          (path B.Cu 2000
+            157307 -158058
+            376225 -158058
+            448483 -85800
+          )
+        )
+        (via "Via[0-1]_600:300_um" 157307 -158058
+        )
+        (wire
+          (path F.Cu 2000
+            130233 -528200
+            130233 -185132
+            157307 -158058
+          )
+        )
+      )
+      (net VBG
+        (wire
+          (path F.Cu 2000
+            340250 -229050
+            319050 -229050
+            300000 -210000
+          )
+        )
+      )
+      (net VBUS
+        (wire
+          (path F.Cu 2000
+            170875 -610000
+            150000 -630875
+            150000 -665000
+            120000 -695000
+          )
+        )
+      )
+    )
+  )
+)
